@@ -1,0 +1,59 @@
+.course-wrapper {
+    overflow: hidden;
+    height: 100vh;
+    background: #4CA1AF; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.course-h1 {
+    border-bottom: 1px solid black;
+    color: white;
+    text-align: center;
+}
+
+.course-outline {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.outline-videos {
+    width: 40%;
+    height: 80vh;
+    overflow-x: hidden;
+    scrollbar-width: 0px;
+}
+
+.outline-videos::-webkit-scrollbar{
+    display: none;
+}
+
+.outline-videos p {
+    padding: 10px;
+    border: 1px solid #e6dee3;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.18) 2.4px 2.4px 3.2px;
+    transform: translateZ(0);
+    transition: transform .30s ease-out;
+   
+}
+
+.outline-videos p:hover {
+    background: #4CA1AF; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #272626, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    color: white;
+    transform: scale(1.04);
+}
+
+.outline-content {
+    width: 40%;
+    text-align: left;
+    color: black;
+}

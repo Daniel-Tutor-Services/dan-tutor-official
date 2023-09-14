@@ -1,0 +1,28 @@
+.custom-button{
+    margin: 0;
+    padding: 0; 
+}
+
+.custom-button button{
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 1.2rem;
+    background: #D82148;
+    color: white;
+    margin-bottom: 50px;
+    border: 2px solid  rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 1.2s;
+    box-shadow: 1px  2px 1px 1px rgb(0, 0, 0);
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.custom-button button:hover{
+    background-color:black;
+    color: white;
+    box-shadow: 1px  2px 1px 1px blanchedalmond;
+}

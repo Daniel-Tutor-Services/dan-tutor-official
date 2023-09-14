@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.Admin-profile {
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    background:linear-gradient(0.9turn,#f2174f, #cc1b4d, #bd1c4d, #97204a, #5c2648, #2e2b48, #202c46); 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    
+
+}
+.Admin-sidebar{
+    border:none;
+    border-right: 1px solid rgba(255, 255, 255, 0.535);
+    min-height: 100vh;
+    width: 20%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top:10rem;
+
+}
+.Admin-icon{ display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 3px;
+
+}
+.Admin-icon p{
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer
+
+}
+.Admin-form{
+    min-height: 100vh;
+    width: 80%;
+    font-size: 0.7rem;
+    padding: 6rem;
+    line-height: 0.3rem;
+
+}
+.Admin-innercon{background: white;
+    border-radius: 5px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 75%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 7rem;
+
+}
+.h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.Admin-main{display: flex;
+    border-bottom:1px solid #202c46;
+    width: 90%;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+ 
+.Admin-main p{
+    font-size: 0.9rem;
+    
+}

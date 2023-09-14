@@ -1,0 +1,166 @@
+.smallCont{
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.col-2{
+    width: 60%;
+    background: black;
+    position: relative;
+}
+
+.abs .img{
+    width: 10rem;
+    height: 10rem;
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.col-2 .abs{
+    top: 17%;
+    left: 2%;
+    width: 95%;
+    position: absolute;
+    color: white;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.col-2 .abs h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.smallCont .signimg{
+    width: 100%;
+    height: 100vh;
+    font-size: 1rem;
+    object-fit: cover;
+    display: block;
+    opacity: 0.15;
+}
+
+.signmob{
+    display: none;
+}
+
+.col {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0;
+}
+
+.col > *{
+    margin-top: 0;
+}
+
+.col h2{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bolder;
+}
+
+#questions {
+    width: 100%;
+    padding: 15px 15px 14px;
+    margin-top:10px; 
+    font-size: 15px;
+    border: 1px solid #151D3B;
+    outline: none;
+    background-color: white;
+    color: gray;
+}
+
+.form{
+    width: 40%;
+    background: #4CA1AF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1710ab, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    border: 1px solid black;
+    padding: 1.4rem 0;
+    height: auto;
+}
+
+.form p{
+    font-size: 1.2rem;
+}
+
+.bottoms h5{
+    width: 79%;
+    margin: 15px auto;
+    font-size: 1rem;   
+    color:rgba(0, 0, 0, 0.62);
+    line-height: 1.2rem;
+    font-weight: bolder;
+}
+
+.bottoms p{
+    color: rgba(0, 0, 0, 0.655);
+    width: 80%;
+    font-weight: bold;
+    margin: 15px auto;
+    font-size:1.2em
+}
+
+.bottoms span{
+    color: rgb(99, 4, 4);
+}
+
+.bottoms span:hover{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.bottoms a{
+    color: rgb(153, 20, 20);
+}
+
+.bottoms a:hover{
+    color: black;
+    transition: ease-in .5s;
+}
+
+.flexs img{
+    display: flex;
+    justify-content: center;
+}
+
+.flexs p{
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+
+
+
+@media screen and (max-width:1200px) {
+    .signmob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .col-2{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width:900px) {
+
+    .col-2{
+        display: none;
+    }
+    .form{
+        width: 100%;
+    }
+}

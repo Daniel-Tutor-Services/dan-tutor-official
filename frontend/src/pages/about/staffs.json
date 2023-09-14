@@ -1,0 +1,61 @@
+[
+    {
+        "_id": 1,
+        "img":"Pictures/staff1.png",
+        "name":"Achilihu Uzoma Christopher",
+        "about":"Chief Executive Officer"
+          
+    },
+    {
+        "_id": 2,
+        "img":"Pictures/staff2.png",
+        "name":"Achilihu Ijeoma Angela",
+        "about":"Managing Director "
+       
+    },
+    {
+        "_id": 3,
+        "img":"Pictures/staff3.png",
+        "name":"Achilihu Chinyere Beryl",
+        "about":"Content Manager"
+        
+    },
+    {
+        "_id": 4,
+        "img":"Pictures/staff4.png",
+        "name":"Achilihu Chidinma Victoria",
+        "about":"Legal Adviser"
+        
+        
+    },
+    {
+        "_id": 5,
+        "img":"Pictures/staff5.png",
+        "name":"Achilihu Uchenna Daniel ",
+        "about":"Chief Technology Officer"
+       
+    },
+    {
+        "_id": 6,
+        "img":"Pictures/staff6.png",
+        "name":"Achilihu Somtoo Anita",
+        "about":"Product Designer"
+        
+    },
+    {
+        "_id": 7,
+        "img":"Pictures/staff7.png",
+        "name":"Achilihu Kelechi Samuel ",
+        "about":"Instructor's Supervisor"
+        
+        
+    },
+    {
+        "_id": 8,
+        "img":"Pictures/staff8.png",
+        "name":"Achilihu Chidera David",
+        "about":"Chief Financial Ofiicer"
+       
+    }   
+
+]

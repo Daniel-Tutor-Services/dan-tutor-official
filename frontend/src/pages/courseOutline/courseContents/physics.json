@@ -1,0 +1,54 @@
+[
+    {
+        "_id": 1,
+        "topic": "Projectile"
+          
+    },
+    {
+        "_id": 2,
+        "topic": "Motion"
+       
+    },
+    {
+        "_id": 3,
+        "topic": "Electromagnetism"
+        
+    },
+    {
+        "_id": 4,
+        "topic": "Radioactivity"
+        
+        
+    },
+    {
+        "_id": 5,
+        "topic": "Random Error"
+       
+    },
+    {
+        "_id": 6,
+        "topic": "Thermodynamics"
+        
+    },
+    {
+        "_id": 7,
+        "topic": "Mechanics"
+        
+        
+    },
+    {
+        "_id": 8,
+        "topic": "Quantun Physics"
+       
+    }, 
+    {
+        "_id": 9,
+        "topic": "Optics"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Nuclear Physics"    
+    }   
+
+]

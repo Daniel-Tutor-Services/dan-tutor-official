@@ -1,0 +1,42 @@
+#adminDash-right{
+    margin: 3% auto auto 17%;
+    width:100%;   
+}
+#adminDash-right-container{
+    display: flex;
+}
+#adminDash-right-container-outlines{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    min-height: 87vh;
+    min-width: 49%;
+    padding: .5rem 0;
+}
+.adminDashContainer{
+    display: flex;
+    position: relative;
+}
+.adminDashContent{
+    width: 82%;
+    margin-left: auto;
+}
+.adminDashContentContainer{
+    width: 96%;
+    margin: 0 auto;
+}
+.adminDashContentBody{
+    display: flex;
+    padding-top: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.adminDashCourseOutlines{
+    width: 45%;
+    padding: 0 10px;
+}
+.adminDashCourseOutlinesVideos{
+    width:45% ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

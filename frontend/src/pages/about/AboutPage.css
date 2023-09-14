@@ -1,0 +1,191 @@
+.about-us-page{
+    padding: 5rem  0 0;
+ background: grey; 
+}
+
+.about-us-page p{
+    text-align: justify;
+    color: black;   
+}
+
+.aboutus-info{
+    width: 80%;
+    margin: 0 auto;
+    padding: 4em 0 0;
+}
+
+.aboutus-info h1{
+    font-size: 2rem;
+    color: rgb(150, 28, 28);
+    font-weight: bolder;
+    padding: 1.2rem 0;
+}
+
+.aboutus-info p{
+    width: 100%;
+    word-spacing: 0.4rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.why-choose-us-info{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 0;
+    position: relative;
+}
+
+.why-choose-us h1, .meet-the-team h1{
+    font-size: 2rem;
+    color: rgb(150, 28, 28);
+    font-weight: bolder;
+    padding: 1.2rem 0;
+}
+
+.why-choose-us p{
+    width: 100%;
+    word-spacing: 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.cl-aw-tr{
+    display: flex;
+    gap: 3rem;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+.client-sat, .award, .trustable{
+    background-color: white;
+    box-shadow: 0px 3.43px 3.43px 0px #0000003D;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding: 40px 10%;
+    border-radius: 10px;
+}
+
+.client-sat h4, .award h4, .trustable h4{
+    display: none;  
+}
+
+.client-sat:hover, .award:hover, .trustable:hover{
+    background: #d82149d1;
+    color: white;
+    transition: 0.7s ease-in;
+}
+
+.c-a-t h3{
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+.meet-the-team {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 0;
+    position: relative;
+    color: black;
+}
+
+.meet-the-team p{
+    width: 100%;
+    word-spacing: 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1000px) {
+    .aboutus-header h1{
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    .aboutus-pic{
+        display: none;
+    }
+    
+    .aboutus-info {
+        width: 80%;
+    }
+    
+    .aboutus-details{
+        position: relative;
+    }
+
+    .aboutus-details h1{
+        font-size: 1.5rem;
+        color: rgb(150, 28, 28);
+    }
+
+    .aboutus-info p{
+        width: 100%;
+        font-weight:normal;
+        font-size: 1rem;
+
+    }
+
+    .why-choose-us{
+        background-image:none;
+        background-color: rgb(183, 182, 182);
+    }
+
+    .why-choose-us-info{
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        color: black;
+    }
+
+    .why-choose-us h1, .meet-the-team h1{
+        font-size: 1.5rem;
+        color: rgb(150, 28, 28);
+    }
+
+    .why-choose-us p, .meet-the-team p{
+        width: 100%;
+        font-weight:normal;
+        font-size: 1rem;
+
+    }
+
+    .cl-aw-tr{
+        display: grid;
+        margin-bottom: 30px;
+    }
+
+    .client-sat img, .award img, .trustable img{
+        width: 60px;
+        margin: 0 auto;
+        display: grid;
+        text-align: center;
+        padding: 10% 0%;
+    }
+    
+    .client-sat, .award, .trustable{
+        width: 170px;
+        height: 160px;
+        padding: 13px 2%;
+    }
+    
+    .client-sat h4, .award h4, .trustable h4{
+        display:flex;
+        justify-content: center;
+        font-size: 0.9rem;
+        width: 80px;
+        margin: 0 auto;
+    }
+
+    .c-a-t h3{
+       display: none;
+    }
+
+}

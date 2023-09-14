@@ -1,0 +1,55 @@
+[
+    {
+        "_id": 1,
+        "topic": "Organic Chemistry"
+          
+    },
+    {
+        "_id": 2,
+        "topic": "InOrganic Chemistry"
+       
+    },
+    {
+        "_id": 3,
+        "topic": "Seperation Technique"
+        
+    },
+    {
+        "_id": 4,
+        "topic": "Element Table"
+        
+        
+    },
+    {
+        "_id": 5,
+        "topic": "Nuclear Chemistry"
+       
+    },
+    {
+        "_id": 6,
+        "topic": "Thermo Chemistry"
+        
+    },
+    {
+        "_id": 7,
+        "topic": "Radio Chemistry"
+        
+        
+    },
+    {
+        "_id": 8,
+        "topic": "Physical Chemistry"
+       
+    }, 
+    {
+        "_id": 9,
+        "topic": "Surface Chemistry"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Geo Chemistry"
+       
+    }   
+
+]

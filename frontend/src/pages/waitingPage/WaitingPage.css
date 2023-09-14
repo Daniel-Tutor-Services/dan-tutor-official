@@ -1,0 +1,32 @@
+.waiting-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #4CA1AF; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.9;
+}
+
+.waiting-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.waiting text{
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.waiting-text h1{
+    color: #D82148;
+}
+
+.waiting-img img {
+    margin-left: 2rem;
+    align-self: end;
+}

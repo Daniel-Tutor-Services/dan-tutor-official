@@ -1,0 +1,24 @@
+.errorbody {
+    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    overflow:hidden;
+    height: 100vh;
+}
+
+.errortext {
+    width: 50%;
+    height: 85vh;
+    margin: 0 auto;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.errorbody span {
+    font-size: 12rem;
+    margin-bottom: 0;
+}
+
+.errorbody p {
+    font-size: 1.8rem;
+    margin: 0;
+}

@@ -1,0 +1,95 @@
+.Profile-main{
+    min-height: 100vh;
+    width: 80%;
+    font-size: 0.7rem;
+    padding: 6rem;
+    line-height: 0.3rem;
+}
+
+.Profile-con{
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;   
+}
+
+.profile-border{
+    display:flex;
+    border-bottom: 1px solid #202c46;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 0;
+    align-items: center;
+}
+
+.profile-border h5{
+    color: #0000006d;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.p-details{
+    margin: 0;
+    font-size: 0.9rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.p-details.p-email{
+    text-transform: lowercase;
+}
+
+.Profile{
+    background: white;
+    border-radius: 5px;
+    padding-bottom: 5rem;
+    padding-top: 0.3rem;
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 5rem;
+    border-radius: 20px;
+}
+
+.ham-mobb{
+    display: none;
+}
+
+
+@media screen and (max-width:800px){
+    .Profile-con{
+        width: 100%;
+        position: absolute;
+        min-height: 110vh;
+    }
+
+    .Profile{
+        width: 70vw;
+        margin-top: 5rem;
+    }
+
+    .profile-border h5{
+        font-size: 0.9rem;
+    }
+    
+    .p-details{
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    
+
+    .ham-mobb{
+        display: flex;
+    }
+
+    .side-mobb {
+        display: none;
+    }
+}

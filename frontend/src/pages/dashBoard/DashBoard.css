@@ -1,0 +1,75 @@
+/* @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap'); */
+
+.dashcontainer{
+    font-family: 'BioRhyme', serif;
+    background: whitesmoke; 
+    padding: 3rem 0;
+}
+
+.dashcustominput{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    padding: 1.2rem;
+    background: linear-gradient(to left, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+#availcours{
+    font-size: 1.5rem;
+}
+
+.dashindiv{
+    display: flex;
+    padding: 0.7rem 0;
+    margin-top: 0.2rem;
+}
+
+.dashindiv-mob{
+    display: none;
+}
+
+.titlediv{
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+.titlediv marquee{
+    background-color: rgb(224, 9, 9);
+    padding: 0.3em  0;
+}
+
+
+
+@media screen and (max-width:850px) {
+    .dashcustominput{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .dashindiv{
+        display: none;
+    }
+
+    .dashindiv-mob{
+        display: flex;
+        padding: 1rem 0;
+    }
+
+    .dashcustominput{
+        width: 100%;
+    }
+
+    #availcours{
+        padding: 1rem 3rem ;
+        font-size: 1rem;
+    }
+    
+    .titlediv h1{
+        font-size: 20px;
+    }
+}
+
+

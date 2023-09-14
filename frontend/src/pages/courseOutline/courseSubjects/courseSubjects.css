@@ -1,0 +1,33 @@
+.courseSubjects-cont{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    gap: 5em;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    object-fit: fill;
+    padding: 2rem 0;    
+}
+
+.courseSubjects-detailz{
+    background: grey; 
+    border-radius: 50px;
+    padding: 1.5rem 0;
+    margin: 0;
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #D82148;
+}
+
+.courseSubjects-detailz h1, h3{
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+

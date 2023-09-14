@@ -1,0 +1,23 @@
+.adminDashSide{
+    position: fixed;
+    width: 250px;
+    padding: 10px;
+    background: linear-gradient(0.9turn,#f2174f, #cc1b4d, #bd1c4d, #97204a, #5c2648, #2e2b48, #202c46);
+    height: 100vh;
+}
+.dashSideBtn{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sideBtn{
+    background-color:#5c2648;
+    border: 1px solid #202c46;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
+.sideBtn:hover{
+    cursor: pointer;
+}

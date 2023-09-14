@@ -1,0 +1,183 @@
+.smallContc{
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.col-2c{
+    width: 60%;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.col-2c .absc{
+    top: 3%;
+    left: 20%;
+    width: 50%;
+    position: absolute;
+    color: white;
+}
+
+.absc .groupc{
+    margin-top: 30px;
+}
+
+.colc .img{
+    width: 4rem;
+    height: 4rem;
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.col-2c .absc h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.smallContc img {
+    width: 100%;
+    height: 100vh;
+    font-size: 1rem;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    opacity: 0.15;
+}
+
+.colc {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0;
+}
+
+.colc h2{
+    text-align: center;
+}
+
+#textc{
+    padding: 20px 0.8rem 0;
+}
+
+.colc > *{
+    margin-top: 15px;
+}
+
+.colc p:hover{
+    opacity: 0.3;
+    cursor: pointer;
+    transition: ease-in .5s;
+}
+
+.formc{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+.formc p{
+    font-size: 1rem;
+    color: white;
+}
+
+.bottomc{
+    color: white;
+    width: 85%;
+    margin: 0px 0 0;   
+    font-size: 1.3rem;
+}
+
+.flexc{
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-between;
+    width: 43%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.flexc p{
+    margin: 10% 0% 0;
+    font-size: 3.4rem;
+}
+
+.groupc{
+    display: flex;
+    width: 100%;
+    height: auto;
+    color: #D82148;
+}
+
+.groupc span{
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.groupc h1{
+    margin-left: 4%;
+}
+
+.groupc2 a{
+    color: white;
+}
+
+.movec {
+    margin-left: 12%;
+    color: white;
+}
+
+.groupc2{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 3% 10%;
+    cursor: pointer;
+}
+
+.bluei:hover{
+    color: #1877F2;
+    transition: ease-in .2s;
+}
+
+.pinki:hover{
+    color: rgb(231, 15, 51);
+    transition: ease-in .2s;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    .signmob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .col-2c{
+        display: none;
+    }
+
+    .formc{
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width:900px) {
+
+    .col-2c{
+        display: none;
+    }
+    .formc{
+        width: 100%;
+    }
+}

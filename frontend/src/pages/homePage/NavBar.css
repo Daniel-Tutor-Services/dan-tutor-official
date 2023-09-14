@@ -1,0 +1,151 @@
+.active li {
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #D82148;
+    padding: 0;
+}
+
+.nav-barr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 115px;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.apply {
+    background-color:#D82148;
+    color: white; 
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+}
+
+.dtlogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dtlogo img {
+    object-fit: contain;
+    width: 20vw;
+    padding: 0 1.5em;
+    height: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.contents li{
+    cursor: pointer;
+    padding: .8rem .7rem .0rem;
+    color: black;
+}
+
+.contents li:hover{
+    color: blue;
+    transition: ease-in .2s;
+}
+
+.contents li:focus-within{
+    color: red;
+} 
+
+.nav{
+    align-items: center;
+}
+
+.apply p {
+    text-decoration: none;
+    color: white;
+}
+
+.apply:hover{
+    background-color:black;
+    color: white;
+    transition: ease-in .5s;
+}
+
+.home-mobb{
+    display: none;
+}
+
+.userpro{
+    display: flex;
+    margin-right: 8rem;
+    padding: .3rem .6rem .6rem .6rem;
+}
+
+.prodiv{
+    display: flex;
+}
+
+.droplogout{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.arrowhov:hover + .droplogout{
+    display: block;
+    color: #D82148;
+    transition: 4s ease-in;
+}
+
+.droplogout:hover {
+    display: block;
+    color: #D82148;
+    transition: 4s ease-in;
+}
+
+
+
+@media screen and (max-width:900px){
+    .home-mobb{
+        display: block;
+        position: relative;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+        margin-right: 7%;
+    }
+
+    .contents li{
+        cursor: pointer;
+        padding: .3rem .3rem .0rem;
+        color: black;
+    }
+    
+    #dtlogg img{
+        width:170px; 
+    }
+
+    .apply, .nav{
+        display: none;
+    }
+}

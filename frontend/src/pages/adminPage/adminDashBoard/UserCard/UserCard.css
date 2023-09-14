@@ -1,0 +1,24 @@
+
+.usercard{
+    background: linear-gradient(0.9turn,#f2174f, #cc1b4d, #bd1c4d, #97204a, #5c2648, #2e2b48, #202c46);
+    height: 100vh;
+    height: fit-content;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.usercard p{
+    margin: 0;
+}
+.usercardBtns{
+    display: flex;
+    align-items: center;
+}
+.usercardBtns .btnCreate{
+    padding: 6px 10px;
+    border-radius: 8px;
+}

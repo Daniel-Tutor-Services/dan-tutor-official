@@ -1,0 +1,75 @@
+
+.main12{   
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    background: #4CA1AF; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.Back12{
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.veiw2{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 3px; 
+}
+
+.veiw2 p {
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.border2{
+    padding: 1rem;
+}
+
+.border p{
+    color:#202c46;  
+}
+
+.profile-img {
+    text-align: center;
+    width: 8rem;
+    height: 8rem;
+    opacity: 1;
+    margin: 0 auto
+}
+
+
+
+
+@media screen and (max-width:800px){
+
+
+    .main12{
+        width: 100%;
+        position: absolute;
+        min-height: 120vh;
+    }
+
+    .Back12{
+        background: white;
+        border-radius: 20px;
+        padding: 1.5rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 7rem;
+    }
+}

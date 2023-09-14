@@ -1,0 +1,150 @@
+.smallContl{
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.col-2l{
+    width: 60%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.absl .imgl{
+    width: 30rem;
+    height: 30rem;
+    opacity: 1;
+}
+
+.col-2l .absl{
+    position: absolute;
+    color: white;
+    bottom: 25%;
+}
+
+.col-2l .absl h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.smallContl .img {
+    width: 100%;
+    height: 100vh;
+    font-size: 1rem;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    opacity: 0.15;
+}
+
+.logmob{
+    display: none;
+}
+
+.mob-img{
+    width: 6rem;
+}
+
+.coll {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.coll > *{
+    margin-top: 14px;
+}
+
+.coll p:hover{
+    cursor: pointer;
+    transition: ease-in .5s;
+    color: rgb(0, 0, 0);
+}
+
+.forml{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    background: linear-gradient(to left, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    border: 1px solid black;
+    padding: 10px 30 0;
+}
+
+.forml p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(125, 9, 9);
+}
+
+.bottomzl{
+    color: rgba(0, 0, 0, 0.507);
+    width: 85%;
+    font-weight: bold;
+    margin: 0px 0 0;   
+    font-size: 1.3rem;
+}
+
+.bottomz1 h5{
+    color: rgb(153, 20, 20);
+    transition: ease-in .5s;
+}
+
+.bottomzl span:hover{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: ease-in .7s;
+}
+
+#btspan{
+    color: rgb(153, 20, 20);
+}
+
+.flexl{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5em;
+    align-items: center;
+}
+
+
+@media screen and (max-width:1200px) {
+    .logmob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .col-2{
+        display: none;
+    }
+
+    .forml{
+        width: 50%;
+        border: none
+    }
+}
+
+
+
+@media screen and (max-width:900px) {
+    .smallContl{
+        overflow: show;
+    }
+    
+    .col-2l{
+        display: none;
+    }
+    .forml{
+        width: 100%;
+    }
+}
