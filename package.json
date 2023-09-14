@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
+    "dev": "vite",
     "server": "nodemon backend/server.js",
     "client": "npm run dev --prefix frontend",
     "build": "concurrently \"npm run server\" \"npm run client\" build"
