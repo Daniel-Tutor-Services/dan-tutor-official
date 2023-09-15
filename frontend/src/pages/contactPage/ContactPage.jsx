@@ -1,52 +1,90 @@
 import './ContactPage.css';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import { MapPin, Phone, EnvelopeSimple, FacebookLogo, LinkedinLogo, InstagramLogo } from 'phosphor-react';
 import img from '../../assets/image4.jpg';
+import { setCredentials } from '../../slices/authSlice';
+import {  useDispatch, useSelector } from 'react-redux';
+import {  useContactUsMutation } from '../../slices/usersApiSlice'
 import dtlogo from '../../assets/dtlogo.png';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
+import Loader from '../../components/loader/Loader';
 
 
 
 
+function ContactPage () {
 
-// eslint-disable-next-line react/prop-types
-function ContactPage({ API_URL }){
-
-	const [contactInfo, setContactInfo] = useState({});
+    const [message, setMessage] = useState ('');
+    
+	const dispatch = useDispatch();
+    
+	const { userInfo } = useSelector ((state) => state.auth);
+    
+	const [contactus, {isLoading} ] = useContactUsMutation();
 	
-	function updateContactInfo(event){
-		const { name, value } = event.target;
+	const [ismessageValid, setMessageIsValid] = useState(false);
+	
 
-		setContactInfo((prevContactInfo) => ({
-			...prevContactInfo,
-			[name]: value
-		}));
+	function validMessage(){
+        if(message.length !== 0){
+			setMessageIsValid(true)
+        }
+        
+        else{	
+			toast.warn("Please Input A Message ", {
+				position: toast.POSITION.TOP_RIGHT
+            })
+			setMessageIsValid(false)			
+		}
+
 	}
 
 
-	async function sendMessage(event){
-		event.preventDefault();
-		let response = await fetch(`${API_URL}/api/message/new`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(contactInfo)
-		});
-		response = await response.json();
-		alert(response.message);
-    }
+	const newMessage= async (e) =>{
+
+		e.preventDefault();
+		validMessage();	
 
 
 
-  
+		if (ismessageValid  == true) {
+			toast.warn("Something went wrong, Please Try again", {
+				position: toast.POSITION.TOP_RIGHT
+			});
+		} 
+		
+
+		else {
+			try {
+				const res = await contactus ({message}).unwrap();
+				dispatch(setCredentials({...res}));
+				toast.success("Message Sent Sucessfully", {
+					position: toast.POSITION.TOP_RIGHT
+				}); 
+			}   
+			
+			catch (err) {
+				toast.error(err?.data.message || err.error);        
+			}
+		}
+	}
+
+
+		
+
+
     return (
 
 		<div className="smallContc">
 
-			<form className='formc' onSubmit={sendMessage}>
+			<form className='formc' onSubmit={newMessage}>
+
+
+			{ isLoading && <Loader/> }
+
 
 				<div className="colc">
 					<Link to='/' className='links'>
@@ -55,13 +93,13 @@ function ContactPage({ API_URL }){
 
 					<h2>Send Us A Message</h2>
 					
-					<CustomInput placeholder='Your full name*' name="name" style = {{width: '100%'}}  onChange={updateContactInfo} />
+					<CustomInput placeholder= {userInfo.name} readOnly  name="name" style = {{width: '100%'}}  />
 					
-					<CustomInput placeholder='Email*' name="email" style = {{width: '100%'}}  onChange={updateContactInfo} />
+					<CustomInput placeholder={userInfo.email} readOnly name="email" style = {{width: '100%'}}  />
 					
-					<CustomInput placeholder='Phone number*' name="phone" style = {{width: '100%'}}  onChange={updateContactInfo} />
+					<CustomInput placeholder={userInfo.phone}  readOnly name="phone" style = {{width: '100%'}}  />
 					
-					<textarea placeholder="Write us a message" cols="20" rows="4" id="textc" name="message" onChange={updateContactInfo} ></textarea>
+					<textarea placeholder="Write us a message" cols="20" rows="4" value={message} id="textc" name="message" minLength={10} onChange={(e) => setMessage (e.target.value)} ></textarea>
 					
 					<CustomButton title = 'SUBMIT' style = {{width: '100%', margin: '8px 0% 0'}} />
 
@@ -81,7 +119,7 @@ function ContactPage({ API_URL }){
 						<span>Address</span>
 					</div>
 					
-					<span className="movec">Afe Babalola Post Graduate School</span><br /><br />
+					<span className="movec">Afe Babalola University Post Graduate <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School, Ado Ekiti, Ekiti State, Nigeria.</span><br /><br />
 					
 					<div className="groupc">
 						<Phone size={32} /> 
@@ -97,6 +135,9 @@ function ContactPage({ API_URL }){
 					
 					<span className="movec">achilihudaniel53@gmail.com</span>
 					
+					<br/>
+					<br/>
+
 					<div className="groupc2">
 						<a href="https://www.facebook.com/daniel.achilihu.9"><p><FacebookLogo size={37} className = 'bluei' /></p></a>
 						<a href="https://www.linkedin.com/in/daniel-achilihu-633161150/"><p><LinkedinLogo size={37} className = 'bluei' /></p></a>

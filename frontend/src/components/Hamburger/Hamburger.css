@@ -5,7 +5,7 @@
         width: 40px;
         height: 32px;
         position: absolute;
-        top: -7px;
+        top: -5px;
         cursor: pointer;
         opacity: 0;
         z-index: 2; /* and place it over the hamburger */
@@ -18,7 +18,7 @@
         height: 4px;
         margin-bottom: 5px;
         position: relative;
-        background: #151D3B;
+        background: #020202;
         border-radius: 3px;
         z-index: 1;
         transform-origin: 4px 0px;

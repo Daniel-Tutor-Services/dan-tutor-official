@@ -1,10 +1,10 @@
 import './NavBar.css';
-import { useEffect } from 'react';
-import { toast } from 'react-toastify';
-import { logout } from '../../slices/authSlice';
+import { useEffect } from 'react'
+import { toast } from 'react-toastify'
+import { logout } from '../../slices/authSlice'
 import { useDispatch, useSelector  } from 'react-redux';
-import { useLogoutMutation } from '../../slices/usersApiSlice';
-import { useLocation, useNavigate, NavLink,  Link} from 'react-router-dom';
+import { useLocation, useNavigate, NavLink, Link } from 'react-router-dom';
+import { useLogoutMutation } from '../../slices/usersApiSlice'
 import dtlogo from '../../assets/dtlogo.png';
 import Hamburger from '../../components/Hamburger/Hamburger';
 import CustomButton from '../../components/customButton/CustomButton';
@@ -19,26 +19,8 @@ function NavBar() {
 
     const { userInfo } = useSelector((state) => state.auth);
 
-    
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-
-    const [logoutApiCall] = useLogoutMutation();
-
-
-    const logoutHandler = async () => {
-        try {
-            await logoutApiCall().unwrap();
-            dispatch(logout());
-            toast.error(`Logged Out Successful`, {
-                position: toast.POSITION.TOP_RIGHT
-            })
-            navigate('/login');
-        } catch (err) {
-            alert(err);         
-        }
-    }
 
 
     function ScrollToTop() {
@@ -55,7 +37,21 @@ function NavBar() {
         return null;
     }
 
+    const [logoutApiCall] = useLogoutMutation();
 
+    const logoutHandler = async () => {
+        try {
+            await logoutApiCall().unwrap();
+            dispatch(logout());
+            toast.error(`Logged Out Successful`, {
+                position: toast.POSITION.TOP_RIGHT
+            })
+            navigate('/login');
+        } catch (err) {
+            alert(err);
+            
+        }
+    }
 
 
     return (
@@ -101,14 +97,10 @@ function NavBar() {
                         )
                     }
                 
-                    <Link to='/contact-page' className='links'>
+                    <Link to='/contactus' className='links'>
                         <li>Contact</li>
                     </Link> 
 
-                    <NavLink to='/termsandconditions' className='links' onFocus={ScrollToTop()}>        
-                        <li className='hambli'> Terms </li> 
-                    </NavLink>
-                    
                 </ul>
 
             </nav>
@@ -128,28 +120,29 @@ function NavBar() {
                             </>
                             :  
                             <>
-                                    <div className='userpro'>
+                                <div className='userpro'>
 
-                                        <div className='prodiv'>
-                                            <img src={profile} alt='profileicon' style={{width:'20px'}}/>
+                                    <div className='prodiv'>
 
-                                            <img src={arrow} alt='arrowdown' style={{width:'20px'}} className='arrowhov'/> 
+                                        <img src={arrow} alt='arrowdown' style={{width:'25px'}} className='arrowhov'/> 
 
-                                            <div className='droplogout'>
+                                        <div className='droplogout' >
 
+                                            <Link to='/profile-page' className='links'> 
                                             <br />
-                                                <Link to='/profile-page' className='links'> 
-                                                    <h6 style={{fontSize:'0.8em', color:'darkblue', marginRight:'50px'}}>{`${userInfo.name}`}</h6>
-                                                </Link> 
-
-                                                <Link to='/login' className='links' onClick={logoutHandler}> 
-                                                    <h6  style={{cursor: 'pointer', color:'red'}}>Logout</h6>
-                                                </Link> 
-
-                                            </div>
-                                            
+                                                <h6 style={{fontSize:'0.8em', color:'darkblue', fontWeight:'bolder',margin:'0.2rem', width:'110px', wordBreak:'break-word'}}>{`${userInfo.email}`}</h6>
+                                            </Link>                                           
                                         </div>
+
+                                        <img src={profile} alt='profileicon' style={{width:'25px'}}/>
+
                                     </div>
+
+                                    <Link to='/' className='links'> 
+                                        <CustomButton title='LOGOUT' onClick={logoutHandler} style={{width:'100px', fontSize:'0.7rem'}}/>
+                                    </Link> 
+                                
+                                </div>
 
                             </>
                         }

@@ -5,8 +5,10 @@ import {
     registerUser,
     logoutUser,
     getUserProfile,
-    updateUserProfile
+    updateUserProfile,
 } from "../controllers/userController.js";
+
+import { contact } from "../controllers/contactUsController.js";
 import { protect } from "../middleware/authMiddleWare.js";
 
 
@@ -18,6 +20,7 @@ router.post ('/logout', logoutUser)
 // router.put ('/profile',protect, updateUserProfile)
 
 router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile);
+router.post ('/contactus', contact)
 
 
 

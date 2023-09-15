@@ -49,7 +49,7 @@ function DashBoard() {
                         <div >
                             <br/>
                                 <marquee direction="right">
-                                    <h3 style={{fontSize:'1.1em', color:'darkblue', marginLeft:'10px'}}>{`Welcome,  ${userInfo.name}`}</h3> 
+                                    <h3 style={{fontSize:'1.1em', color:'darkblue', marginLeft:'10px'}}>{`Welcome,  ${userInfo.fullName}`}</h3> 
                                 </marquee>
                             <br/>
 

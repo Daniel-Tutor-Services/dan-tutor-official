@@ -1,118 +1,210 @@
-import './EditedProfile.css'
-import {useState} from 'react'
-import { toast } from 'react-toastify'
+import './EditedProfile.css';
+import { useState} from 'react';
+import { toast } from 'react-toastify';
+import { setCredentials } from '../../slices/authSlice';
+import {  useDispatch, useSelector } from 'react-redux';
+import {  useUpdateProfileMutation } from '../../slices/usersApiSlice';
 import SideBar from './SideBar';
+import validator from 'validator';
+import ProfNavBar from './ProfNavBar';
+import Loader from '../../components/loader/Loader';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
-import ProfNavBar from './ProfNavBar';
 
 
 
 
+function EditedProfile() {
+    
+    //Declaration of variables
 
+    const dispatch = useDispatch();
+    const [fullName, setFullName] = useState ('');
+    const [email, setEmail] = useState ('');
+    const [phone, setPhone] = useState ('');
+    const { userInfo } = useSelector ((state) => state.auth);
+    const [updateProfile, {isLoading} ] = useUpdateProfileMutation();
 
+    const [isfullNameValid, setFullNameIsValid] = useState(false);
+    const [isemailValid, setEmailIsValid] = useState(false);
+    const [isphoneValid, setPhoneIsValid] = useState(false);
 
+    
+    
+    //Input border styles for validation
 
-
-
-
-
-
-// eslint-disable-next-line react/prop-types
-function EditedProfile({API_URL}) {
-   
-    const[userEditedProfile, setUserEditedprofile] = useState({
-        fullName:'',
-        phoneNumber:''
+    const [fullNameStyle, setFullNameStyle] = useState({
+        width: '100%',
+        margin: '0 0 0 0',
+        border: '',
+        borderRadius: '15px'
     })
 
-    const [localStorageData,setLocalStorageData] = useState({})
+    const [emailStyle, setEmailStyle] = useState({
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '',
+        borderRadius: '15px'
+    })
 
-    // useEffect(()=>{
-    //     //COLLECTING THE DATA FROM LOCAL STORAGE AND CONVERTING TO AN OBJECT
-    //     const stData = JSON.parse(localStorage.getItem('userData'))
+    const [phoneStyle, setPhoneStyle] = useState({
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '',
+        borderRadius: '15px'
+    })
+
+    const redBorder = {
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '2px solid red',
+        borderRadius: '15px'
+    }
+
+    const greenBorder = {
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '2px solid green',
+        borderRadius: '15px'
+    }
+
+    const yellowBorder = {
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '2px solid yellow',
+        borderRadius: '15px'
+    }
+  
+
+    
+    //check for valid name
+
+    function validFullname(){
         
-    //     //SETTING THE DATE COLLECTED INTO THIS STATE
-    //     setLocalStorageData(stData)
-    //     const {fullName,phoneNumber,email} = stData
-    //     setUserEditedprofile(
-    //         (initialprofile) =>(
-    //             {
-    //                 ...initialprofile,
-    //                 fullName:fullName,
-    //                 email:email,
-    //                 phoneNumber:phoneNumber
-    //             }
-    //         )
-    //     )
-    // },[])
+        if(fullName.length == 0){
+            setFullNameStyle({...yellowBorder})
+            toast.warn(`Name Unchanged `, {
+                position: toast.POSITION.TOP_RIGHT
+            })  
+            setFullNameIsValid(true)
+        }
+        else{
+            setFullNameStyle({...greenBorder})
+            toast.success(`Name Updated `, {
+                position: toast.POSITION.TOP_RIGHT
+            })
+            setFullNameIsValid(true)
+        }
+
+    }
+
+
+    // check for input alphabet only 
+
+    const onInputChange = e => {
+        
+        const { value } = e.target;
+        const re = /^[A-Za-z][A-Za-z\s]*$/;
+        
+        
+        if (value === "" || re.test(value)) {
+            setFullName(value);
+        }
+    }
+
     
-    
-    
-    // const navigate = useNavigate()
-    function updateEditedprofile(e){
-        const {name, value} = e.target
-        setUserEditedprofile(initialEdit => ({
-            ...initialEdit, [name]:value
-        }))
+    //check for email
+
+    function validEmail(){
+        
+        if(email.length == 0){
+            setEmailStyle({...yellowBorder})
+            toast.warn(`Email Unchanged `, {
+                position: toast.POSITION.TOP_RIGHT
+            })  
+            setEmailIsValid(true)
+        }
+        else{
+            setFullNameStyle({...greenBorder})
+            toast.success(`Email Updated `, {
+                position: toast.POSITION.TOP_RIGHT
+            })
+            setFullNameIsValid(true)
+        }
+
     }
 
 
 
-    function handleSubmit(e){
-        //to prevent refreshing of page after submitting
-        e.preventDefault()
-        // console.log(userEditedProfile)
+    //check for valid phone number    
 
-        const{fullName,phoneNumber} = userEditedProfile
+    function validPhone(){
 
-        if(fullName.trim() === '' || phoneNumber.trim() === ''){
-            return  toast.warn(`you cannot use empty space`, {
+        if(phone.length == 0){
+            setPhoneStyle({...yellowBorder})
+            toast.warn(`Phone Number Unchanged `, {
                 position: toast.POSITION.TOP_RIGHT
             })
+            setPhoneIsValid(true)
         }
-
-        const newData = localStorageData
-        newData.fullName = fullName
-        newData.phoneNumber = phoneNumber
-
-        setLocalStorageData(initialLC => ({
-            ...initialLC,
-            fullName:fullName,
-            phoneNumber:phoneNumber
-        }))
-
-        localStorage.setItem('userData',JSON.stringify(newData))
-
-        fetch(`${API_URL}/auth/user/updateprofile/${localStorageData._id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(userEditedProfile),
-        })
-        
-        .then((response) => response.json())
-        .then((data) => {
-            if(data.success){
-                console.log(data)
-                toast.success(`${data.message}`, {
-                    position: toast.POSITION.TOP_RIGHT
-                })
+     
+        else{
+            if(validator.isNumeric(phone)){
+                setPhoneStyle({...phoneStyle, border: '2px solid green'})
+                setPhoneIsValid(true)
             }
             
             else{
-                toast.error(`${data.message}`, {
+                setPhoneStyle({...redBorder})
+                
+                toast.warn("Invalid Phone Number", {
                     position: toast.POSITION.TOP_RIGHT
                 })
+                setPhoneIsValid(false)
             }
-        })
-        
-        .catch(() => toast.error(`Server error`, {
-            position: toast.POSITION.TOP_RIGHT
-        }))
     
+        }
     }
+
+
+
+
+    // Validation of the form
+    
+    const updateUserProfile = async (e) =>{
+
+        e.preventDefault();
+        validFullname();
+        validEmail();
+        validPhone();
+
+
+
+        if (isfullNameValid  && isemailValid && isphoneValid  !== true) {
+            toast.error("Please Enter Correct Information", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            
+        } 
+        else {
+
+            const res = await updateProfile ({
+                _id: userInfo._id,
+                fullName,
+                phone, 
+            
+            }).unwrap();
+
+            dispatch(setCredentials({...res}));
+            toast.success("Profile Updated Successfully", {
+                position: toast.POSITION.TOP_RIGHT
+            }); 
+        }  
+    }
+     
+ 
+
+
 
 
     return (
@@ -130,16 +222,25 @@ function EditedProfile({API_URL}) {
             
             <div className='Back12'>
 
-                <form onSubmit={handleSubmit} >
-        
+                <form onSubmit={updateUserProfile} >
+
+                    <div style={{display:'flex', justifyContent:'center'}}>
+                        { isLoading && <Loader/> }
+                    </div>
+
                     <div className="border2" >
-                        <p>Fullname</p>
-                        <CustomInput placeholder='e.g  Achilihu Daniel Uchenna' name="fullName" style={{width:'100%',height:'1rem', borderRadius:'1rem',border:' 2px solid black',padding:'1.5rem'}} value={userEditedProfile.fullName} onChange = {updateEditedprofile} />
+                        <p>Full Name</p>
+                        <CustomInput placeholder={userInfo.fullName} value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
+                    </div>
+
+                    <div className="border2" >
+                        <p>Email</p>
+                        <CustomInput type='email' placeholder= {userInfo.email}  style = {emailStyle} readOnly onChange={(e) => setEmail(e.target.value)} />
                     </div>
 
                     <div className="border2">
-                        <p>Phone number</p>
-                        <CustomInput  placeholder='e.g  09037231624' name="phoneNumber"  style={{width:'100%',height:'1rem', borderRadius:'1rem',border:' 2px solid black',padding:'1.5rem'}} value ={userEditedProfile.phoneNumber}  onChange = {updateEditedprofile}/>
+                        <p>Phone Number</p>
+                        <CustomInput  placeholder= {userInfo.phone} value= {phone} style = {phoneStyle}  onChange={(e) => setPhone(e.target.value)} />
                     </div>
 
                     <div className="border2">
@@ -155,4 +256,4 @@ function EditedProfile({API_URL}) {
     )
 }
 
-export default EditedProfile
+export default EditedProfile;

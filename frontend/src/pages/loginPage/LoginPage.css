@@ -66,7 +66,7 @@
 .coll p:hover{
     cursor: pointer;
     transition: ease-in .5s;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .forml{
@@ -86,7 +86,7 @@
 }
 
 .bottomzl{
-    color: rgba(0, 0, 0, 0.507);
+    color: rgb(0, 0, 0);
     width: 85%;
     font-weight: bold;
     margin: 0px 0 0;   
@@ -100,7 +100,7 @@
 
 .bottomzl span:hover{
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: ease-in .7s;
 }
 

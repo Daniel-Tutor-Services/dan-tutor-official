@@ -1,6 +1,7 @@
-import asyncHandler from 'express-async-handler'
+import asyncHandler from 'express-async-handler';
 import generateToken from '../utils/generateToken.js'
 import User from '../models/userModel.js'
+
 
 
 
@@ -20,9 +21,9 @@ const registerUser =  asyncHandler(async (req, res) => {
     // res.status (200).json({ message: 'Register User' });
     
     
-    const { name, email, phone, password } = req.body;
+    const { fullName, userName, email, phone, password } = req.body;
     
-    const userExists = await User.findOne({email})
+    const userExists = await User.findOne({email, userName})
     
     if (userExists) {
         res.status(400);
@@ -30,7 +31,8 @@ const registerUser =  asyncHandler(async (req, res) => {
     }
     
     const user = await User.create ({
-        name,
+        fullName,
+        userName,
         email,
         phone,
         password
@@ -40,7 +42,8 @@ const registerUser =  asyncHandler(async (req, res) => {
         generateToken (res, user._id);
         res.status (201).json ({
             _id: user._id,
-            name: user.name,
+            fullName: user.fullName,
+            userName: user.userName,
             email: user.email,
             phone: user.phone,
             password: user.password
@@ -75,7 +78,7 @@ const authUser =  asyncHandler(async (req, res) => {
     
     // res.status (200).json({ message: 'Login Successful' });
     
-    const { email, password  } = req.body;
+    const { email, password } = req.body;
     
     const user = await User.findOne({ email });
     
@@ -84,13 +87,14 @@ const authUser =  asyncHandler(async (req, res) => {
         res.status(201).json({
             message: 'Login Successful',
             _id: user._id,
-            name: user.name,
+            fullName: user.fullName,
+            userName: user.userName,
             email: user.email, 
             phone: user.phone 
         });
     } else {
         res.status(401);
-        throw new Error('Invalid email or password');
+        throw new Error('Invalid details');
     }
     
 });
@@ -151,7 +155,8 @@ const getUserProfile =  asyncHandler(async (req, res) => {
     
     const user = {
         _id: req.user._id,
-        name: req.user.name,
+        fullName: req.user.fullName,
+        userName: req.user.userName,
         email: req.user.email,
         phone: req.user.phone
     };
@@ -183,7 +188,8 @@ const updateUserProfile =  asyncHandler(async (req, res) => {
     const user = await User.findById (req.user._id);
 
     if (user) {
-        user.name = req.body.name || user.name;
+        user.fullName = req.body.fullName || user.fullName;
+        user.userName = req.body.userName || user.userName;
         user.email = req.body.email || user.email;
         user.phone = req.body.phone || user.phone;
 
@@ -194,17 +200,18 @@ const updateUserProfile =  asyncHandler(async (req, res) => {
 
         res.status (200).json({
             _id: updatedUser._id,
-            name: updatedUser.name,
+            fullName: updatedUser.fullName,
+            userName: updatedUser.userName,
             email: updatedUser.email,
             phone: updatedUser.phone
+ 
+
         });
     } else{
         res.status(404);
         throw new Error ('User not found')
     }
 });
-
-
 
 
 

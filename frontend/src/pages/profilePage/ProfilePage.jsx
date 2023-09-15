@@ -10,9 +10,12 @@ import ProfNavBar from './ProfNavBar';
 
 function ProfilePage() {
 
-
+    // Declaration of Variables
     const { userInfo } = useSelector((state) => state.auth)
     
+
+
+
     return (
 
         <div className="Profile-con">
@@ -35,24 +38,31 @@ function ProfilePage() {
                     </div>
 
                     <div className=" profile-border" >
-                        <IdentificationBadge size={28} weight="thin" />
+                        <IdentificationBadge className='p-icons' size={28} weight="thin" />
                         <h5>Fullname:</h5>
-                        <p className='p-details'>{userInfo.name}</p>
+                        <p className='p-details'>{userInfo.fullName}</p>
+                    </div>
+
+                    <div className=" profile-border" >
+                        <IdentificationBadge className='p-icons' size={28} weight="thin" />
+                        <h5>Username:</h5>
+                        <p className='p-details'>{userInfo.userName}</p>
                     </div>
 
                     <div className=" profile-border">
-                        <Envelope size={28} weight="thin" />
+                        <Envelope className='p-icons'  size={28} weight="thin" />
                         <h5>Email:</h5>
                         <p className='p-details'>{userInfo.email}</p>
                     </div>
                     
                     <div className=" profile-border">
-                        <Phone size={28} weight="thin" />
+                        <Phone className='p-icons'  size={28} weight="thin" />
                         <h5>Phone number:</h5>
                         <p className='p-details'>{userInfo.phone}</p>
                     </div>
                     
                 </div>
+
             </div>
 
         </div>

@@ -10,7 +10,7 @@
     border:none;
     border-right: 5px solid rgba(255, 255, 255, 0.753);
     min-height: 100vh;
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: start;

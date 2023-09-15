@@ -1,136 +1,179 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
 import './ChangePassword.css'
 import './EditedProfile.css'
-import {useState} from 'react'
 import { toast } from 'react-toastify';
-import ProfNavBar from './ProfNavBar';
+import { AiFillEye } from 'react-icons/ai'
+import { useState, useEffect } from 'react';
+import { AiFillEyeInvisible } from 'react-icons/ai'
+import { useDispatch, useSelector } from 'react-redux';
+import { setCredentials } from '../../slices/authSlice';
+import { useUpdatePassWordMutation } from '../../slices/usersApiSlice'
 import SideBar from './SideBar';
+import ProfNavBar from './ProfNavBar';
+import Loader from '../../components/loader/Loader';
 import CustomInput from '../../components/customInput/CustomInput';
-import CustomButton from '../../components/customButton/CustomButton'
+import CustomButton from '../../components/customButton/CustomButton';
 
 
 
 
-function ChangePassword({API_URL}){
 
-    const style = {width:'100%',height:'1rem', borderRadius:'1rem',border:' 2px solid black',padding:'1.5rem'}
+function ChangePassword(){
 
-    const [passStyle, setPassStyles] = useState({
-        ...style
+    //Declaration of variables
+
+        
+    const [password, setPassword] = useState ('');
+    const [confirmPassword, setConfirmPassword] = useState ('');
+   
+
+    const  [passwordShown, setPasswordShown] = useState(true);
+    const  [passwordShown2, setPasswordShown2] = useState(true);
+    const  [passwordShown3, setPasswordShown3] = useState(true);
+
+    const dispatch = useDispatch();
+    const { userInfo } = useSelector ((state) => state.auth);
+
+    const [updatePassWord, {isLoading} ] = useUpdatePassWordMutation();
+    
+    const togglePassword = () => {
+        setPasswordShown(!passwordShown);
+    };
+
+    const togglePassword2 = () => {
+        setPasswordShown2(!passwordShown2);
+    };
+    const togglePassword3 = () => {
+        setPasswordShown3(!passwordShown3);
+    };
+
+
+
+
+
+    useEffect (() => {
+        setPassword(userInfo.password);
+        setConfirmPassword(userInfo.ConfirmPassword);
+
+    }, [userInfo.password, userInfo.ConfirmPassword]);
+
+  
+      
+    //Input border for validation
+
+    const [passWordStyle, setPassWordStyle] = useState({
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '',
+        borderRadius: '15px'
     })
 
-    const [conPassStyle, setConPassStyles] = useState({
-        ...style
+    const [confirmPassWordStyle, setConfirmPassWordStyle] = useState({
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '',
+        borderRadius: '15px'
     })
 
+        
     const redBorder = {
-        width:'100%',
-        height:'1rem', 
-        borderRadius:'1rem',
-        padding:'1.5rem',
-        border: '2px solid red'
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '2px solid red',
+        borderRadius: '15px'
     }
 
     const greenBorder = {
-        width:'100%',
-        height:'1rem', 
-        borderRadius:'1rem',
-        padding:'1.5rem',
-        border: '2px solid green'
+        width: '100%',
+        margin: '2% 0 0 0',
+        border: '2px solid green',
+        borderRadius: '15px'
     }
-   
-    const[userPasswords,setUserPasswords] = useState({
-        oldPassword:'',
-        password:'',
-        confirmPassword:''
-    })
 
-   
-    const {password,confirmPassword} = userPasswords 
+
+ 
     
-    const strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+    // Check for valid new password
 
-    function handleChangePassword(e){
-        const {name,value} = e.target
-        setUserPasswords(intialState => ({
-            ...intialState,
-            [name]:value
-        }))
+    const check = Object.is(password, confirmPassword)
 
-    }
+    function validNewPassword(){
 
-    //let check = Object.is(password,confirmPassword)
+        let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
 
-    function handleNewpassword(e){
-        const {name,value} = e.target
-        setUserPasswords(intialState => ({
-            ...intialState,
-            [name]:value
-        }))
-        
         if(strongPassword.test(password)){
-            setPassStyles({...greenBorder})
+
+            setPassWordStyle({...greenBorder})
+     
+
+            //check for confirm password
+            if(check){
+                setConfirmPassWordStyle({...greenBorder})
+            }
+
+            else{
+                setConfirmPassWordStyle({...redBorder})
+            } 
+            
+
         }
 
         else{
-            setPassStyles({...redBorder})
-        }
-    }
-    
+            setPassWordStyle({...redBorder})
 
-
-    function handleOnSubmit(e){
-        e.preventDefault();
-
-        if(password === confirmPassword){
-            setConPassStyles({...greenBorder})
-        }else{
-            setConPassStyles({...redBorder})
-        }
-
-        if (password !== confirmPassword){
-            return toast.warn("passwords don't match", {
-              position: toast.POSITION.TOP_RIGHT
-            })
-        }
-
-        const localdata = JSON.parse(localStorage.getItem('userData'))
-        const userData = {
-            userId: localdata._id,
-            oldPassword: userPasswords.oldPassword,
-            newPassword: userPasswords.password
-        }
-        //proceeed to fetch
-        fetch(`${API_URL}/auth/changePassword`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        })
-
-        .then((response) => response.json())
-        .then((data) => {
-            if(data.success){
-                toast.success(`${data.message}`, {
-                    position: toast.POSITION.TOP_RIGHT
-                })
-            }
-            else{
-                toast.error(`${data.message}`, {
-                    position: toast.POSITION.TOP_RIGHT
-                })
-            }
-            
-        })
-            
-        .catch(() => {
-            toast.error("Server or Network Failure", {
+            toast.warn("Password is not strong enough", {
                 position: toast.POSITION.TOP_RIGHT
-            })
-        })
+            });
+        }
+                
+
     }
+
+
+
+
+
+    // Validate the form
+
+    const updateUserPassword = async (e) =>{
+
+        e.preventDefault();
+          validNewPassword();
+
+
+        if ( password !== confirmPassword  ) {
+
+            setConfirmPassWordStyle({...redBorder})
+            setPassWordStyle({...redBorder})
+
+            toast.warn("Passwords does not match", {
+                position: toast.POSITION.TOP_RIGHT
+            }); 
+
+        }   
+            
+        else {
+            const res = await updatePassWord ({
+                _id: userInfo._id,                 
+                password,                
+            }).unwrap();
+            
+            dispatch(setCredentials({...res}));
+            
+            toast.success("Profile Updated Successfully", {
+                position: toast.POSITION.TOP_RIGHT
+            }); 
+            setConfirmPassWordStyle({...greenBorder})
+            setPassWordStyle({...greenBorder})   
+
+            toast.success("Profile Updated Successfully", {
+                position: toast.POSITION.TOP_RIGHT
+            }); 
+        }
+
+    }
+
+
+
 
 
 
@@ -149,23 +192,29 @@ function ChangePassword({API_URL}){
             
             <div className='Back11'>
 
-                <form onSubmit={handleOnSubmit}>
+                <form onSubmit={updateUserPassword}>
+
+                    { isLoading && <Loader/> }
 
                     <div className="border2" >
-                        <p>Enter Old Password</p>
-                        <CustomInput type="password" name= 'oldPassword'   placeholder='XXXXXXXX' style={{...style}}
-                        onChange={handleChangePassword}/>
+                        <p>Email</p>
+                        <CustomInput  name= 'oldPassword' type={passwordShown ? "password" : "text"}  placeholder ={userInfo.email} style={passWordStyle} onChange={(e) => setPassword (e.target.value)}  readOnly/>
+
+                        {passwordShown ? <AiFillEyeInvisible  style={{margin:'0 90%'}} size={25} onClick={togglePassword}/> : <AiFillEye style={{margin:'0 90%'}}  size={25} onClick={togglePassword}/> } 
+
                     </div>
 
                     <div className="border2" >
                         <p>Create New Password</p>
-                        <CustomInput type="password" name = 'password'   placeholder='XXXXXXXX' style={{...passStyle}}
-                        onChange={handleNewpassword}/>
+                        <CustomInput  type={passwordShown2 ? "password" : "text"}  value ={password}   placeholder='XXXXXXXX' style={passWordStyle}
+                        onChange={(e) => setPassword (e.target.value)}/>
+                         {passwordShown2 ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={25} onClick={togglePassword2}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword2}/> } 
                     </div>
 
                     <div className="border2">
                         <p>Re-Enter Password</p>
-                        <CustomInput type="password" name= 'confirmPassword'  placeholder='XXXXXXXX'  style={conPassStyle}  onChange={handleChangePassword}/>
+                        <CustomInput  type={passwordShown3 ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
+                        {passwordShown3 ? <AiFillEyeInvisible  style={{margin:'0 90%'}} className= 'AiFillEyeInvisibleIcon' size={25} onClick={togglePassword3}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword3}/> } 
                     </div>
                     
                     <div className="border2">

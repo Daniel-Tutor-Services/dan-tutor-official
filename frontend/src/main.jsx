@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 //About
 import AboutPage from './pages/about/AboutPage.jsx';
 import AllStaffPage from './pages/about/AllStaffPage.jsx';
@@ -91,7 +92,6 @@ const router = createBrowserRouter(
 
             {/* Homepage */}
             <Route index= {true} path='/' exact element = {<HomePage/>} />
-            <Route index= {true} path='/home' exact element = {<HomePage/>} />
             
 
 
@@ -119,22 +119,35 @@ const router = createBrowserRouter(
 
 
             {/* Contact */}
-            <Route path='/contact-page' element = {<PrivateRoutes />}>
-                <Route path="/contact-page" element={<ContactPage />} />
+            <Route path='/contactus' element = {<PrivateRoutes />}>
+                <Route path="/contactus" element={<ContactPage />} />
             </Route>
 
 
 
             {/* Course Outline */}
-            <Route path="/course-materials" element={<CourseMaterials />} />
+            <Route path='/course-materials' element = {<PrivateRoutes />}>
+                <Route path="/course-materials" element={<CourseMaterials />} />
+            </Route>
 
 
-            {/* Course Subjects */}  
-            <Route path="/course-chemistry" element={<Chemistry />} />  
-            <Route path="/course-english-language" element={<EnglishLanguage />} />  
-            <Route path="/course-mathematics" element={<Mathematics />} />  
-            <Route path="/course-physics" element={<Physics />} />  
 
+            {/* Course Subjects */} 
+            <Route path='/course-chemistry' element = {<PrivateRoutes />}> 
+                <Route path="/course-chemistry" element={<Chemistry />} />  
+            </Route>
+
+            <Route path='/course-english-language' element = {<PrivateRoutes />}> 
+                <Route path="/course-english-language" element={<EnglishLanguage />} />  
+            </Route>
+
+            <Route path='/course-mathematics' element = {<PrivateRoutes />}> 
+                <Route path="/course-mathematics" element={<Mathematics />} />  
+            </Route>
+
+            <Route path='/course-physics' element = {<PrivateRoutes />}> 
+                <Route path="/course-physics" element={<Physics />} />  
+            </Route>
 
 
             {/* Dashboard */}

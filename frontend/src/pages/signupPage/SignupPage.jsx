@@ -1,53 +1,97 @@
 import './SignupPage.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import { AiFillEye } from 'react-icons/ai';
+import { AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
+import {  useDispatch, useSelector } from 'react-redux';
+import { setCredentials } from '../../slices/authSlice';
+import {  useRegisterMutation } from '../../slices/usersApiSlice';
 import validator from 'validator';
 import img from '../../assets/image5.jpg';
 import dtlogo from '../../assets/dtlogo.png';
+import Loader from '../../components/loader/Loader';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
 
 
 
+function SignupPage () {
 
-// eslint-disable-next-line react/prop-types
-function SignupPage({ API_URL }) {
-    const [userData, setUserData] = useState({
-        fullName: "",
-        email: "",
-        phoneNumber: "",
-        password: "",
-        confirmPassword: ""
-    })
+
+    // Declaraion of variables
+    
+    const [fullName, setFullName] = useState ('');
+    const [userName, setUserName] = useState ('');
+    const [email, setEmail] = useState ('');
+    const [phone, setPhone] = useState ('');
+    const [password, setPassword] = useState ('');
+    const [confirmPassword, setConfirmPassword] = useState ('');
+    
+      
+    const [isfullNameValid, setFullNameIsValid] = useState(false);
+    const [isuserNameValid, setUserNameIsValid] = useState(false);
+    const [isemailValid, setEmailIsValid] = useState(false);
+    const [isphoneValid, setPhoneIsValid] = useState(false);
+    const [ispassWordValid, setPassWordIsValid] = useState(false);
+    
+    const check = Object.is(password, confirmPassword)
+
+    const  [passwordShown, setPasswordShown] = useState(true);
+    const togglePassword = () => {
+        setPasswordShown(!passwordShown);
+    };
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const [nameStyle, setNameStyles] = useState({
+    const { userInfo } = useSelector ((state) => state.auth);
+    const [register, {isLoading} ] = useRegisterMutation();
+
+
+    useEffect (() => {
+        if (userInfo) {
+            navigate('/waiting-page');
+        }
+
+    }, [navigate, userInfo]);
+
+
+
+
+    //Input border styles for validation
+
+    const [fullNameStyle, setFullNameStyle] = useState({
         width: '100%',
         margin: '0 0 0 0',
         border: ''
-    })
+    });
 
-    const [passStyle, setPassStyles] = useState({
+    const [userNameStyle, setUserNameStyle] = useState({
+        width: '100%',
+        margin: '0 0 0 0',
+        border: ''
+    });
+
+    const [emailStyle, setEmailStyle] = useState({
         width: '100%',
         margin: '2% 0 0 0',
         border: ''
-    })
-
+    });
+    
     const [phoneStyle, setPhoneStyle] = useState({
         width: '100%',
         margin: '2% 0 0 0',
         border: ''
-    })
+    });
 
-    const [conpasStyle, setConpasStyle] = useState({
+    const [passWordStyle, setPassWordStyle] = useState({
         width: '100%',
         margin: '2% 0 0 0',
         border: ''
-    })
+    });
 
-    const [emailStyle, setEmailStyle] = useState({
+    const [confirmPassWordStyle, setConfirmPassWordStyle] = useState({
         width: '100%',
         margin: '2% 0 0 0',
         border: ''
@@ -56,66 +100,89 @@ function SignupPage({ API_URL }) {
     const redBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '3px solid red'
+        border: '2px solid red'
     }
 
     const greenBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '3px solid green'
+        border: '2px solid green'
     }
     
-    const [isnameValid, setNameIsValid] = useState(false);
-    const [isemailValid, setEmailIsValid] = useState(false);
-    const [isphoneValid, setPhoneIsValid] = useState(false);
-    const [ispassValid, setPassIsValid] = useState(false);
-    const check = Object.is(userData.password,userData.confirmPassword)
-
-
-    function updateUserdata(e){
-        const {value, name} = e.target
-
-        setUserData(initialUserData => ({
-            ...initialUserData,
-            [name]: value
-        }))
-        // console.log(userData)
-    }
-
 
     
-    function validFullname(){
-        //check for full name
-        if(userData.fullName.length === 0){
-            setNameStyles({...redBorder})
-            setNameIsValid(false)
+    //check for valid fullname
+    
+    function validFullname(){   
+
+        if(fullName.length === 0){
+            setFullNameStyle({...redBorder})
+            setFullNameIsValid(false)
             toast.warn(`Full Name Required`, {
             position: toast.POSITION.TOP_RIGHT
             })
         }
 
         else{
-            setNameStyles({...greenBorder})
-            setNameIsValid(true)
+            setFullNameStyle({...greenBorder})
+            setFullNameIsValid(true)
         }
+    }
+
+
+    // check for input alphabet only 
+
+    const onInputChange = e => {
+
+        const { value } = e.target;
+        const re = /^[A-Za-z][A-Za-z\s]*$/;
+
+        if (value === "" || re.test(value)) {
+            setFullName(value);
+        }
+    
     }
 
     
 
-    function validEmail(){
-        //check for email
-        const emailvalidate = validator.isEmail(userData.email)
+    //check for valid username
+    
+    function validUsername(){
 
-        if(userData.email.length === 0){
+        if(userName.length === 0){
+            setUserNameStyle({...redBorder})
+            setUserNameIsValid(false)
+            toast.warn(`User Name Required`, {
+            position: toast.POSITION.TOP_RIGHT
+            })
+        }
+
+        else{
+            setUserNameStyle({...greenBorder})
+            setUserNameIsValid(true)
+        }
+    }
+
+
+
+    
+    //check for valid email
+
+    function validEmail(){
+
+        const emailvalidate = validator.isEmail(email)
+
+        if(email.length === 0){
             setEmailStyle({...redBorder})
             setEmailIsValid(false)
 
-            toast.warn("Email Required ", {
+            toast.warn("Email Address Required ", {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
         
         else{
+
             if(emailvalidate){
                 setEmailStyle({...greenBorder})
                 setEmailIsValid(true)
@@ -133,19 +200,22 @@ function SignupPage({ API_URL }) {
     }
 
 
+
+    //check for valid phone number
+
     function validPhone(){
-        //check the phone number
-        if(userData.phoneNumber.length !== 11){
+
+        if(phone.length === 0){
             setPhoneStyle({...redBorder})
             setPhoneIsValid(false)
 
-            toast.warn("Phone Number not up to eleven", {
+            toast.warn("Invalid Phone Number", {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
 
         else{
-            if(validator.isNumeric(userData.phoneNumber)){
+            if(validator.isNumeric(phone)){
                 setPhoneStyle({...phoneStyle, border: '2px solid green'})
                 setPhoneIsValid(true)
             }
@@ -163,32 +233,30 @@ function SignupPage({ API_URL }) {
 
 
 
+    //check for valid password
 
     function validPassword(){
-        //check for password
         let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
 
-        if(strongPassword.test(userData.password)){
-            //set the border to green
-            setPassStyles({...greenBorder})
-            setPassIsValid(true)
+        if(strongPassword.test(password)){
+            setPassWordStyle({...greenBorder})
+            setPassWordIsValid(true)
 
             //check for confirm password
             if(check){
-                setConpasStyle({...greenBorder})
-                setPassIsValid(true)
+                setConfirmPassWordStyle({...greenBorder})
+                setPassWordIsValid(true)
             }
             
             else{
-                setConpasStyle({...redBorder})
-                setPassIsValid(false)
+                setConfirmPassWordStyle({...redBorder})
+                setPassWordIsValid(false)
             }  
         }
         
         else{
-            //set the border to red
-            setPassStyles({...redBorder})
-            setPassIsValid(false)
+            setPassWordStyle({...redBorder})
+            setPassWordIsValid(false)
             
             toast.warn("Password is not strong enough", {
                 position: toast.POSITION.TOP_RIGHT
@@ -197,58 +265,59 @@ function SignupPage({ API_URL }) {
     
     }
 
-    function sendNewUserData(e){
-        
-        e.preventDefault()
+
+    //validate the form
+
+    const registerNewUser = async (e) =>{
+
+        e.preventDefault();
         validFullname();
+        validUsername();
         validEmail();
         validPhone();
-        // validSecQuest();
         validPassword();
-
-
-        const {password, confirmPassword} = userData;
         
+
+
+
         if (password !== confirmPassword){
-            return toast.warn("passwords don't match", {
+            return toast.error("Passwords don't match", {
                 position: toast.POSITION.TOP_RIGHT
-            })
+            });
         }
+    
 
-        if(isemailValid && isnameValid && ispassValid && isphoneValid){
-            // return console.log(userData)
+        if (isfullNameValid && isuserNameValid && isemailValid && ispassWordValid && isphoneValid !== true) {
+            toast.warn("Please Enter Correct Information", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        } 
+        
+
+        else {
+            try {
+                const res = await register ({fullName, userName, email, phone, password, confirmPassword}).unwrap();
+                dispatch(setCredentials({...res}));
+                navigate('/waiting-page');
+                toast.success("Registration Successful", {
+                    position: toast.POSITION.TOP_RIGHT
+                }); 
+            }   
             
-            fetch(`${API_URL}/auth/user/register`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(userData)
-            })
-
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.success){
-                    navigate("/waiting-page")
-                }
-
-                else{
-                    toast.error(`${data.message}`, {
-                        position: toast.POSITION.TOP_RIGHT
-                    })
-                }
-            })
+            catch (err) {
+                toast.error(err?.data.message || err.error);        
+            }
         }
     }
-  
 
 
 
 
     return (
+
         <div className="smallCont">
 
-            <form className='form' onSubmit={sendNewUserData}>
+            <form className='form' onSubmit={registerNewUser}>
 
                 <div className="col"> 
 
@@ -258,22 +327,29 @@ function SignupPage({ API_URL }) {
                         </div>
                     </Link> 
 
+
                     <h2>Join Us on This Journey</h2>
 
-                    <CustomInput placeholder='FullName*' name="fullName" style = {nameStyle} onChange={updateUserdata} />  <br />
-                    
-                    <CustomInput placeholder='Email*' name="email" style = {emailStyle} onChange={updateUserdata}/>  <br />
-                    
-                    <CustomInput placeholder='Phone Number*' name="phoneNumber" style = {phoneStyle} onChange={updateUserdata}/>  <br />
+                    { isLoading && <Loader/> }
 
-                    <CustomInput placeholder='Confirm Password*' name="confirmPassword" type ='password' style = {conpasStyle} onChange={updateUserdata}/> 
+                    <CustomInput placeholder='FullName*' type="text"  value= {fullName} style = {fullNameStyle}  onChange={onInputChange}/>  <br />
+
+                    <CustomInput placeholder='UserName*' value= {userName} style ={userNameStyle} onChange={(e) => setUserName (e.target.value)} />  <br />
+                    
+                    <CustomInput placeholder='Email*' value= {email}  name="email" type='email' style = {emailStyle} onChange={(e) => setEmail (e.target.value)}/>  <br />
+                    
+                    <CustomInput placeholder='Phone Number*' value= {phone}  name="phoneNumber" style = {phoneStyle} onChange={(e) => setPhone (e.target.value)}/>  <br />
+
+                    <CustomInput placeholder='Password*' value= {password}  name="confirmPassword" type={passwordShown ? "password" : "text"}  style = {confirmPassWordStyle} onChange={(e) => setPassword (e.target.value)}/> 
                     <br />
 
-                    <CustomInput placeholder='Password*' name="password" type ='password' style = {passStyle} onChange={updateUserdata}/>
+                    <CustomInput placeholder='Confirm Password*' value= {confirmPassword}  name="password" type={passwordShown ? "password" : "text"}  style = {passWordStyle} onChange={(e) => setConfirmPassword (e.target.value)}/>
                     <br />
-                   
+
+                    {passwordShown ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={20} color='black' onClick={togglePassword}/> : <AiFillEye  style={{margin:'0 90%'}} color='black' size={20} onClick={togglePassword}/> } 
+ 
     
-                    <CustomButton title = 'SIGN UP' style = {{width: '100%', margin: '8px 0% auto'}} />
+                    <CustomButton title = 'SIGN UP'  style = {{width: '100%', margin: '8px 0% auto'}} />
 
                 </div>
 

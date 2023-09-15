@@ -71,8 +71,15 @@ function SideBar() {
 
             <NavLink to='/change-password' className='links'>
                 <div  className='sidebar-icon'>
-                    <Password size={18} color='black' style={{ marginRight: '1rem'}} weight="thin" />
+                    <Lock size={18} color='black' style={{ marginRight: '1rem'}} weight="thin" />
                     <p>Change password</p>
+                </div>
+            </NavLink>
+
+            <NavLink to='/termsandconditions' className='links'>
+                <div  className='sidebar-icon'>
+                    <Password size={18} color='black' style={{ marginRight: '1rem'}} weight="thin" />
+                    <p>Terms and Conditions</p>
                 </div>
             </NavLink>
             
@@ -81,14 +88,7 @@ function SideBar() {
                     <Lock size={18} color='black' style={{ marginRight: '1rem'}} weight="thin" />
                     <p>Privacy Policy</p>
                 </div>
-            </NavLink>
-
-            <NavLink to='/termsandconditions' className='links'>
-                <div  className='sidebar-icon'>
-                    <Lock size={18} color='black' style={{ marginRight: '1rem'}} weight="thin" />
-                    <p>Terms and Conditions</p>
-                </div>
-            </NavLink>
+            </NavLink>  
             
             <Link to='/login' className='links' onClick={logoutHandler}> 
                 <div className='sidebar-icon'>

@@ -5,6 +5,56 @@
     overflow: hidden;
 }
 
+.smallContc img {
+    width: 100%;
+    height: 100vh;
+    font-size: 1rem;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    opacity: 0.15;
+}
+
+.formc{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+.formc p{
+    font-size: 1rem;
+    color: white;
+}
+
+.colc {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0;
+}
+
+.colc > *{
+    margin-top: 15px;
+}
+
+.colc .img{
+    width: 4rem;
+    height: 4rem;
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.colc h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#textc{
+    padding: 20px 0.8rem 0;
+}
+
 .col-2c{
     width: 60%;
     height: 100%;
@@ -20,68 +70,13 @@
     color: white;
 }
 
-.absc .groupc{
-    margin-top: 30px;
-}
-
-.colc .img{
-    width: 4rem;
-    height: 4rem;
-    opacity: 1;
-    margin: 0 auto;
-}
-
 .col-2c .absc h1{
     font-size: 2rem;
     text-align: center;
 }
 
-.smallContc img {
-    width: 100%;
-    height: 100vh;
-    font-size: 1rem;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    opacity: 0.15;
-}
-
-.colc {
-    width: 80%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto 0;
-}
-
-.colc h2{
-    text-align: center;
-}
-
-#textc{
-    padding: 20px 0.8rem 0;
-}
-
-.colc > *{
-    margin-top: 15px;
-}
-
-.colc p:hover{
-    opacity: 0.3;
-    cursor: pointer;
-    transition: ease-in .5s;
-}
-
-.formc{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
-}
-
-.formc p{
-    font-size: 1rem;
-    color: white;
+.absc .groupc{
+    margin-top: 30px;
 }
 
 .bottomc{
@@ -109,7 +104,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    color: #D82148;
+    color: #d30330;
 }
 
 .groupc span{
@@ -126,8 +121,11 @@
 }
 
 .movec {
+    width: 90%;
     margin-left: 12%;
+    text-align: justify;
     color: white;
+    letter-spacing: 0.02rem;
 }
 
 .groupc2{
@@ -154,6 +152,8 @@
 
 
 
+/* Responsive */
+
 @media screen and (max-width:1200px) {
     .signmob{
         display: flex;
@@ -169,7 +169,6 @@
         width: 100%;
     }
 }
-
 
 
 @media screen and (max-width:900px) {

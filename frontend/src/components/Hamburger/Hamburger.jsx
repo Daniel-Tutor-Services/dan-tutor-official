@@ -110,7 +110,7 @@ function Hamburger() {
 
                     
                     <li className='hambli'> 
-                        <NavLink to='/contact-page' className='links' onFocus={ScrollToTop()}>
+                        <NavLink to='/contactus' className='links' onFocus={ScrollToTop()}>
                             <p>Contact</p>
                         </NavLink>
                     </li>
