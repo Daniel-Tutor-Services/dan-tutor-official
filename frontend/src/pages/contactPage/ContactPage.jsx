@@ -1,12 +1,12 @@
 import './ContactPage.css';
+import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
-import { toast } from 'react-toastify';
+import {  useDispatch, useSelector } from 'react-redux';
+import { setMessagex } from '../../slices/authSlice';
+import {  useContactUsMutation } from '../../slices/usersApiSlice'
 import { MapPin, Phone, EnvelopeSimple, FacebookLogo, LinkedinLogo, InstagramLogo } from 'phosphor-react';
 import img from '../../assets/image4.jpg';
-import { setCredentials } from '../../slices/authSlice';
-import {  useDispatch, useSelector } from 'react-redux';
-import {  useContactUsMutation } from '../../slices/usersApiSlice'
 import dtlogo from '../../assets/dtlogo.png';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
@@ -17,59 +17,46 @@ import Loader from '../../components/loader/Loader';
 
 function ContactPage () {
 
+	const [fullName, setFullName] = useState ('');
+    const [email, setEmail] = useState ('');
+    const [phone, setPhone] = useState ('');
     const [message, setMessage] = useState ('');
-    
-	const dispatch = useDispatch();
-    
-	const { userInfo } = useSelector ((state) => state.auth);
-    
+
+
+	const dispatch = useDispatch(); 
+	const { userInfo } = useSelector ((state) => state.auth);   
 	const [contactus, {isLoading} ] = useContactUsMutation();
-	
-	const [ismessageValid, setMessageIsValid] = useState(false);
-	
 
-	function validMessage(){
-        if(message.length !== 0){
-			setMessageIsValid(true)
-        }
-        
-        else{	
-			toast.warn("Please Input A Message ", {
-				position: toast.POSITION.TOP_RIGHT
-            })
-			setMessageIsValid(false)			
-		}
 
-	}
+
+	// Validation for message input
 
 
 	const newMessage= async (e) =>{
 
 		e.preventDefault();
-		validMessage();	
 
+		if (message.length === 0) {
 
-
-		if (ismessageValid  == true) {
-			toast.warn("Something went wrong, Please Try again", {
+			toast.error("Something went wrong, Please try again", {
 				position: toast.POSITION.TOP_RIGHT
 			});
 		} 
 		
 
 		else {
-			try {
-				const res = await contactus ({message}).unwrap();
-				dispatch(setCredentials({...res}));
-				toast.success("Message Sent Sucessfully", {
-					position: toast.POSITION.TOP_RIGHT
-				}); 
-			}   
-			
-			catch (err) {
-				toast.error(err?.data.message || err.error);        
-			}
-		}
+            try {
+				const res = await contactus ({fullName, phone, email, message}).unwrap();
+                dispatch(setMessagex({...res}));
+                toast.success("Message sent successfully", {
+                    position: toast.POSITION.TOP_RIGHT
+                }); 
+            }   
+            
+            catch (err) {
+                toast.error(err?.data.message || err.error);        
+            }
+        }
 	}
 
 
@@ -88,18 +75,34 @@ function ContactPage () {
 
 				<div className="colc">
 					<Link to='/' className='links'>
-						<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'150px'}}/>          
+						<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'150px'}} />          
 					</Link>
 
 					<h2>Send Us A Message</h2>
+
+					{ userInfo ? 
+
+						(
+							<>
+								<CustomInput placeholder={userInfo.fullName}  style = {{width: '100%'}}  value= {fullName}  onChange={() => setFullName (userInfo.fullName)}/>
+								<CustomInput placeholder= {userInfo.email} style = {{width: '100%'}}  value= {email} onChange={() => setEmail (userInfo.email)}  />
+								<CustomInput placeholder= {userInfo.phone} style = {{width: '100%'}}  value= {phone}  onChange={() => setPhone (userInfo.phone)}  />
+							</>
+						)
+						
+						:
+						
+						( 
+							<>
+								<CustomInput placeholder= 'Full Name*' style = {{width: '100%'}}  value= {fullName}  onChange={(e) => setFullName (e.target.value)} />		
+								<CustomInput placeholder= 'Email Address*' style = {{width: '100%'}}  value= {email}  onChange={(e) => setEmail (e.target.value)} />
+								<CustomInput placeholder= 'Phone Number*' style = {{width: '100%'}}  value= {phone}  onChange={(e) => setPhone (e.target.value)} />		
+							</>
+						)	
+					}
 					
-					<CustomInput placeholder= {userInfo.name} readOnly  name="name" style = {{width: '100%'}}  />
 					
-					<CustomInput placeholder={userInfo.email} readOnly name="email" style = {{width: '100%'}}  />
-					
-					<CustomInput placeholder={userInfo.phone}  readOnly name="phone" style = {{width: '100%'}}  />
-					
-					<textarea placeholder="Write us a message" cols="20" rows="4" value={message} id="textc" name="message" minLength={10} onChange={(e) => setMessage (e.target.value)} ></textarea>
+					<textarea placeholder="Write us a message" cols="20" rows="4" value={message} id="textc" minLength={10} onChange={(e) => setMessage (e.target.value)} ></textarea>
 					
 					<CustomButton title = 'SUBMIT' style = {{width: '100%', margin: '8px 0% 0'}} />
 

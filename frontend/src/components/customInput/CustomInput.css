@@ -3,14 +3,12 @@
     padding: 15px 15px 14px;
     margin:10px 0; 
     font-size: 15px;
-    border: 1px solid #151D3B;
+    border: 1.8px solid #151D3B;
     outline: none;
     color: #151D3B;
-
 }
 
-::placeholder{
-    
+::placeholder{  
     font-size: 15px;
     color: gray;
 }

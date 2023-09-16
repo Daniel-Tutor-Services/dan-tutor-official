@@ -1,8 +1,8 @@
 import './AboutPage.css';
 import { Link } from "react-router-dom";
-import ch1 from "./aboutAssets/ch1.png";
-import ch2 from "./aboutAssets/ch2.png";
-import ch3 from "./aboutAssets/ch3.png";
+import csa from "./aboutAssets/csa.png";
+import caw from "./aboutAssets/caw.png";
+import tr from "./aboutAssets/tr.png";
 import NavBar from '../homePage/NavBar';
 import StaffPage from './StaffPage.jsx';
 import CustomButton from '../../components/customButton/CustomButton.jsx';
@@ -70,7 +70,7 @@ function AboutPage() {
 
                         <div className='c-a-t'>
                             <div className='client-sat'>
-                                <img src={ch1} alt="" />
+                                <img src={csa} alt="" />
                                 <h4>CLIENT SATISFACTION</h4>
                             </div>
 
@@ -80,7 +80,7 @@ function AboutPage() {
 
                         <div className='c-a-t'>
                             <div className='award'>                            
-                                <img src={ch2} alt="" />
+                                <img src={caw} alt="" />
                                 <h4>CERTIFICATE AWARD</h4>
                             </div>
 
@@ -90,7 +90,7 @@ function AboutPage() {
 
                         <div className='c-a-t'>
                             <div className='trustable'>
-                                <img src={ch3} alt="" />
+                                <img src={tr} alt="" />
                                 <h4>TRUSTABLE</h4>
                             </div>
                         

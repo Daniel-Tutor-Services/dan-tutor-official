@@ -1,8 +1,6 @@
 .course-wrapper {
     overflow: hidden;
     height: 100vh;
-    background: #4CA1AF; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
@@ -45,8 +43,6 @@
 }
 
 .outline-videos p:hover {
-    background: #4CA1AF; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #272626, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
     color: white;
     transform: scale(1.04);

@@ -17,7 +17,7 @@ function SuccessPage() {
                 <div className="waiting-text">
                     <h1 style={{color:'green'}}>Successful !!</h1>
 
-                    <Link to='/login' className="links">
+                    <Link to='/' className="links">
                         <CustomButton title='Proceed to log in'style={{ 
                             marginBottom: "10px",
                             padding: "10px 5px",

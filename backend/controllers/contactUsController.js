@@ -13,21 +13,20 @@ import ContactUs from '../models/contactUsModel.js';
 
 
 const contact =  asyncHandler(async (req, res) => {
-    try{
-        const {  name, mbox, number,  message  } = req.body;
-        let newMessage = new ContactUs(req.body);
-        newMessage = await newMessage.save();
-        
-        res.status(201).json({
-            message: "message sent successfully",
+
+    const {  fullName, email, phone, message  } = req.body;
+    let newMessage = new ContactUs(req.body);
+    newMessage = await newMessage.save();
+
+    if (newMessage) {
+        res.status (201).json ({
+            message: 'Message sent successfully',
             newMessage,
             statusCode: 201,
         });
-    }catch(err){
-        res.status(400).json({
-            message: "something went wrong",
-            statusCode: 400,
-        });
+    } else {
+        res.status (400);
+        throw new Error ('Something went wrong');
     }
     
 });

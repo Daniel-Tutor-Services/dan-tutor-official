@@ -37,7 +37,7 @@ function LoginPage () {
 
     useEffect (() => {
         if (userInfo) {
-            navigate('/dash-board');
+            navigate('/');
         }
 
     }, [navigate, userInfo]);
@@ -51,7 +51,7 @@ function LoginPage () {
             toast.success("Login Successful", {
                 position: toast.POSITION.TOP_RIGHT
             }) 
-            navigate('/dash-board')
+            navigate('/')
 
         } catch (err) {
             toast.error(err?.data.message || err.error);               
@@ -79,7 +79,7 @@ function LoginPage () {
 
                     <h1>Login</h1>
 
-                    <CustomInput placeholder='Email or Username*' value = {email} name="email" style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
+                    <CustomInput placeholder='Email Address*' value = {email} name="email" style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
 
                     <CustomInput placeholder='Password*' value = {password} name="password"   type={passwordShown ? "password" : "text"}  style = {{width: '100%'}} onChange ={(e) => setPassword (e.target.value)}/>
                   

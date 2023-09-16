@@ -11,7 +11,6 @@ const userSchema = mongoose.Schema ({
             value: /^[A-Za-z]+$/
         }
     },
-
     userName: {
         type: String,
         required: true,

@@ -28,7 +28,7 @@ function ChangePassword(){
 
     const  [passwordShown, setPasswordShown] = useState(true);
     const  [passwordShown2, setPasswordShown2] = useState(true);
-    const  [passwordShown3, setPasswordShown3] = useState(true);
+
 
     const dispatch = useDispatch();
     const { userInfo } = useSelector ((state) => state.auth);
@@ -41,9 +41,6 @@ function ChangePassword(){
 
     const togglePassword2 = () => {
         setPasswordShown2(!passwordShown2);
-    };
-    const togglePassword3 = () => {
-        setPasswordShown3(!passwordShown3);
     };
 
 
@@ -145,7 +142,7 @@ function ChangePassword(){
             setConfirmPassWordStyle({...redBorder})
             setPassWordStyle({...redBorder})
 
-            toast.warn("Passwords does not match", {
+            toast.warn("Passwords do not match", {
                 position: toast.POSITION.TOP_RIGHT
             }); 
 
@@ -159,7 +156,7 @@ function ChangePassword(){
             
             dispatch(setCredentials({...res}));
             
-            toast.success("Profile Updated Successfully", {
+            toast.success("Password Updated", {
                 position: toast.POSITION.TOP_RIGHT
             }); 
             setConfirmPassWordStyle({...greenBorder})
@@ -198,23 +195,25 @@ function ChangePassword(){
 
                     <div className="border2" >
                         <p>Email</p>
-                        <CustomInput  name= 'oldPassword' type={passwordShown ? "password" : "text"}  placeholder ={userInfo.email} style={passWordStyle} onChange={(e) => setPassword (e.target.value)}  readOnly/>
+                        <CustomInput  name= 'oldPassword'  placeholder ={userInfo.email} style={passWordStyle} onChange={(e) => setPassword (e.target.value)}  readOnly/>
 
-                        {passwordShown ? <AiFillEyeInvisible  style={{margin:'0 90%'}} size={25} onClick={togglePassword}/> : <AiFillEye style={{margin:'0 90%'}}  size={25} onClick={togglePassword}/> } 
 
                     </div>
 
                     <div className="border2" >
                         <p>Create New Password</p>
-                        <CustomInput  type={passwordShown2 ? "password" : "text"}  value ={password}   placeholder='XXXXXXXX' style={passWordStyle}
+                        <CustomInput  type={passwordShown ? "password" : "text"}  value ={password}   placeholder='XXXXXXXX' style={passWordStyle}
                         onChange={(e) => setPassword (e.target.value)}/>
-                         {passwordShown2 ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={25} onClick={togglePassword2}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword2}/> } 
+                            
+                        {passwordShown ? <AiFillEyeInvisible  style={{margin:'0 90%'}} size={25} onClick={togglePassword}/> : <AiFillEye style={{margin:'0 90%'}}  size={25} onClick={togglePassword}/> } 
+
                     </div>
 
                     <div className="border2">
                         <p>Re-Enter Password</p>
-                        <CustomInput  type={passwordShown3 ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
-                        {passwordShown3 ? <AiFillEyeInvisible  style={{margin:'0 90%'}} className= 'AiFillEyeInvisibleIcon' size={25} onClick={togglePassword3}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword3}/> } 
+                        <CustomInput  type={passwordShown2 ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
+
+                        {passwordShown2 ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={25} onClick={togglePassword2}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword2}/> } 
                     </div>
                     
                     <div className="border2">

@@ -281,7 +281,7 @@ function SignupPage () {
 
 
         if (password !== confirmPassword){
-            return toast.error("Passwords don't match", {
+            return toast.error("Passwords do not match", {
                 position: toast.POSITION.TOP_RIGHT
             });
         }
@@ -336,14 +336,14 @@ function SignupPage () {
 
                     <CustomInput placeholder='UserName*' value= {userName} style ={userNameStyle} onChange={(e) => setUserName (e.target.value)} />  <br />
                     
-                    <CustomInput placeholder='Email*' value= {email}  name="email" type='email' style = {emailStyle} onChange={(e) => setEmail (e.target.value)}/>  <br />
+                    <CustomInput placeholder='Email*' value= {email}  type='email' style = {emailStyle} onChange={(e) => setEmail (e.target.value)}/>  <br />
                     
-                    <CustomInput placeholder='Phone Number*' value= {phone}  name="phoneNumber" style = {phoneStyle} onChange={(e) => setPhone (e.target.value)}/>  <br />
+                    <CustomInput placeholder='Phone Number*' value= {phone} style = {phoneStyle} onChange={(e) => setPhone (e.target.value)}/>  <br />
 
                     <CustomInput placeholder='Password*' value= {password}  name="confirmPassword" type={passwordShown ? "password" : "text"}  style = {confirmPassWordStyle} onChange={(e) => setPassword (e.target.value)}/> 
                     <br />
 
-                    <CustomInput placeholder='Confirm Password*' value= {confirmPassword}  name="password" type={passwordShown ? "password" : "text"}  style = {passWordStyle} onChange={(e) => setConfirmPassword (e.target.value)}/>
+                    <CustomInput placeholder='Confirm Password*' value= {confirmPassword} type={passwordShown ? "password" : "text"}  style = {passWordStyle} onChange={(e) => setConfirmPassword (e.target.value)}/>
                     <br />
 
                     {passwordShown ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={20} color='black' onClick={togglePassword}/> : <AiFillEye  style={{margin:'0 90%'}} color='black' size={20} onClick={togglePassword}/> } 

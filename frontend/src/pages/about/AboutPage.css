@@ -70,17 +70,15 @@
     display: none;  
 }
 
-.client-sat:hover, .award:hover, .trustable:hover{
-    background: #d82149d1;
-    color: white;
-    transition: 0.7s ease-in;
-}
-
 .c-a-t h3{
     text-align: center;
     font-size: 0.8rem;
     margin: 10px 0;
     font-weight: bolder;
+}
+
+.c-a-t img{
+    width: 80px;
 }
 
 .meet-the-team {

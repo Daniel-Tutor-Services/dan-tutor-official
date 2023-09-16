@@ -1,18 +1,19 @@
 import mongoose from "mongoose";
 
 const messageSchema = mongoose.Schema ({
-    name: {
+    fullName: {
         type: String,
-        required: true
+        required: true,
     },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    phone: {
+        type: Number,
+        required: true,
 
-    mbox: {
-        type: String,
-        required: true,
-    },
-    number: {
-        type: String,
-        required: true,
     },
     message: {
         type: String,

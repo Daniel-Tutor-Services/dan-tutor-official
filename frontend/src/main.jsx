@@ -86,7 +86,8 @@ import PrivateRoutes from './util/PrivateRoutes.jsx';
 
 
 const router = createBrowserRouter(
-    
+
+
     createRoutesFromElements(
         <Route path= '/' element = {<App/>}>
 
@@ -119,9 +120,9 @@ const router = createBrowserRouter(
 
 
             {/* Contact */}
-            <Route path='/contactus' element = {<PrivateRoutes />}>
+            {/* <Route path='/contactus' element = {<PrivateRoutes />}> */}
                 <Route path="/contactus" element={<ContactPage />} />
-            </Route>
+            {/* </Route> */}
 
 
 
