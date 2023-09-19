@@ -3,16 +3,15 @@ import mongoose from "mongoose";
 const messageSchema = mongoose.Schema ({
     fullName: {
         type: String,
-        required: true,
+        required: true
     },
     email: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     phone: {
         type: Number,
-        required: true,
+        required: true
 
     },
     message: {

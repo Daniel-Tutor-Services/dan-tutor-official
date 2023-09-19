@@ -96,14 +96,15 @@ function DashBoard() {
                                         <div className="courses"><p>MATHEMATICS</p></div>
                                     </NavLink>
 
-                                    <NavLink to='/course-chemistry' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>CHEMISTRY</p></div>
-                                    </NavLink>
 
                                     <NavLink to='/course-physics' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>PHYSICS</p></div>
                                     </NavLink>
 
+                                    <NavLink to='/course-chemistry' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>CHEMISTRY</p></div>
+                                    </NavLink>
+                                    
                                     <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>FRENCH LANGUAGE</p></div>
                                     </NavLink>
