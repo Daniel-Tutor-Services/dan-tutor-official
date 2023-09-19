@@ -11,9 +11,13 @@
     margin-top: 3rem;
     justify-content: center;
     align-items: center;
-    position: -webkit-sticky;
+    position: sticky;
     padding: 1.2rem;
     background: linear-gradient(to left, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+#searchbar:focus{
+    outline: 2px solid rgb(0, 0, 0);
 }
 
 #availcours{
@@ -24,6 +28,12 @@
     display: flex;
     padding: 0.7rem 0;
     margin-top: 0.2rem;
+}
+
+.dashindiv input{
+    display: flex;
+    padding: 0.7rem 0;
+    margin-top: 0.7rem;
 }
 
 .dashindiv-mob{
@@ -42,17 +52,16 @@
 
 
 
-@media screen and (max-width:850px) {
-    .dashcustominput{
-        width: 100%;
-    }
-}
+
 
 @media screen and (max-width:900px){
-    .dashindiv{
-        display: none;
-    }
 
+
+    .dashindiv{
+        display: flex;
+        width: 60%;
+    }
+    
     .dashindiv-mob{
         display: flex;
         padding: 1rem 0;
@@ -73,3 +82,20 @@
 }
 
 
+
+
+@media screen and (max-width:650px) {
+    
+    .dashindiv{
+        padding: 3rem 0 0;
+        display: block;
+        width: 60%;
+    }
+    
+    .dashcustominput{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+    }
+}

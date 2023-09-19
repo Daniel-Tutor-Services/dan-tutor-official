@@ -1,12 +1,14 @@
-import React from 'react';
 import './courseSubjects.css';
-import physics from '../courseContents/physics.json';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import physics from '../courseContents/physics.json';
 
 
 
 function Physics() {
+    
+    const [query, setQuery] = useState("");
+
     
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -17,10 +19,13 @@ function Physics() {
             left: 0,
             behavior: 'smooth', 
         });
-        }, [pathname]);
+    }, [pathname]);
     
-        return null;
-    }
+    return null;
+}
+
+
+
 
 
     return (
@@ -29,23 +34,37 @@ function Physics() {
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>PHYSICS</h1> 
-                <p style={{color:'white'}}>Here are lists of availaible topics in Physics. Click to learn on.</p>
+                <p style={{color:'white'}}>Here are lists of availaible topics in Physics. Click to learn more.</p>
                 <br />
             </div>
 
-            <div className='courseSubjects-cont'>
-                {
-                    physics.map((physics, index) => (
-                        <React.Fragment key={index}>
 
 
-                            <div className='courseSubjects-detailz'>
 
-                                <h3> <a href=" https://www.toppr.com/guides/physics/motion-in-a-plane/projectile-motion/"  target='_blank' rel='noreferrer'> {physics.topicpr}</a> </h3>
+            <div>
+
+                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+
+                <div className='courseSubjects-cont'>
+                                
+                    {
+                        physics.filter(physicz => {
+
+                            if (query === '') {
+                                return physicz;
+                            } else if (physicz.topic.toLowerCase().includes(query.toLowerCase())) {
+                                return physicz;
+                            }
+
+                        }).map((physics, index) => (
+
+                            <div className='courseSubjects-detailz' key={index}>
+                                
+                                <h3> <a href=" https://www.toppr.com/guides/physics/motion-in-a-plane/projectile-motion/" target='_blank' rel='noreferrer'> {physics.topicpr}</a> </h3>
 
                                 <h3> <a href=" https://byjus.com/physics/introduction-to-motion/"  target='_blank' rel='noreferrer'> {physics.topicmo}</a></h3>
 
-                                <h3> <a href=" https://byjus.com/physics/electromagnetism/#:~:text=Electromagnetism%20is%20a%20branch%20of,%2C%20electric%20fields%2C%20and%20light."  target='_blank' rel='noreferrer'> {physics.topicel}</a></h3>
+                                <h3> <a href=" https://byjus.com/physics/electromagnetism/#:~:text=Electromagnetism%20is%20a%20branch%20of,%2C%20electric%20fields%2C%20and%20light." target='_blank' rel='noreferrer'> {physics.topicel}</a></h3>
 
                                 <h3> <a href=" https://ehss.energy.gov/ohre/roadmap/achre/intro_9_2.html#:~:text=As%20its%20name%20implies%2C%20radioactivity,to%20a%20more%20stable%20configuration."  target='_blank' rel='noreferrer'> {physics.topicrad}</a></h3>
 
@@ -62,10 +81,10 @@ function Physics() {
                                 <h3> <a href=" https://www.britannica.com/science/physics-science/Nuclear-physics"  target='_blank' rel='noreferrer'> {physics.topicnu}</a></h3>
 
                             </div>
+                        ))
+                    }
 
-                        </React.Fragment>
-                    ))
-                }
+                </div>      
                 
             </div>
 

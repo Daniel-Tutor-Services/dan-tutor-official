@@ -29,9 +29,6 @@ import AdminContacts from './pages/adminPage/adminDashBoard/AdminContacts.jsx';
 import ContactPage from './pages/contactPage/ContactPage.jsx';
 
 
-//Course Outline
-import CourseMaterials from './pages/courseOutline/CourseMaterials.jsx'
-
 
 //Course Subjects
 import Chemistry from './pages/courseOutline/courseSubjects/chemistry.jsx';
@@ -123,13 +120,6 @@ const router = createBrowserRouter(
             {/* <Route path='/contactus' element = {<PrivateRoutes />}> */}
                 <Route path="/contactus" element={<ContactPage />} />
             {/* </Route> */}
-
-
-
-            {/* Course Outline */}
-            <Route path='/course-materials' element = {<PrivateRoutes />}>
-                <Route path="/course-materials" element={<CourseMaterials />} />
-            </Route>
 
 
 

@@ -1,12 +1,13 @@
-import React from 'react';
 import './courseSubjects.css';
-import mathematics from '../courseContents/mathematics.json';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import mathematics from '../courseContents/mathematics.json';
 
 
 
 function Mathematics() {
+        
+    const [query, setQuery] = useState("");
     
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -29,16 +30,29 @@ function Mathematics() {
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>MATHEMATICS</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in Mathematics. Click to learn on.</p>
+                <p style={{color:'black'}}>Here are lists of availaible topics in Mathematics. Click to learn more.</p>
                 <br />
             </div>
 
-            <div className='courseSubjects-cont'>
-                {
-                    mathematics.map((mathematics, index) => (
-                        <React.Fragment key={index}>
 
-                            <div className='courseSubjects-detailz'>
+
+            <div>
+
+                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+
+                <div className='courseSubjects-cont'>
+                    
+                    {
+                        mathematics.filter(mathematicz => {
+
+                            if (query === '') {
+                                return mathematicz;
+                            } else if (mathematicz.topic.toLowerCase().includes(query.toLowerCase())) {
+                                return mathematicz;
+                            }
+                        }).map((pmathematics, index) => (
+
+                            <div className='courseSubjects-detailz' key={index}>
                                 <h3> <a href="https://www.cuemath.com/data/standard-deviation/" target='_blank' rel='noreferrer' >{mathematics.topicsd} </a></h3>
 
                                 <h3> <a href="https://www.britannica.com/science/differentiation-mathematics"  target='_blank' rel='noreferrer'>{mathematics.topicdi} </a></h3>
@@ -58,11 +72,12 @@ function Mathematics() {
                                 <h3> <a href=" https://www.britannica.com/science/matrix-mathematics"  target='_blank' rel='noreferrer'>{mathematics.topicma} </a></h3>
 
                                 <h3> <a href=" https://thirdspacelearning.com/gcse-maths/geometry-and-measure/bearings-maths/"  target='_blank' rel='noreferrer'>{mathematics.topicbe} </a></h3>
+
                             </div>
-                        
-                        </React.Fragment>
-                    ))
-                }
+                        ))
+                    }
+
+                </div>      
                 
             </div>
 

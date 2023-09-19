@@ -33,6 +33,10 @@
     color: rgb(0, 0, 0);
 }
 
+.dashinput:focus{
+    outline: 2px solid rgb(0, 0, 0);
+}
+
 
 
 

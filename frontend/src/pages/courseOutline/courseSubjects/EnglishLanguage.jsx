@@ -1,8 +1,7 @@
-import React from 'react';
 import './courseSubjects.css';
-import english from '../courseContents/english.json';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import english from '../courseContents/english.json';
 
 
 
@@ -10,6 +9,9 @@ import { useLocation } from 'react-router-dom';
 
 
 function EnglishLanguage() {
+
+    const [query, setQuery] = useState("");
+
     
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -26,23 +28,42 @@ function EnglishLanguage() {
     }
 
 
+
+
+
+
     return (
 
         <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'gray'}}>
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn on.</p>
+                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn more.</p>
                 <br />
             </div>
 
-            <div className='courseSubjects-cont'>
-                {
-                    english.map((english, index) => (
-                        <React.Fragment key={index}>
 
-                            <div className='courseSubjects-detailz'>
 
+
+            <div>
+
+                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+
+                <div className='courseSubjects-cont'>
+                                
+                    {
+                        english.filter(english => {
+
+                            if (query === '') {
+                                return english;
+                            } else if (english.topic.toLowerCase().includes(query.toLowerCase())) {
+                                return english;
+                            }
+
+                        }).map((english, index) => (
+
+                            <div className='courseSubjects-detailz' key={index}>
+        
                                 <h3> <a href=" https://www.toppr.com/guides/english/writing/letter-writing/"  target='_blank' rel='noreferrer'>{english.topicle}</a></h3>
 
                                 <h3> <a href=" https://www.butte.edu/departments/cas/tipsheets/grammar/parts_of_speech.html"  target='_blank' rel='noreferrer'>{english.topicpa}</a></h3>
@@ -62,11 +83,12 @@ function EnglishLanguage() {
                                 <h3> <a href=" https://www.dictionary.com/browse/synonym"  target='_blank' rel='noreferrer'>{english.topicsy}</a></h3>
                                 
                                 <h3> <a href=" https://www.vedantu.com/commerce/article-writing"  target='_blank' rel='noreferrer'>{english.topicar}</a></h3>
+
                             </div>
-                        
-                        </React.Fragment>
-                    ))
-                }
+                        ))
+                    }
+
+                </div>      
                 
             </div>
 

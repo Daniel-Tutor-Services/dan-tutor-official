@@ -1,53 +1,63 @@
 [
     {
         "_id": 1,
+        "topic": "Organic Chemistry",
         "topicor": "Organic Chemistry"
           
     },
     {
         "_id": 2,
+        "topic": "InOrganic Chemistry",
         "topicin": "InOrganic Chemistry"
        
     },
     {
         "_id": 3,
+        "topic": "Seperation Technique",
         "topicse": "Seperation Technique"
         
     },
     {
         "_id": 4,
+        "topic": "Element Table",
         "topicel": "Element Table"
         
         
     },
     {
         "_id": 5,
+        "topic": "Nuclear Chemistry",
         "topicnu": "Nuclear Chemistry"
        
     },
     {
         "_id": 6,
+        "topic": "Thermo Chemistry",
         "topicth": "Thermo Chemistry"
         
     },
     {
         "_id": 7,
+        "topic": "Radio Chemistry",
         "topicra": "Radio Chemistry"
         
         
     },
     {
         "_id": 8,
+        "topic": "Physical Chemistry",
         "topicph": "Physical Chemistry"
        
     }, 
     {
         "_id": 9,
+        "topic": "Surface Chemistry",
         "topicsu": "Surface Chemistry"
        
     },   
     {
         "_id": 10,
+        "topic": "Geo Chemistry",
         "topicge": "Geo Chemistry"
        
     }   

@@ -1,12 +1,13 @@
-import React from 'react';
 import './courseSubjects.css';
 import chemistry from '../courseContents/chemistry.json';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 
 
 function Chemistry() {
+
+    const [query, setQuery] = useState("");
     
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -31,16 +32,31 @@ function Chemistry() {
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>CHEMISTRY</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in Chemistry. Click to learn on.</p>
+                <p style={{color:'black'}}>Here are lists of availaible topics in Chemistry. Click to learn more.</p>
                 <br />
             </div>
 
-            <div className='courseSubjects-cont'>
-                {
-                    chemistry.map((chemistry, index) => (
-                        <React.Fragment key={index}>
 
-                            <div className='courseSubjects-detailz'>
+
+
+            <div>
+
+                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+
+                <div className='courseSubjects-cont'>
+                                
+                    {
+                        chemistry.filter(chemistryz => {
+
+                            if (query === '') {
+                                return chemistryz;
+                            } else if (chemistryz.topic.toLowerCase().includes(query.toLowerCase())) {
+                                return chemistryz;
+                            }
+
+                        }).map((chemistry, index) => (
+
+                            <div className='courseSubjects-detailz' key={index}>
 
                                 <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicor} </a></h3>
 
@@ -61,11 +77,12 @@ function Chemistry() {
                                 <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicsu} </a></h3>
 
                                 <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicge} </a></h3>
+
                             </div>
-                        
-                        </React.Fragment>
-                    ))
-                }
+                        ))
+                    }
+
+                </div>      
                 
             </div>
 
