@@ -21,7 +21,7 @@ const authSlice = createSlice({
         },
 
         logout: (state, action) => {
-            state.userInfo = action.null;
+            state.userInfo = null;
             localStorage.removeItem ('userInfo');
         },
         setMessagex: (state, action) =>{

@@ -1,54 +1,54 @@
 [
     {
         "_id": 1,
-        "topic": "Projectile"
+        "topicpr": "Projectile"
           
     },
     {
         "_id": 2,
-        "topic": "Motion"
+        "topicmo": "Motion"
        
     },
     {
         "_id": 3,
-        "topic": "Electromagnetism"
+        "topicel": "Electromagnetism"
         
     },
     {
         "_id": 4,
-        "topic": "Radioactivity"
+        "topicrad": "Radioactivity"
         
         
     },
     {
         "_id": 5,
-        "topic": "Random Error"
+        "topicra": "Random Error"
        
     },
     {
         "_id": 6,
-        "topic": "Thermodynamics"
+        "topicth": "Thermodynamics"
         
     },
     {
         "_id": 7,
-        "topic": "Mechanics"
+        "topicme": "Mechanics"
         
         
     },
     {
         "_id": 8,
-        "topic": "Quantun Physics"
+        "topicqu": "Quantun Physics"
        
     }, 
     {
         "_id": 9,
-        "topic": "Optics"
+        "topicop": "Optics"
        
     },   
     {
         "_id": 10,
-        "topic": "Nuclear Physics"    
+        "topicnu": "Nuclear Physics"    
     }   
 
 ]

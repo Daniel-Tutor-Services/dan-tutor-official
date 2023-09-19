@@ -31,7 +31,7 @@ function Chemistry() {
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>CHEMISTRY</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in Chemistry. You can click to learn.</p>
+                <p style={{color:'black'}}>Here are lists of availaible topics in Chemistry. Click to learn on.</p>
                 <br />
             </div>
 
@@ -41,7 +41,26 @@ function Chemistry() {
                         <React.Fragment key={index}>
 
                             <div className='courseSubjects-detailz'>
-                                <h3>{chemistry.topic}</h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicor} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicin} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicse}</a> </h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicel}</a> </h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicnu} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicth} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicra} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'> {chemistry.topicph}  </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicsu} </a></h3>
+
+                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicge} </a></h3>
                             </div>
                         
                         </React.Fragment>

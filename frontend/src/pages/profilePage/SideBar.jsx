@@ -27,7 +27,7 @@ function SideBar() {
             toast.error(`Logged Out Sucessful`, {
                 position: toast.POSITION.TOP_RIGHT
             })
-            navigate('/');
+            navigate('/login');
         } catch (err) {
             alert(err);
             

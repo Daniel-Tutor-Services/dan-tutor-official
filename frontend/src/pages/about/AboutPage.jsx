@@ -38,7 +38,7 @@ function AboutPage() {
 
 
                     <div className = "staff-btn">                      
-                        <Link to='/contact-page' pathname='/contactus'>
+                        <Link to='/contactus' pathname='/contactus'>
                         
                             <CustomButton title="KNOW MORE" style={{width:'200px', height:'50px', padding:'1rem',color:'white', fontSize:'.7rem'}}/>
                 

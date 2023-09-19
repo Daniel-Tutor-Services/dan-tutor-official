@@ -34,15 +34,14 @@ function CourseMaterials() {
             
             <NavBar/>
 
-            <div className='gen-course-mat'>
-
-
-                <NavLink to='/course-mathematics' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
-                    <div><p>MATHEMATICS</p></div>
-                </NavLink>
+            <div className='gen-course-mat'>     
 
                 <NavLink to='/course-english-language' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
                     <div><p>ENGLISH LANGUAGE</p></div>
+                </NavLink>
+
+                <NavLink to='/course-mathematics' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>MATHEMATICS</p></div>
                 </NavLink>
 
                 <NavLink to='/course-chemistry' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
@@ -53,29 +52,44 @@ function CourseMaterials() {
                     <div><p>PHYSICS</p></div>
                 </NavLink>
 
-
-                <div><p>FRENCH LANGUAGE</p></div>
-
-
-                <div><p>BIOLOGY</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>FRENCH LANGUAGE</p></div>
+                </NavLink>
 
 
-                <div><p>COMPUTER SCIENCE</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>BIOLOGY</p></div>
+                </NavLink>
 
 
-                <div><p>AGRICULTURAL SCIENCE</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>COMPUTER SCIENCE</p></div>
+                </NavLink>
 
 
-                <div><p>ECONOMICS</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>AGRICULTURAL SCIENCE</p></div>
+                </NavLink>
 
 
-                <div><p>GEOGRAPHY</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>ECONOMICS</p></div>
+                </NavLink>
 
 
-                <div><p>CIVIC EDUCATION</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>GEOGRAPHY</p></div>
+                </NavLink>
 
 
-                <div><p>GOVERNMENT</p></div>
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>CIVIC EDUCATION</p></div>
+                </NavLink>
+
+
+                <NavLink to='/course-' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
+                    <div><p>GOVERNMENT</p></div>
+                </NavLink>
 
             </div>
 

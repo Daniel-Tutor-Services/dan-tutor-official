@@ -1,6 +1,6 @@
 .about-us-page{
     padding: 5rem  0 0;
- background: grey; 
+ background: rgb(128, 128, 128); 
 }
 
 .about-us-page p{
@@ -93,7 +93,7 @@
     width: 100%;
     word-spacing: 0.4rem;
     font-size: 1.2rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 

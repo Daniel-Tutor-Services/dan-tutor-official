@@ -2,7 +2,7 @@ import './ChangePassword.css'
 import './EditedProfile.css'
 import { toast } from 'react-toastify';
 import { AiFillEye } from 'react-icons/ai'
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { AiFillEyeInvisible } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
 import { setCredentials } from '../../slices/authSlice';
@@ -42,16 +42,6 @@ function ChangePassword(){
     const togglePassword2 = () => {
         setPasswordShown2(!passwordShown2);
     };
-
-
-
-
-
-    useEffect (() => {
-        setPassword(userInfo.password);
-        setConfirmPassword(userInfo.ConfirmPassword);
-
-    }, [userInfo.password, userInfo.ConfirmPassword]);
 
   
       

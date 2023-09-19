@@ -1,52 +1,50 @@
 [
     {
         "_id": 1,
-        "topic": "Standard Deviation"
-          
+        "topicsd": "Standard Deviation" 
     },
     {
         "_id": 2,
-        "topic": "Differentiation"
-       
+        "topicdi": "Differentiation" 
     },
     {
         "_id": 3,
-        "topic": "Integration"
+        "topicin": "Integration"
         
     },
     {
         "_id": 4,
-        "topic": "Graphs"
+        "topicgr": "Graphs"
         
         
     },
     {
         "_id": 5,
-        "topic": "Pie Chart"
+        "topicpi": "Pie Chart"
        
     },
     {
         "_id": 6,
-        "topic": "Indices"
+        "topicind": "Indices"
         
     },
     {
         "_id": 7,
-        "topic": "Quadratic Equation"
+        "topicqe": "Quadratic Equation"
     },
     {
         "_id": 8,
-        "topic": "Permutation"
+        "topicpe": "Permutation"
        
     }, 
     {
         "_id": 9,
-        "topic": "Matrices"
+        "topicma": "Matrices"
        
     },   
     {
         "_id": 10,
-        "topic": "Bearing"
+        "topicbe": "Bearing"
        
     }   
 

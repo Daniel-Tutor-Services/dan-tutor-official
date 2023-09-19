@@ -64,7 +64,7 @@
 
 .contents li{
     cursor: pointer;
-    padding: .8rem .7rem .0rem;
+    padding: .8rem .6rem .0rem;
     color: black;
 }
 
@@ -102,7 +102,7 @@
     padding: 1rem 2rem;
     justify-content:first baseline;
     align-items: first baseline;
-    gap: 5rem;
+    gap: 10rem;
 
 }
 
