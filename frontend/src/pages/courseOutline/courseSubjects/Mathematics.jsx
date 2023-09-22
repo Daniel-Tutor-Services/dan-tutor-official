@@ -50,7 +50,7 @@ function Mathematics() {
                             } else if (mathematicz.topic.toLowerCase().includes(query.toLowerCase())) {
                                 return mathematicz;
                             }
-                        }).map((pmathematics, index) => (
+                        }).map((mathematics, index) => (
 
                             <div className='courseSubjects-detailz' key={index}>
                                 <h3> <a href="https://www.cuemath.com/data/standard-deviation/" target='_blank' rel='noreferrer' >{mathematics.topicsd} </a></h3>
