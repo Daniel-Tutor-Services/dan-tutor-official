@@ -48,7 +48,7 @@ function Chemistry() {
 
             <div>
 
-                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
                 <div className='courseSubjects-cont'>
                                 

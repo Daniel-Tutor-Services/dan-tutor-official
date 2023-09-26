@@ -57,7 +57,7 @@ function DashBoard() {
             <div className='dashcustominput'>
                 
                 <form className='dashindiv'>
-                    <input id="searchbar"  type="text"  name="search"  placeholder="Find a course" className="dashinput"  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  />
+                    <input id="searchbar"  type="text"  name="search"  placeholder="Find a course" className="dashinput"  style={{width:'100%',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  />
 
                     <CustomButton title="Search" className="dashbet" style={{width:'130px', height:'50px', padding:'5px 0px', margin:'10px 0px', borderRadius:'30px', fontFamily:'BioRhyme, serif'}} type='submit' onClick={searchCourses} />
                 </form>

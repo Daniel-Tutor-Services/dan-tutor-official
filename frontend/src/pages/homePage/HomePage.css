@@ -133,3 +133,14 @@
     }
 
 }
+
+
+@media screen and (max-width:900px){
+    .home-text h1{
+        font-size: 1.3rem;
+    }
+
+    .home-text p{
+        font-size: 1rem;
+    }
+}

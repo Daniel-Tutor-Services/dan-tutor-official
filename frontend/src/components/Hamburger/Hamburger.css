@@ -96,3 +96,13 @@
 
     }
 }
+
+@media screen and (max-width:520px){
+
+    .hambli p{
+        width: 200px;
+        margin: 10px auto;
+        margin-right: 80px;
+
+    }
+}

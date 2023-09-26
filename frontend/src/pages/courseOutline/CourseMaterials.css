@@ -37,13 +37,13 @@
 
 @media screen and (max-width:800px){
     .gen-course-mat {
-        background-color: #eee;
         padding: 30px;   
         width: 80%;
         margin: 3rem auto;
         border-radius: 1.7rem;
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         overflow: hidden;
+        font-size:0.7rem;
     }
 }
 

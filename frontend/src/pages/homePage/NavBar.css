@@ -161,9 +161,18 @@
 }
 
 
+@media screen and (max-width:500px){
+    .applyz{
+        display: none;
+    }
+}
+
 @media screen and (max-width:450px){
     .nav-barr{
-        padding: 20rem;
-        background-color: red;
+        padding: 0.1rem;
+        height: 100px;
+        display: flexbox;
+        margin: 0;
+        justify-content: space-between;
     }
 }
