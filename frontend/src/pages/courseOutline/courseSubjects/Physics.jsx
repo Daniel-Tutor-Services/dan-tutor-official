@@ -1,6 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
+import { Link, useLocation } from 'react-router-dom';
 import physics from '../courseContents/physics.json';
 
 
@@ -31,6 +32,12 @@ function Physics() {
     return (
 
         <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'gray'}}>
+            
+            <div style={{display:'flex', justifyContent:'start'}}>
+                <Link to= '/dash-board'>
+                    <BiArrowBack color='white' size={40}/>
+                </Link>
+            </div>
 
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>PHYSICS</h1> 
