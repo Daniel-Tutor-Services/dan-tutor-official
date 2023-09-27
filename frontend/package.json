@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build --base=/client/",
+        "build": "vite build --base=/",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
     },
