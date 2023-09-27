@@ -79,7 +79,7 @@ function ContactPage () {
 
 					<div>
 						<Link to= '/'>
-    	                	<BiArrowBack color='white' size={40}/>
+    	                	<BiArrowBack color='white' size={30}/>
 	                	</Link>
 					</div>
 					

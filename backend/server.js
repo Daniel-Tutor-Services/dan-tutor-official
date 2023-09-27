@@ -10,7 +10,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleWare.js";
 
 import connectDB from "./config/db.js";
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 import userRoutes from './routes/userRoutes.js';
 
 

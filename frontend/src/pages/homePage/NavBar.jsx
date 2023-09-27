@@ -97,9 +97,9 @@ function NavBar() {
                         )
                     }
                 
-                    <Link to='/contactus' className='links'>
+                    <NavLink to='/contactus' className='links' onFocus={ScrollToTop()} >
                         <li>Contact</li>
-                    </Link> 
+                    </NavLink> 
 
                 </ul>
 
