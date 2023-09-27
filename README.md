@@ -43,7 +43,7 @@ Instructor: Users who create, manage, and teach courses.<br/>
 <br/>
 
 ## 5. Logging In<br/>
-i. Open your web browser and navigate to the platform's URL (www.dan-tutor.netlify.app).<br/>
+i. Open your web browser and navigate to the platform's URL (https://dantutor.onrender.com).<br/>
 ii. Click on the "Login" button.<br/>
 iii. Enter your username and password.<br/>
 iv. Select the appropriate role (Student or Instructor) from the dropdown.<br/>
