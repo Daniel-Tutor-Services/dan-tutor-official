@@ -1,4 +1,3 @@
-import React from 'react'
 import './AdminDashContentHeader.css'
 import CustomModal from '../../../../components/customModal/CustomModal'
 
