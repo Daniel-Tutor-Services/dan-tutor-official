@@ -12,3 +12,7 @@
     font-size: 15px;
     color: gray;
 }
+
+.input:focus{
+    outline: 1px solid black;
+}

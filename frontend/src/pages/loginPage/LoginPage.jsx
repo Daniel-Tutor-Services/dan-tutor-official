@@ -93,7 +93,7 @@ function LoginPage () {
                     </Link>
 
                     <div className='bottomzl' style={{marginTop: 'none', textAlign: 'left'}}> 
-                        <h5 style={{fontSize:'1.2rem', fontWeight:'bold'}}>Yet to register with us? 
+                        <h5 style={{fontSize:'1rem', fontWeight:'bold'}}>Yet to register with us? 
                             <span> 
                                 <Link to='/signup' style = {{textDecoration: 'none'}}  id='btspan'> <span>Sign Up</span> </Link> 
                             </span>

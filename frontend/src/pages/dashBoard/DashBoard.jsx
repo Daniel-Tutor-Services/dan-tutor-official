@@ -155,7 +155,7 @@ function DashBoard() {
                     (
                         <div className='titlediv'>
                             <h1>All Courses</h1>
-                            <marquee direction="right"> 
+                            <marquee direction="left"> 
                                 <h3>  Please Login / Sign up to view our course outlines. </h3>
                             </marquee>
 

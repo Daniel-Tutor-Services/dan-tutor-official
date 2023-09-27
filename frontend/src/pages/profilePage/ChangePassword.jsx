@@ -27,7 +27,6 @@ function ChangePassword(){
    
 
     const  [passwordShown, setPasswordShown] = useState(true);
-    const  [passwordShown2, setPasswordShown2] = useState(true);
 
 
     const dispatch = useDispatch();
@@ -37,10 +36,6 @@ function ChangePassword(){
     
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
-    };
-
-    const togglePassword2 = () => {
-        setPasswordShown2(!passwordShown2);
     };
 
   
@@ -181,7 +176,10 @@ function ChangePassword(){
 
                 <form onSubmit={updateUserPassword}>
 
-                    { isLoading && <Loader/> }
+                    <div style={{display:'flex', justifyContent:'center'}}>
+                        { isLoading && <Loader/> }
+                    </div>
+
 
                     <div className="border2" >
                         <p>Email</p>
@@ -191,23 +189,22 @@ function ChangePassword(){
                     </div>
 
                     <div className="border2" >
+
                         <p>Create New Password</p>
                         <CustomInput  type={passwordShown ? "password" : "text"}  value ={password}   placeholder='XXXXXXXX' style={passWordStyle}
                         onChange={(e) => setPassword (e.target.value)}/>
                             
-                        {passwordShown ? <AiFillEyeInvisible  style={{margin:'0 90%'}} size={25} onClick={togglePassword}/> : <AiFillEye style={{margin:'0 90%'}}  size={25} onClick={togglePassword}/> } 
-
                     </div>
 
                     <div className="border2">
                         <p>Re-Enter Password</p>
-                        <CustomInput  type={passwordShown2 ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
+                        <CustomInput  type={passwordShown ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
 
-                        {passwordShown2 ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={25} onClick={togglePassword2}/> : <AiFillEye  style={{margin:'0 90%'}} size={25} onClick={togglePassword2}/> } 
+                        {passwordShown ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={20} onClick={togglePassword}/> : <AiFillEye  style={{margin:'0 90%'}} size={20} onClick={togglePassword}/> } 
                     </div>
                     
                     <div className="border2">
-                        <CustomButton title={'Confirm Password'} type='submit' style={{width:'100%', height:'60px',borderRadius:'1rem'}}/>
+                        <CustomButton title={'Confirm Password'} type='submit' style={{width:'100%', height:'55px',borderRadius:'1rem'}}/>
                     </div> 
 
                 </form>

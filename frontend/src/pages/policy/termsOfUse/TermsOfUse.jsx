@@ -1,6 +1,7 @@
 import './TermsOfUse.css';
 import { useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
+import { Link, useLocation } from 'react-router-dom';
 import dtlogo from '../../../assets/dtlogo.png';
 
 
@@ -32,6 +33,10 @@ function TermsOfUse() {
                         <img src={dtlogo} alt="dtlogo" style={{width:'150px'}}/>
                     </Link>
                 </div>
+
+                <Link to= '/'>
+                    <BiArrowBack color='white' size={40}/>
+                </Link>
 
 
                 <div className='termsheader'>                    

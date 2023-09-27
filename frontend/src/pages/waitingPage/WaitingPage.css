@@ -4,6 +4,7 @@
     align-items: center;
     background: linear-gradient(to right, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 3rem 2rem;
+    height:100vh;
     width: 100%;
 }
 
@@ -24,14 +25,14 @@
 
 .waiting-img img {
     align-self: end;
-    width: 650px;
+    width: 700px;
 }
 
 
 
 
 
-@media screen and (max-width:900px){
+@media screen and (max-width:930px){
     .waiting-body {
         display: grid;
         justify-content: center;
@@ -41,12 +42,13 @@
     }
     
     .waiting-text{
-        width: 200px;
+        width: 60%;
         margin: 10px auto;
     }
 
     .waiting-img img {
-        align-self: end;
+        display: flex;
+        justify-content: center;
         width: 300px;
         margin: 10px auto;
     }

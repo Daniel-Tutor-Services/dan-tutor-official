@@ -21,7 +21,7 @@ function WaitingPage() {
                 <div className="waiting-text">
                     <h1>Waiting...</h1>
                     
-                    <p>Thank you for choosing <b>DAN-TUTOR</b> as your learning companion. Let us learn, grow, and achieve together!</p>
+                    <p>Thank you for choosing <b>DAN-TUTOR</b> as your learning companion. <br /> Let us learn, grow, and achieve together!</p>
 
                     <p>Please, Wait! This wont take long.</p>
                 </div>

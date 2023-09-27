@@ -1,7 +1,9 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import './ContactPage.css';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { BiArrowBack } from 'react-icons/bi';
 import {  useDispatch, useSelector } from 'react-redux';
 import { setMessagex } from '../../slices/authSlice';
 import {  useContactUsMutation } from '../../slices/usersApiSlice'
@@ -74,9 +76,23 @@ function ContactPage () {
 
 
 				<div className="colc">
-					<Link to='/' className='links'>
-						<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'150px'}} />          
-					</Link>
+
+					<div>
+						<Link to= '/'>
+    	                	<BiArrowBack color='white' size={40}/>
+	                	</Link>
+					</div>
+					
+
+					<div>
+
+						<Link to='/' className='links'>
+							<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'150px'}} />          
+						</Link>
+					</div>
+
+		
+								
 
 					<h2>Send Us A Message</h2>
 
@@ -122,7 +138,7 @@ function ContactPage () {
 						<span>Address</span>
 					</div>
 					
-					<span className="movec">Afe Babalola University Post Graduate <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School, Ado Ekiti, Ekiti State, Nigeria.</span><br /><br />
+					<span className="movec">Afe Babalola University Post Graduate School, <br/>  Ado Ekiti, Ekiti State, Nigeria.</span><br /><br />
 					
 					<div className="groupc">
 						<Phone size={32} /> 

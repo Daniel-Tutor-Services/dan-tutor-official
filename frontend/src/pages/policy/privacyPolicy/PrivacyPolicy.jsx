@@ -1,6 +1,7 @@
 import './PrivacyPolicy.css';
 import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
 import dtlogo from '../../../assets/dtlogo.png';
 
 
@@ -34,6 +35,10 @@ function PrivacyPolicy() {
                     </Link>
 
                 </div>
+
+                <Link to= '/'>
+                    <BiArrowBack color='white' size={40}/>
+                </Link>
                 
                 <div className='policyheader'>         
                     <h1>PRIVACY POLICY</h1>

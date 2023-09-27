@@ -229,7 +229,7 @@ function EditedProfile() {
                     </div>
 
                     <div className="border2" >
-                        <p>Full Name</p>
+                        <p style={{marginBottom:"10px"}}>Full Name</p> 
                         <CustomInput placeholder={userInfo.fullName} value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
                     </div>
 
