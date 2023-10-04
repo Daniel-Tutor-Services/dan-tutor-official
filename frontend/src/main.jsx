@@ -19,10 +19,10 @@ import AllStaffPage from './pages/about/AllStaffPage.jsx';
 
 
 //Admin
-import AdminDashBoard from './pages/adminPage/adminDashBoard/AdminDashBoard.jsx';
-import AdminUsers from './pages/adminPage/adminDashBoard/AdminUsers.jsx';
-import AdminOutline from './pages/adminPage/adminDashBoard/AdminAllOutline.jsx';
-import AdminContacts from './pages/adminPage/adminDashBoard/AdminContacts.jsx';
+// import AdminDashBoard from './pages/adminPage/adminDashBoard/AdminDashBoard.jsx';
+// import AdminUsers from './pages/adminPage/adminDashBoard/AdminUsers.jsx';
+// import AdminOutline from './pages/adminPage/adminDashBoard/AdminAllOutline.jsx';
+// import AdminContacts from './pages/adminPage/adminDashBoard/AdminContacts.jsx';
 
 
 //Contact
@@ -100,7 +100,7 @@ const router = createBrowserRouter(
 
 
             {/* Admin */}
-            <Route path="/admin-contacts" element={<AdminContacts />} />
+            {/* <Route path="/admin-contacts" element={<AdminContacts />} />
 
             <Route path='/admin-outline' element = {<PrivateRoutes />}>
                 <Route path="/admin-outline" element={<AdminOutline />} />
@@ -112,7 +112,7 @@ const router = createBrowserRouter(
 
             <Route path='/admin-dash' element = {<PrivateRoutes/>}>
                 <Route path="/admin-dash" element={<AdminDashBoard />} />
-            </Route>
+            </Route> */}
 
 
 
