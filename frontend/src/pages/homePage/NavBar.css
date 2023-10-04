@@ -69,7 +69,7 @@
 }
 
 .contents li:hover{
-    color: darkblue;
+    color: #0057ff;
     transition: ease-in .2s;
 }
 

@@ -22,7 +22,7 @@
 }
 
 .gen-course-mat div:hover {
-    background: linear-gradient(to left, #0d0d0d, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background: #0057ff;
     transform: scale(1.04);  
     color: white;
 }

@@ -1,5 +1,5 @@
 .errorbody {
-    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background: #0057ff;
     overflow:hidden;
     height: 100vh;
 }

@@ -20,7 +20,7 @@
     flex-direction: column;
     width: 40%;
     padding: 2rem 0;
-    background: linear-gradient(to right, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+    background: #0057ff
 }
 
 .formc p{

@@ -38,7 +38,7 @@ function SideBar() {
    
     return (
         
-        <div className="Sidebar-con ">
+        <div style={{background:'whitesmoke'}} className="Sidebar-con ">
 
             <Link to='/' className='links'>
                 <div className='sidebar-img'>

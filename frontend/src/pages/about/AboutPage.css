@@ -1,11 +1,11 @@
 .about-us-page{
     padding: 5rem  0 0;
- background: rgb(128, 128, 128); 
+    background: #0057ff;
 }
 
 .about-us-page p{
     text-align: justify;
-    color: black;   
+    color: rgb(0, 0, 0);   
 }
 
 .aboutus-info{

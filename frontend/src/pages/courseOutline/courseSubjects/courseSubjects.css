@@ -10,18 +10,18 @@
 }
 
 .courseSubjects-detailz{
-    background: grey; 
     border-radius: 50px;
     padding: 1.5rem 0;
     margin: 0;
     text-decoration: none;
     width: 300px;
     margin-bottom: 30px;
-    background-color: #64585b;
+    background-color: #2e001e;
+    border: 5px solid #ee35bc;
 }
 
 .courseSubjects-detailz a{
-    color: #000000;
+    color: #ee35bc;
 }
 
 .courseSubjects-detailz a:hover{

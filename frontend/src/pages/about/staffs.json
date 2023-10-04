@@ -2,27 +2,27 @@
     {
         "_id": 1,
         "img":"Pictures/staff1.png",
-        "name":"Achilihu Uzoma Christopher",
+        "name":"Achilihu Daniel Uchenna",
         "about":"Chief Executive Officer"
           
     },
     {
         "_id": 2,
-        "img":"Pictures/staff2.png",
-        "name":"Achilihu Ijeoma Angela",
+        "img":"https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-6/345900950_546149961020623_2467108972751171423_n.jpg?stp=c0.23.206.206a_dst-jpg_p206x206&_nc_cat=100&ccb=1-7&_nc_sid=0df3a7&_nc_eui2=AeFHonK-S5G_0NF0Jz2dqnIFOZKo7QORuYc5kqjtA5G5h70E6dBjuw2n9wjWgsq9OwPLTWPqRDu2JyY9_p5JpaF5&_nc_ohc=NVUKjJyrc8wAX9c6tmf&_nc_zt=23&_nc_ht=scontent.flos5-2.fna&oh=00_AfC6mACFyVtLA2CGfROt6JCH3IsEeafaszwFk6UGgIno2A&oe=65219A51",
+        "name":"Abigail Ekidaire",
         "about":"Managing Director "
        
     },
     {
         "_id": 3,
-        "img":"Pictures/staff3.png",
+        "img":"https://media.licdn.com/dms/image/C4D03AQGnWgz0CNturQ/profile-displayphoto-shrink_200_200/0/1596326619418?e=1701907200&v=beta&t=OtSWVeErvkhZjW81J5X9Z9_1wvtXjLZpR5Ecg5SBWkw",
         "name":"Achilihu Chinyere Beryl",
         "about":"Content Manager"
         
     },
     {
         "_id": 4,
-        "img":"Pictures/staff4.png",
+        "img":"https://media.licdn.com/dms/image/D4E03AQH8rHEk6uxQbQ/profile-displayphoto-shrink_100_100/0/1668864147736?e=1701907200&v=beta&t=KcZ4a9qBWw3g7jOEwC4cnFYTFKjjWlr-h6umiFLpQu8" ,
         "name":"Achilihu Chidinma Victoria",
         "about":"Legal Adviser"
         
@@ -30,30 +30,29 @@
     },
     {
         "_id": 5,
-        "img":"Pictures/staff5.png",
-        "name":"Achilihu Uchenna Daniel ",
-        "about":"Chief Technology Officer"
+        "img":"https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-1/351187620_269397545660961_5293395798425752814_n.jpg?stp=dst-jpg_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=fe8171&_nc_eui2=AeEbkzxGAM-R5EPnYJibb_3xPwZZCVU4j58_BlkJVTiPn_zYM9JrbW0MSza9fsIHmHIJBBS1-XpSroRE94tVK6B1&_nc_ohc=w7zwks26AEQAX88XoVf&_nc_oc=AQlDQCZ9shtqEmdmUqvTDpNWU6ojkVGGtdUS1DvFzEZOASdOPuIrw4tq1pueXu3aDc4&_nc_ht=scontent.flos5-2.fna&oh=00_AfAW89dn1uMHTjs8nEr4W3-uyDHlHRQwfvWP3VCtfuK5aw&oe=6522C898",
+        "name":"Sochima  Enechi ",
+        "about":"Instructor's Supervisor"
        
     },
     {
         "_id": 6,
-        "img":"Pictures/staff6.png",
-        "name":"Achilihu Somtoo Anita",
+        "img":"https://scontent.flos5-1.fna.fbcdn.net/v/t1.6435-9/135784352_1682218055282498_9106563363684997948_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFc4CxUjwiEspzsOb753Wca64un25-Wij3ri6fbn5aKPYkCQ6AVaPyeYzSeBYD3E5NhFE3WeChyPz9hn38QoZ2w&_nc_ohc=G2G1XBXDZOoAX-P9cwH&_nc_ht=scontent.flos5-1.fna&oh=00_AfAS_eZ0jGbsYL-UrPTz9rKcbtgE2r39omZsvz34_ZOhqA&oe=6544D6C5",
+        "name":"Cletus Emmanuel",
         "about":"Product Designer"
         
     },
     {
         "_id": 7,
-        "img":"Pictures/staff7.png",
-        "name":"Achilihu Kelechi Samuel ",
-        "about":"Instructor's Supervisor"
-        
-        
+        "img":"https://scontent.flos5-1.fna.fbcdn.net/v/t1.18169-9/13062058_123227451414551_606878748512805753_n.jpg?stp=c0.3.206.206a_dst-jpg_p206x206&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_eui2=AeHy-TfgJCiydWbj3O6OWpyJ8fe4S7vcNarx97hLu9w1qu3dR9jgQ0XMwEigiJ870GV-bWgHc9PTeYBJwaLxFGYW&_nc_ohc=ssUEzQYz1d4AX8tDKCX&_nc_ht=scontent.flos5-1.fna&oh=00_AfAJDIcY6aQbe5vhU9KOwAUEYc8y2J7AbT4m4FoEmFp4sg&oe=6544E3A6",
+        "name":"Okpara Paul ",
+        "about":"Chief Technology Officer"
+
     },
     {
         "_id": 8,
-        "img":"Pictures/staff8.png",
-        "name":"Achilihu Chidera David",
+        "img":"https://scontent.flos5-3.fna.fbcdn.net/v/t1.6435-9/131008129_3340951559364763_779718978559202323_n.jpg?stp=c0.34.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_eui2=AeFNXsnhnq462SMH9PSm4HoshTm9FwWuDCyFOb0XBa4MLO8gBOPAB_Zv37nGMWJuurSPFnUG8DrJ-qfxo12NLPv_&_nc_ohc=muY2XeMrs3QAX_GzS10&_nc_ht=scontent.flos5-3.fna&oh=00_AfCMyV_NZFwLctDDXehkSEGaH0pauLSrADrhZRM7ZNeGKg&oe=6545045F",
+        "name":"Noble Didi",
         "about":"Chief Financial Ofiicer"
        
     }   

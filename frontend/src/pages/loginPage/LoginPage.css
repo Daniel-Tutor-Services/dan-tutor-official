@@ -17,15 +17,15 @@
 }
 
 .absl .imgl{
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
     opacity: 1;
 }
 
 .col-2l .absl{
     position: absolute;
     color: white;
-    bottom: 25%;
+    bottom: 12%;
 }
 
 .col-2l .absl h1{
@@ -74,7 +74,7 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
-    background: linear-gradient(to left, #C4E0E5, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background: #0057ff;
     border: 1px solid black;
     padding: 10px 30 0;
 }

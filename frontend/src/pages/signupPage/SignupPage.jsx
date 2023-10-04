@@ -224,7 +224,7 @@ function SignupPage () {
                 setPhoneStyle({...redBorder})
                 setPhoneIsValid(false)
             
-                toast.warn("Invalid Phone Number", {
+                toast.error("Invalid Phone Number", {
                     position: toast.POSITION.TOP_RIGHT
                 })
             }
@@ -387,7 +387,7 @@ function SignupPage () {
                     </div>
 
                     <h1>Welcome to our E-learning center</h1>
-                    <p>Whether you are a student looking to supplement your studies, a professional aiming to upskill, or someone with a curiosity to explore new subjects, DAN-TUTOR is here to support your learning journey. We invite you to join our community of learners, engage in thoughtful discussions, and embark on a path of continuous growth.</p>
+                    <p>Whether you are a student looking to supplement your studies, a professional aiming to upskill, or someone with a curiosity to explore new subjects and love to learn, DAN-TUTOR is here to support your learning journey. We invite you to join our community of learners, engage in thoughtful discussions, and embark on a path of continuous growth.</p>
                 </div>
 
             </div>

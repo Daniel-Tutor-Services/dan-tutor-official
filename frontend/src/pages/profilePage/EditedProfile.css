@@ -2,9 +2,7 @@
 .main12{   
     width: 100vw;
     min-height: 100vh;
-    background: #4CA1AF; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1710ab, #e0eaeb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e2e8e9, #110eb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    background: #0057ff;
     top: 0;
     bottom: 0;
     left: 0;

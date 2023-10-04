@@ -31,7 +31,7 @@ function Physics() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'gray'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
             
             <div style={{display:'flex', justifyContent:'start'}}>
                 <Link to= '/dash-board'>
@@ -51,6 +51,10 @@ function Physics() {
             <div>
 
                 <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+
+                <br />
+                <br />
+                <br />
 
                 <div className='courseSubjects-cont'>
                                 
