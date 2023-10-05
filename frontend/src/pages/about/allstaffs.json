@@ -2,7 +2,7 @@
     {
         "_id": 1,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Uzomah Christopher",
+        "name":"Uzomah Christopher",
         "about":"Mathematics Instructor",
         "number": "+234 9037231624"
         
@@ -11,7 +11,7 @@
     {
         "_id": 2,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Ijeoma Angela",
+        "name":"Ijeoma Angela",
         "about":"English Language Instructor ",
         "number": "+234 9037231624"
        
@@ -19,7 +19,7 @@
     {
         "_id": 3,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Chinyere Beryl",
+        "name":"Chinyere Beryl",
         "about":"French Language Instructor",
         "number": "+234 9037231624"
         
@@ -27,7 +27,7 @@
     {
         "_id": 4,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Chidinma Victoria",
+        "name":"Chidinma Victoria",
         "about":"Physics Instructor",
         "number": "+234 9037231624"
         
@@ -36,7 +36,7 @@
     {
         "_id": 5,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Uchenna Daniel ",
+        "name":"Uchenna Daniel ",
         "about":"Chemistry Instructor",
         "number": "+234 9037231624"
        
@@ -44,7 +44,7 @@
     {
         "_id": 6,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Somtoo Anita",
+        "name":"Somtoo Anita",
         "about":"Biology Instructor",
         "number": "+234 9037231624"
         
@@ -52,7 +52,7 @@
     {
         "_id": 7,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Kelechi Samuel ",
+        "name":"Kelechi Samuel ",
         "about":"Computer Science Instructor",
         "number": "+234 9037231624"
         
@@ -61,7 +61,7 @@
     {
         "_id": 8,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Chidera David",
+        "name":"Chidera David",
         "about":"Agricultural Science Instructor",
         "number": "+234 9037231624"
        
@@ -69,7 +69,7 @@
     {
         "_id": 9,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Uzoma Christopher",
+        "name":"Uzoma Christopher",
         "about":"Economics Instructor",
         "number": "+234 9037231624"
         
@@ -78,7 +78,7 @@
     {
         "_id": 10,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Ijeoma Angela",
+        "name":"Ijeoma Angela",
         "about":"Geography Instructor",
         "number": "+234 9037231624"
        
@@ -86,7 +86,7 @@
     {
         "_id": 11,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Chinyere Beryl",
+        "name":"Chinyere Beryl",
         "about":"Civic Education Instructor",
         "number": "+234 9037231624"
         
@@ -94,7 +94,7 @@
     {
         "_id": 12,
         "img":"Pictures/staff.png",
-        "name":"Achilihu Chidinma Victoria",
+        "name":"Chidinma Victoria",
         "about":"Government Instructor ",
         "number": "+234 9037231624"
                

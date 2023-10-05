@@ -21,6 +21,11 @@ function TermsOfUse() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
+
 
 
     return (
@@ -34,9 +39,8 @@ function TermsOfUse() {
                     </Link>
                 </div>
 
-                <Link to= '/'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
 
 
                 <div className='termsheader'>                    

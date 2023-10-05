@@ -1,7 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import chemistry from '../courseContents/chemistry.json';
 
 
@@ -24,6 +24,11 @@ function Chemistry() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
+
 
 
 
@@ -32,9 +37,8 @@ function Chemistry() {
         <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
             
             <div style={{display:'flex', justifyContent:'start'}}>
-                <Link to= '/dash-board'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+
             </div>
 
             <div >

@@ -24,6 +24,7 @@ function ChangePassword(){
         
     const [password, setPassword] = useState ('');
     const [confirmPassword, setConfirmPassword] = useState ('');
+    const [ispassWordValid, setPassWordIsValid] = useState(false);
    
 
     const  [passwordShown, setPasswordShown] = useState(true);
@@ -76,39 +77,27 @@ function ChangePassword(){
     
     // Check for valid new password
 
-    const check = Object.is(password, confirmPassword)
-
     function validNewPassword(){
 
         let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
 
-        if(strongPassword.test(password)){
-
-            setPassWordStyle({...greenBorder})
-     
-
-            //check for confirm password
-            if(check){
-                setConfirmPassWordStyle({...greenBorder})
+            if(!strongPassword.test(password)){
+                setConfirmPassWordStyle({...redBorder})
+                setPassWordIsValid(false)
+                
+            }
+            
+            else {
+                setPassWordStyle({...greenBorder})          
+                toast.success("Password hashed successfully", {
+                    position: toast.POSITION.TOP_RIGHT
+                })
+                setPassWordIsValid(true)
             }
 
-            else{
-                setConfirmPassWordStyle({...redBorder})
-            } 
-            
+    }      
 
-        }
 
-        else{
-            setPassWordStyle({...redBorder})
-
-            toast.warn("Password is not strong enough", {
-                position: toast.POSITION.TOP_RIGHT
-            });
-        }
-                
-
-    }
 
 
 
@@ -117,6 +106,9 @@ function ChangePassword(){
     // Validate the form
 
     const updateUserPassword = async (e) =>{
+
+        let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+        
 
         e.preventDefault();
           validNewPassword();
@@ -127,11 +119,25 @@ function ChangePassword(){
             setConfirmPassWordStyle({...redBorder})
             setPassWordStyle({...redBorder})
 
-            toast.warn("Passwords do not match", {
+            toast.error("Passwords do not match", {
                 position: toast.POSITION.TOP_RIGHT
             }); 
 
-        }   
+        }  
+
+
+        else if (!strongPassword.test(password)) {
+            return toast.error("Password not strong enough, Please Use atleast 8 characters with combination of : uppercase, lowercase, number and special character ", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
+        
+        else if ( ispassWordValid !== true) {
+            return toast.warn("Updating new password, Click to confirm", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        } 
+        
             
         else {
             const res = await updatePassWord ({

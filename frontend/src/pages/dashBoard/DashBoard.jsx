@@ -3,6 +3,7 @@ import '../courseOutline/CourseMaterials.css';
 import { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import NavBar from '../homePage/NavBar';
+// import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import CustomButton from '../../components/customButton/CustomButton';
 
@@ -37,14 +38,19 @@ function DashBoard() {
         let x = document.getElementsByClassName('courses');
         let i =0
         for (i = 0; i < x.length; i++) {
-            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            if (x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="grid";		
+            }
+            
+            
+            else {
                 x[i].style.display="none";
             }
-            else {
-                x[i].style.display="grid";				
-            }
+     
         }
     }
+
+      
 
 
 
@@ -75,9 +81,9 @@ function DashBoard() {
                     (
                         <div >
                             <br/>
-                                <marquee direction="right">
-                                    <h3 style={{fontSize:'1.1em', color:'black', marginLeft:'10px'}}>{`Welcome,  ${userInfo.fullName}`}</h3> 
-                                </marquee>
+                            
+                                <h3 style={{fontSize:'1.1em', color:'black', marginLeft:'10px', display:'flex', justifyContent:'center'}}>{`Welcome,  ${userInfo.fullName}`}</h3> 
+                 
                             <br/>
 
                             <p id='availcours' style={{textAlign:'center'}}>Here are the lists of courses avaialble. Select to see topics. </p>
@@ -86,7 +92,9 @@ function DashBoard() {
             
                                 <NavBar/>
 
-                                <div className='gen-course-mat'>     
+                                <div className='gen-course-mat'>
+
+                                    <h3 style={{display:'none', color: 'white' }} id='ddde'> COURSE NOT FOUND  </h3>     
 
                                     <NavLink to='/course-english-language' className='links' activeStyle={{color: "red"}} onFocus={ScrollToTop()} >        
                                         <div className="courses"><p >ENGLISH LANGUAGE</p></div>

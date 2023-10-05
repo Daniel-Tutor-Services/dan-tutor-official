@@ -21,6 +21,10 @@ function PrivacyPolicy() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
 
 
 
@@ -30,15 +34,15 @@ function PrivacyPolicy() {
             <div className='policyhead'>
 
                 <div className='policyheadpic'>
-                    <Link to='/' className='links'>
+                    <Link to='/' className='links' >
                         <img src={dtlogo} alt="dtlogo" style={{width:'180px'}}/>
                     </Link>
 
                 </div>
 
-                <Link to= '/'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+
                 
                 <div className='policyheader'>         
                     <h1>PRIVACY POLICY</h1>

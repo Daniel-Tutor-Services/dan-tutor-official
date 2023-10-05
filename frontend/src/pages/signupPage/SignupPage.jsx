@@ -35,7 +35,6 @@ function SignupPage () {
     const [isphoneValid, setPhoneIsValid] = useState(false);
     const [ispassWordValid, setPassWordIsValid] = useState(false);
     
-    const check = Object.is(password, confirmPassword)
 
     const  [passwordShown, setPasswordShown] = useState(true);
     const togglePassword = () => {
@@ -205,7 +204,7 @@ function SignupPage () {
 
     function validPhone(){
 
-        if(phone.length === 0){
+        if(phone.length == 0){
             setPhoneStyle({...redBorder})
             setPhoneIsValid(false)
 
@@ -238,31 +237,19 @@ function SignupPage () {
     function validPassword(){
         let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
 
-        if(strongPassword.test(password)){
-            setPassWordStyle({...greenBorder})
-            setPassWordIsValid(true)
-
-            //check for confirm password
-            if(check){
-                setConfirmPassWordStyle({...greenBorder})
-                setPassWordIsValid(true)
-            }
-            
-            else{
-                setConfirmPassWordStyle({...redBorder})
-                setPassWordIsValid(false)
-            }  
-        }
-        
-        else{
-            setPassWordStyle({...redBorder})
+        if(!strongPassword.test(password)){
+            setConfirmPassWordStyle({...redBorder})
             setPassWordIsValid(false)
             
-            toast.warn("Password is not strong enough", {
+        }
+        
+        else {
+            setPassWordStyle({...greenBorder})          
+            toast.success("Password hashed successfully", {
                 position: toast.POSITION.TOP_RIGHT
             })
+            setPassWordIsValid(true)
         }
-    
     }
 
 
@@ -270,6 +257,8 @@ function SignupPage () {
 
     const registerNewUser = async (e) =>{
 
+        let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+        
         e.preventDefault();
         validFullname();
         validUsername();
@@ -278,17 +267,31 @@ function SignupPage () {
         validPassword();
         
 
-
-
-        if (password !== confirmPassword){
+        if (password !== confirmPassword) {
             return toast.error("Passwords do not match", {
                 position: toast.POSITION.TOP_RIGHT
             });
         }
     
 
-        if (isfullNameValid && isuserNameValid && isemailValid && ispassWordValid && isphoneValid !== true) {
-            toast.warn("Please Enter Correct Information", {
+        else if (!strongPassword.test(password)) {
+            return toast.error("Password not strong enough, Please Use atleast 8 characters with combination of : uppercase, lowercase, number and special character ", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
+
+        
+        else if(phone.length < 11){
+            setPhoneStyle({...redBorder})
+            toast.warn("Invalid Phone Number, Number too short", {
+                position: toast.POSITION.TOP_RIGHT
+            })
+        }
+
+    
+
+        else if (isfullNameValid && isuserNameValid && isemailValid && ispassWordValid && isphoneValid !== true) {
+            return toast.warn("Please Enter Correct Information", {
                 position: toast.POSITION.TOP_RIGHT
             });
         } 

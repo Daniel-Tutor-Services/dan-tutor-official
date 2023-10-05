@@ -61,6 +61,9 @@ function ContactPage () {
         }
 	}
 
+	function goBackAndRefresh() {
+        window.history.go(-1);
+    }
 
 		
 
@@ -78,9 +81,7 @@ function ContactPage () {
 				<div className="colc">
 
 					<div>
-						<Link to= '/'>
-    	                	<BiArrowBack color='white' size={30}/>
-	                	</Link>
+					<BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={30}/>
 					</div>
 					
 
@@ -101,7 +102,9 @@ function ContactPage () {
 						(
 							<>
 								<CustomInput placeholder={userInfo.fullName}  style = {{width: '100%'}}  value= {fullName}  onChange={() => setFullName (userInfo.fullName)}/>
-								<CustomInput placeholder= {userInfo.email} style = {{width: '100%'}}  value= {email} onChange={() => setEmail (userInfo.email)}  />
+								
+								<CustomInput placeholder= {userInfo.email}  type='email' style = {{width: '100%'}}  value= {email} onChange={() => setEmail (userInfo.email)}  />
+								
 								<CustomInput placeholder= {userInfo.phone} style = {{width: '100%'}}  value= {phone}  onChange={() => setPhone (userInfo.phone)}  />
 							</>
 						)
@@ -111,7 +114,9 @@ function ContactPage () {
 						( 
 							<>
 								<CustomInput placeholder= 'Full Name*' style = {{width: '100%'}}  value= {fullName}  onChange={(e) => setFullName (e.target.value)} />		
-								<CustomInput placeholder= 'Email Address*' style = {{width: '100%'}}  value= {email}  onChange={(e) => setEmail (e.target.value)} />
+								
+								<CustomInput placeholder= 'Email Address*' style = {{width: '100%'}} type='email' value= {email}  onChange={(e) => setEmail (e.target.value)} />
+								
 								<CustomInput placeholder= 'Phone Number*' style = {{width: '100%'}}  value= {phone}  onChange={(e) => setPhone (e.target.value)} />		
 							</>
 						)	

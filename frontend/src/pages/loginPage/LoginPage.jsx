@@ -79,7 +79,7 @@ function LoginPage () {
 
                     <h1>Login</h1>
 
-                    <CustomInput placeholder='Email Address*' value = {email} name="email" style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
+                    <CustomInput placeholder='Email Address*' value = {email} name="email"  type='email' style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
 
                     <CustomInput placeholder='Password*' value = {password} name="password"   type={passwordShown ? "password" : "text"}  style = {{width: '100%'}} onChange ={(e) => setPassword (e.target.value)}/>
                   

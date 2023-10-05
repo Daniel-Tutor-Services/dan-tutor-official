@@ -57,21 +57,21 @@ function EditedProfile() {
     const redBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid red',
+        border: '1px solid red',
         borderRadius: '15px'
     }
 
     const greenBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid green',
+        border: '1px solid green',
         borderRadius: '15px'
     }
 
     const yellowBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid yellow',
+        border: '1px solid yellow',
         borderRadius: '15px'
     }
   
@@ -151,6 +151,9 @@ function EditedProfile() {
         else{
             if(validator.isNumeric(phone)){
                 setPhoneStyle({...phoneStyle, border: '2px solid green'})
+                toast.success(`Phone Number Updated `, {
+                    position: toast.POSITION.TOP_RIGHT
+                })
                 setPhoneIsValid(true)
             }
             
@@ -186,6 +189,15 @@ function EditedProfile() {
             });
             
         } 
+
+                
+        else if(phone.length < 11){
+            setPhoneStyle({...redBorder})
+            toast.warn("Invalid Phone Number, Number too short", {
+                position: toast.POSITION.TOP_RIGHT
+            })
+        }
+
         else {
 
             const res = await updateProfile ({
