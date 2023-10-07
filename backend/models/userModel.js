@@ -7,9 +7,6 @@ const userSchema = mongoose.Schema ({
     fullName: {
         type: String,
         required: true,
-        pattern: {
-            value: /^[A-Za-z]+$/
-        }
     },
     userName: {
         type: String,
@@ -17,7 +14,7 @@ const userSchema = mongoose.Schema ({
         unique: true
     },
     email: {
-        type: String,
+        type:String,
         required: true,
         unique: true
     },
