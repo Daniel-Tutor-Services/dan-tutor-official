@@ -81,7 +81,7 @@ function ContactPage () {
 				<div className="colc">
 
 					<div>
-					<BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={30}/>
+						<BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={30}/>
 					</div>
 					
 

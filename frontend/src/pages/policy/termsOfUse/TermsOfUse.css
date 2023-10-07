@@ -2,6 +2,8 @@
 .termshead{
     background: #0057ff; 
     display: flex;
+    padding: 0 4rem;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
     color: white;
@@ -11,13 +13,24 @@
 }
 
 .termsheader{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content:center;
+    margin-left: 15%;
     align-items: center;
+}
+
+
+.termsheadpic{
+    width: 100%;
+    display: flex;
+}
+
+
+.termsheadpic img{
+    width: 150px;
 }
 
 .terms{
@@ -28,14 +41,32 @@
     margin-top: 30px;
 }
 
+.terms ul{
+    margin-left: 2rem;
+}
 
-@media screen and (max-width:800px){
+
+@media screen and (max-width:900px){
 
     .termsheader h1{
         font-size: 1rem;
         width: 100%;
         margin: 0;
-        padding: 0 2rem;
+        padding: 0 1rem;
+        margin-left: 20px;
+    }
+
+    .termsheader{
+        width: 100%;
+        margin-left: 0%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+        
+    .termsheadpic{
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     .terms{
@@ -43,9 +74,27 @@
         width: 80%;
         margin: 30px auto;
     }
-
+    
     .terms ul{
         margin-left: 1rem;
+    }
+}
+
+
+@media screen and (max-width:520px){
+    .termshead{
+        padding: 0 2rem;
+    }
+
+    .termsheader h1{
+        font-size: 0.7rem;
+        width: 100%;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .termsheadpic img{
+        width: 80px;
     }
     
 }

@@ -30,10 +30,27 @@
 
 .courseSubjects-detailz h1, h3{
     font-size: 1.3rem;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
 }
 
 .dashinput:focus{
     outline: 2px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+@media screen and (max-width:800px){
+    
+    #courseSubjects-hd h1{
+        font-size: 1rem;
+    }
+
+    #courseSubjects-hd p{
+        font-size: 0.8rem;
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 

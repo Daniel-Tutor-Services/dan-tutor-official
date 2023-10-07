@@ -33,8 +33,8 @@ import ContactPage from './pages/contactPage/ContactPage.jsx';
 //Course Subjects
 import Chemistry from './pages/courseOutline/courseSubjects/chemistry.jsx';
 import EnglishLanguage from './pages/courseOutline/courseSubjects/EnglishLanguage.jsx';
-import Mathematics from './pages/courseOutline/courseSubjects/Mathematics';
-import Physics from './pages/courseOutline/courseSubjects/Physics';
+import Mathematics from './pages/courseOutline/courseSubjects/Mathematics.jsx';
+import Physics from './pages/courseOutline/courseSubjects/Physics.jsx';
 
 
 //Dashboard
@@ -139,6 +139,7 @@ const router = createBrowserRouter(
             <Route path='/course-physics' element = {<PrivateRoutes />}> 
                 <Route path="/course-physics" element={<Physics />} />  
             </Route>
+
 
 
             {/* Dashboard */}

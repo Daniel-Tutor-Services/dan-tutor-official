@@ -35,10 +35,9 @@ function EnglishLanguage() {
 
 
 
-
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em',paddingBottom:'30%', width:'100%', background:'#7EDCAD'}}>
             
             <div style={{display:'flex', justifyContent:'start'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
@@ -61,9 +60,6 @@ function EnglishLanguage() {
 
                 <br />
                 <br />
-                <br />
-                <br />
-
 
                 <div className='courseSubjects-cont'>
                                 
@@ -72,9 +68,10 @@ function EnglishLanguage() {
 
                             if (query === '') {
                                 return english;
-                            } else if (english.topic.toLowerCase().includes(query.toLowerCase())) {
+                            } else if (english.topic.trim().toLowerCase().includes(query.toLowerCase())) {
                                 return english;
                             }
+
 
                         }).map((english, index) => (
 
@@ -102,11 +99,21 @@ function EnglishLanguage() {
 
                             </div>
                         ))
-                    }
+                    }  
 
-                </div>      
-                
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'60%', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>
+
             </div>
+
 
         </div>
     )

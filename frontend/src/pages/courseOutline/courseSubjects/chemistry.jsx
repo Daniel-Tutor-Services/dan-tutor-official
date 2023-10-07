@@ -34,7 +34,7 @@ function Chemistry() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', paddingBottom:'30%', width:'100%', background:'#7EDCAD'}}>
             
             <div style={{display:'flex', justifyContent:'start'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
@@ -54,7 +54,6 @@ function Chemistry() {
 
                 <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
-                <br />
                 <br />
                 <br />
 
@@ -97,7 +96,17 @@ function Chemistry() {
                         ))
                     }
 
-                </div>      
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'60%', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>
+
                 
             </div>
 

@@ -33,21 +33,19 @@ function TermsOfUse() {
         <div className='termspage'>
                 
             <div className='termshead'>
+                
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                
                 <div className='termsheadpic'>
                     <Link to='/' className='links'>
-                        <img src={dtlogo} alt="dtlogo" style={{width:'150px'}}/>
+                        <img src={dtlogo} alt="dtlogo"/>
                     </Link>
+
+                    <div className='termsheader'>                    
+                        <h1>TERMS OF USE</h1>
+                    </div>
+                    
                 </div>
-
-
-                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
-
-
-                <div className='termsheader'>                    
-                    <h1>TERMS OF USE</h1>
-
-                </div>
-                
             </div>
                 
                 

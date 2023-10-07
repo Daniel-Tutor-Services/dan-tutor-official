@@ -34,14 +34,14 @@ function Mathematics() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem  3rem', paddingBottom:'30%', width:'100%', background:'#7EDCAD'}}>
 
             <div style={{display:'flex', justifyContent:'start'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
             </div>
 
-            <div >
-                <h1 id='courseSubjects-hd' style={{color:'white'}}>MATHEMATICS</h1> 
+            <div id='courseSubjects-hd' >
+                <h1 style={{color:'white'}}>MATHEMATICS</h1> 
                 <p style={{color:'black'}}>Here are lists of availaible topics in Mathematics. Click to learn more.</p>
                 <br />
             </div>
@@ -54,7 +54,6 @@ function Mathematics() {
 
                 <br />
                 <br />
-                <br />
 
                 <div className='courseSubjects-cont'>
                     
@@ -62,9 +61,14 @@ function Mathematics() {
                         mathematics.filter(mathematicz => {
 
                             if (query === '') {
+                                // alert ('kesh')
                                 return mathematicz;
                             } else if (mathematicz.topic.toLowerCase().includes(query.toLowerCase())) {
                                 return mathematicz;
+                            }
+
+                            else if ( mathematicz.topic.toLowerCase().includes(query.toLowerCase())=== '' ) {
+                                console.log('kesh');
                             }
                         }).map((mathematics, index) => (
 
@@ -93,7 +97,17 @@ function Mathematics() {
                         ))
                     }
 
-                </div>      
+                                            
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'60%', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>  
                 
             </div>
 
