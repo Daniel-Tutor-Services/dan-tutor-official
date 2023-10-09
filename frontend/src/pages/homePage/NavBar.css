@@ -180,6 +180,8 @@
         height: 100px;
         display: flexbox;
         margin: 0;
+        background-color: red;
+        align-items: center; 
         justify-content: space-between;
     }
 }
