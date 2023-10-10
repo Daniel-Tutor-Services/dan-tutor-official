@@ -34,10 +34,11 @@ function Mathematics() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem  3rem', paddingBottom:'30%', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem  1rem', paddingBottom:'100%', width:'100%', background:'#7EDCAD'}}>
 
-            <div style={{display:'flex', justifyContent:'start'}}>
+            <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                <span>Back</span>
             </div>
 
             <div id='courseSubjects-hd' >
@@ -50,7 +51,7 @@ function Mathematics() {
 
             <div>
 
-                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'42vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
                 <br />
                 <br />
@@ -100,7 +101,7 @@ function Mathematics() {
                                             
                 </div>   
 
-                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'60%', padding:'0.5rem', margin:'0 auto'}}> 
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
 
                     <marquee  direction="left">
                         <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>

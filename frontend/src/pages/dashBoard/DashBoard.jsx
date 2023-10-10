@@ -104,11 +104,7 @@ function DashBoard() {
                                     <NavLink to='/course-chemistry' className='links'  onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>CHEMISTRY</p></div>
                                     </NavLink>
-                                    
-                                    <NavLink to='/course-xxx' className='links'  onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>CHEMISTRY</p></div>
-                                    </NavLink>
-                                    
+                                                                        
                                     <NavLink to='/course-french' className='links'  onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>FRENCH LANGUAGE</p></div>
                                     </NavLink>

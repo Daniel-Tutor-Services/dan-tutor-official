@@ -256,7 +256,7 @@ function EditedProfile() {
                     </div>
 
                     <div className="border2">
-                        <CustomButton title={'Confirm Changes'} type='submit' style={{width:'100%', height:'60px',borderRadius:'5rem'}}/>
+                        <CustomButton title={'Confirm Changes'} type='submit' style={{width:'100%', height:'60px',fontSize:'1.1rem',marginTop:'20px', borderRadius:'1rem'}}/>
                     </div> 
                     
                 </form>

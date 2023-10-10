@@ -37,17 +37,17 @@ function EnglishLanguage() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em',paddingBottom:'30%', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1em',paddingBottom:'100%', width:'100%', background:'#7EDCAD'}}>
             
-            <div style={{display:'flex', justifyContent:'start'}}>
+            <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
-
+                <span>Back</span>
             </div>
             
-            <div >
+            <div id='courseSubjects-hd'  >
 
-                <h1 id='courseSubjects-hd' style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn more.</p>
+                <h1 style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
+                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn moree.</p>
                 <br />
             </div>
 
@@ -103,7 +103,7 @@ function EnglishLanguage() {
 
                 </div>   
 
-                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'60%', padding:'0.5rem', margin:'0 auto'}}> 
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
 
                     <marquee  direction="left">
                         <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>

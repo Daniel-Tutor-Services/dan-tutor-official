@@ -210,7 +210,7 @@ function ChangePassword(){
                     </div>
                     
                     <div className="border2">
-                        <CustomButton title={'Confirm Password'} type='submit' style={{width:'100%', height:'55px',borderRadius:'1rem'}}/>
+                        <CustomButton title={'Confirm Password'} type='submit' style={{width:'100%', height:'60px',fontSize:'1.1rem', borderRadius:'1rem'}}/>
                     </div> 
 
                 </form>
