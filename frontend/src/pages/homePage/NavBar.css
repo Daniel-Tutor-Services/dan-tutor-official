@@ -178,7 +178,8 @@
     .nav-barr{
         padding: 0.1rem;
         height: 100px;
-        display: flexbox;
+        display: flex;
+        align-items: center;
         margin: 0;
         justify-content: space-between;
     }
