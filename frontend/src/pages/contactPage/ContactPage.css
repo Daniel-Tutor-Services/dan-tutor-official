@@ -7,7 +7,7 @@
 
 .smallContc img {
     width: 100%;
-    height: 120vh;
+    height: 125vh;
     font-size: 1rem;
     object-fit: cover;
     display: block;
@@ -20,7 +20,8 @@
     flex-direction: column;
     width: 40%;
     padding: 2rem 0;
-    background: #0057ff
+    background: #00296f; 
+
 }
 
 .formc p{
@@ -109,7 +110,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    color: #d30330;
+    color: yellow;
 }
 
 .groupc span{

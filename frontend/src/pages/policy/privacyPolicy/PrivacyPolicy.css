@@ -1,5 +1,5 @@
 .policyhead{
-    background: #0057ff;
+    background: #00296f; 
     display: flex;
     padding: 0 4rem;
     justify-content: space-between;
@@ -28,7 +28,7 @@
 
 
 .policyheadpic img{
-    width: 150px;
+    width: 160px;
 }
 
 
@@ -95,7 +95,7 @@
     }
 
     .policyheadpic img{
-        width: 80px;
+        width: 130px;
     }
     
 }

@@ -38,10 +38,10 @@ function SideBar() {
    
     return (
         
-        <div style={{background:'whitesmoke'}} className="Sidebar-con ">
+        <div style={{background:'white'}} className="Sidebar-con ">
 
             <Link to='/' className='links'>
-                <div className='sidebar-img'>
+                <div className='sidebar-img' >
                     <img src={dtlogo} alt="dtlogo" className='img'/>
                 </div>
             </Link>

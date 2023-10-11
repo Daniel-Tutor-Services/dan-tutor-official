@@ -148,7 +148,7 @@ function DashBoard() {
 
                                     <div className="nocourse" style={{background:'red',textAlign:'center',transform:'none', color:'black'}}> 
                                         <marquee direction="left">
-                                            <p style={{background:'red'}}>
+                                            <p style={{background:'red', color:'white'}}>
                                                 No Other Course Available
                                             </p>
                                         </marquee>
@@ -167,7 +167,7 @@ function DashBoard() {
                         <div className='titlediv'>
                             <h1>All Courses</h1>
                             <marquee direction="left"> 
-                                <h3>  Please Login / Sign up to view our course outlines. </h3>
+                                <h3 style={{color:'white'}}>  Please Login / Sign up to view our course outlines. </h3>
                             </marquee>
 
                         </div>                 

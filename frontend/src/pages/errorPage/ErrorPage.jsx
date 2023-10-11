@@ -1,7 +1,7 @@
 import './ErrorPage.css';
 import { Link } from "react-router-dom";
 import { BiArrowBack } from 'react-icons/bi';
-import dtlogo from '../../assets/dtlogo.png';
+import dtlogo from '../../assets/dtlogo2.png';
 
 
 
@@ -20,18 +20,18 @@ function ErrorPage() {
         <div className='errorbody'>
             <div className='errorlogo'>
 
-                <div>
-                    <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer',display:'flex', justifyContent:'start'}} color='white' size={30}/>
+                <div  style={{cursor: 'pointer',display:'flex', alignItems:'center', color:'white'}} >
+                    <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer',display:'flex', marginRight:'10px', justifyContent:'start'}} color='white' size={30}/>  Back
                 </div>
 
-                <Link to='/' className='links'>
-                    <img src={dtlogo} alt="dtlogo" style={{width:'170px', height:'170px', padding:'5px 5px'}}/>
-                </Link>
-
-
             </div>
+        
+            <div style={{display:'flex', justifyContent:'center'}}>
 
-
+                <Link to='/' className='links'>
+                    <img src={dtlogo} alt="dtlogo" style={{width:'200px', height:'150px'}}/>
+                </Link>
+            </div>
 					
             <div className="errortext">
 

@@ -16,16 +16,17 @@
     text-decoration: none;
     width: 300px;
     margin-bottom: 30px;
-    background-color: #2e001e;
-    border: 5px solid #ee35bc;
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .courseSubjects-detailz a{
-    color: #ee35bc;
+    color: #000000;
 }
 
 .courseSubjects-detailz a:hover{
-    color: #ffffff;
+    color: #ff0000;
+    text-decoration: none;
 }
 
 .courseSubjects-detailz h1, h3{
@@ -53,8 +54,8 @@
     }
 
     #courseSubjects-hd p{
-        font-size: 0.8rem;
-        width: 80%;
+        font-size: 0.9rem;
+        width: 70%;
         margin: 0 auto;
     }
     
@@ -65,8 +66,6 @@
         text-decoration: none;
         width: 250px;
         margin-bottom: 30px;
-        background-color: #2e001e;
-        border: 5px solid #ee35bc;
     }    
     
 

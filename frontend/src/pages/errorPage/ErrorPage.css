@@ -1,5 +1,5 @@
 .errorbody {
-    background: #0057ff;
+    background: #00296f;
     overflow:hidden;
     height: 100vh;
 }
@@ -8,8 +8,7 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    /* justify-content: space-between; */
-    height: 200px;
+    padding: 2rem 0;
     align-items: center;
 }
 

@@ -7,15 +7,12 @@
 
 .col-2{
     width: 60%;
-    background: black;
+    background: rgb(0, 0, 0);
     position: relative;
 }
 
 .abs .img{
-    width: 10rem;
-    height: 10rem;
-    opacity: 0.6;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .col-2 .abs{
@@ -23,13 +20,13 @@
     left: 2%;
     width: 95%;
     position: absolute;
-    color: rgba(255, 255, 255, 0.4);
+    color: white;
     text-align: center;
     line-height: 1.8rem;
 }
 
 .col-2 .abs h1{
-    margin-top: 150px;
+    margin-top: 180px;
     font-size: 2rem;
     line-height: 2rem;
     text-align: center;
@@ -70,7 +67,7 @@
 
 .form{
     width: 40%;
-    background: #0057ff;
+    background: #00296f;
     border: 1px solid black;
     padding: 1.1rem 0;
     height: auto;
@@ -85,12 +82,13 @@
     margin: 14px auto;
     font-size: 1rem;   
     color:rgba(0, 0, 0, 0.911);
+    color:  white;
     line-height: 1.2rem;
     font-weight: bolder;
 }
 
 .bottoms p{
-    color: rgba(0, 0, 0, 0.96);
+    color:  white;
     width: 80%;
     font-weight: bold;
     margin: 1px auto;
@@ -98,21 +96,21 @@
 }
 
 .bottoms span{
-    color: rgb(99, 4, 4);
+    color:  rgb(0, 0, 0);
 }
 
 .bottoms span:hover{
-    color: white;
-    transition: ease-in .5s;
+    color: yellow;
+    transition: ease-in .3s;
 }
 
 .bottoms a{
-    color: rgb(153, 20, 20);
+    color:  rgb(0, 0, 0);
 }
 
 .bottoms a:hover{
-    color: rgb(255, 255, 255);
-    transition: ease-in .5s;
+    color:  yellow;
+    transition: ease-in .3s;
 }
 
 .flexs img{
@@ -153,6 +151,7 @@
     }
     .form{
         width: 100%;
+        padding: 3rem 0;
     }
 }
 

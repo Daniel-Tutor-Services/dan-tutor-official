@@ -1,7 +1,6 @@
 import React from 'react';
 import allstaffs from './allstaffs.json';
 import { useEffect } from 'react';
-import { Link } from "react-router-dom";
 import { BiArrowBack } from 'react-icons/bi';
 import { useLocation } from 'react-router-dom';
 
@@ -25,6 +24,11 @@ function AllStaffPage() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
+		
 
 
 
@@ -34,12 +38,10 @@ function AllStaffPage() {
 
         <div className='staff-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center',padding:'3em 3rem', width:'100%', background:'grey'}}>
 
-
-            <div style={{display:'flex', justifyContent:'start'}}>
-                <Link to= '/about'>
-                    <BiArrowBack color='white' size={30}/>
-                </Link>
+            <div style={{display:'flex', justifyContent:'start',gap:'1rem', alignItems:'center', color:'white'}}>
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={30}/> Back
             </div>
+					
 
             <div >
                 <h1 id='staff-hd' style={{color:'white'}}>Meet Our Dedicated Instructors</h1> 

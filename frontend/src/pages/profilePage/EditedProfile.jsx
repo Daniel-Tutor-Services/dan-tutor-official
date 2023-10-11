@@ -242,7 +242,7 @@ function EditedProfile() {
 
                     <div className="border2" >
                         <p style={{marginBottom:"10px"}}>Full Name</p> 
-                        <CustomInput placeholder={userInfo.fullName} value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
+                        <CustomInput placeholder='Enter New Name' value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
                     </div>
 
                     <div className="border2" >
@@ -252,7 +252,7 @@ function EditedProfile() {
 
                     <div className="border2">
                         <p>Phone Number</p>
-                        <CustomInput  placeholder= {userInfo.phone} value= {phone} style = {phoneStyle}  onChange={(e) => setPhone(e.target.value)} />
+                        <CustomInput  placeholder= "Enter New Phone Number" value= {phone} style = {phoneStyle}  onChange={(e) => setPhone(e.target.value)} />
                     </div>
 
                     <div className="border2">

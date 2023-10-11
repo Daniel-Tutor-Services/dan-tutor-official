@@ -2,7 +2,7 @@
     padding: 0.2em;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #D82148;
+    border-bottom: 2px solid red;
     padding: 0;
 }
 
@@ -15,7 +15,6 @@
     position: fixed;
     top: 0;
     height: 115px;
-    padding: 2.3rem 0;
     z-index: 1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -41,7 +40,7 @@
 
 .dtlogo img {
     object-fit: contain;
-    width: 11vw;
+    width: 250px;
     height: 100%;
 }
 
@@ -68,7 +67,7 @@
 }
 
 .contents li:hover{
-    color: #0057ff;
+    color: #00296f; 
     transition: ease-in .2s;
 }
 
@@ -130,12 +129,27 @@
 
 @media screen and (max-width:3000px){
     .nav-barr{
-        height: 12vh;
+        height: 15vh;
     }
 }
 
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1150px){
+    .contents li{
+        cursor: pointer;
+        padding: .3rem .3rem .0rem;
+        color: black;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width:950px){
+    .nav-barr{
+        height: 130px;
+        display: flex;
+    }
+
     .home-mobb{
         display: block;
         position: relative;
@@ -144,10 +158,15 @@
         user-select: none;
         margin-right: 7%;
     }
+    .dtlogo{
+        padding: 0;
+        margin: 0;
+        width: 200px;
+    }
 
     .contents li{
         cursor: pointer;
-        padding: .3rem .3rem .0rem;
+        padding: .2rem .2rem .0rem;
         color: black;
     }
 
@@ -157,7 +176,7 @@
     
     
     #dtlogg img{
-        width:120px;
+        width:300px;
         padding: 0;
         margin: 0; 
     }
@@ -175,13 +194,26 @@
 }
 
 
-@media screen and (max-width:450px){
+@media screen and (max-width:550px){
     .nav-barr{
-        height: 100px;
+        height: 120px;
         display: flex;
         align-items: center;
+        padding: 0;
         margin: 0;
         align-items: center; 
         justify-content: space-between;
+    }
+
+    .dtlogo{
+        padding: 0;
+        margin: 0;
+        width: 150px;
+    }
+
+    #dtlogg img{
+        width:250px;
+        padding: 0;
+        margin: 0; 
     }
 }

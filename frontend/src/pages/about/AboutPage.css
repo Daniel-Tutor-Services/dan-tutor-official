@@ -1,6 +1,6 @@
 .about-us-page{
     padding: 5rem  0 0;
-    background: #0057ff;
+    background: #00296F;
 }
 
 .about-us-page p{
@@ -9,14 +9,14 @@
 }
 
 .aboutus-info{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 4em 0 0;
 }
 
 .aboutus-info h1{
     font-size: 2rem;
-    color: rgb(150, 28, 28);
+    color: yellow;
     font-weight: bolder;
     padding: 1.2rem 0;
 }
@@ -26,10 +26,11 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 2rem;
+    color: white;
 }
 
 .why-choose-us-info{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 1% 0;
     position: relative;
@@ -37,7 +38,7 @@
 
 .why-choose-us h1, .meet-the-team h1{
     font-size: 2rem;
-    color: rgb(150, 28, 28);
+    color: yellow;
     font-weight: bolder;
     padding: 1.2rem 0;
 }
@@ -47,6 +48,7 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    color: white;
 }
 
 .cl-aw-tr{
@@ -75,6 +77,7 @@
     font-size: 0.8rem;
     margin: 10px 0;
     font-weight: bolder;
+    color: wheat;
 }
 
 .c-a-t img{
@@ -82,11 +85,10 @@
 }
 
 .meet-the-team {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 1% 0;
     position: relative;
-    color: black;
 }
 
 .meet-the-team p{
@@ -94,6 +96,7 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 2rem;
+    color: white;
 }
 
 
@@ -121,14 +124,12 @@
 
     .aboutus-details h1{
         font-size: 1.5rem;
-        color: rgb(150, 28, 28);
     }
 
     .aboutus-info p{
         width: 100%;
         font-weight:normal;
         font-size: 1rem;
-
     }
 
     .why-choose-us{
@@ -145,14 +146,19 @@
 
     .why-choose-us h1, .meet-the-team h1{
         font-size: 1.5rem;
-        color: rgb(150, 28, 28);
     }
 
-    .why-choose-us p, .meet-the-team p{
+    .why-choose-us p{
         width: 100%;
         font-weight:normal;
         font-size: 1rem;
+        color: black;
+    }
 
+    .meet-the-team p{
+        width: 100%;
+        font-weight:normal;
+        font-size: 1rem;
     }
 
     .cl-aw-tr{

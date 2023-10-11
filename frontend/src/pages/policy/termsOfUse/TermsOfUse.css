@@ -1,6 +1,6 @@
 
 .termshead{
-    background: #0057ff; 
+    background: #00296f; 
     display: flex;
     padding: 0 4rem;
     justify-content: space-between;
@@ -30,7 +30,7 @@
 
 
 .termsheadpic img{
-    width: 150px;
+    width: 170px;
 }
 
 .terms{
@@ -94,7 +94,7 @@
     }
 
     .termsheadpic img{
-        width: 80px;
+        width: 130px;
     }
     
 }

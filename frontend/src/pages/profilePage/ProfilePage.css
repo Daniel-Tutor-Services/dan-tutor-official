@@ -1,6 +1,6 @@
 .Profile-con{
     min-height: 100vh;
-    background: #0057ff;
+    background: #00296f; 
     margin: 0;
     display: flex;
     align-items: first baseline;   
@@ -45,7 +45,7 @@
     font-size: 0.9rem;
     word-break:break-all;
     line-height: 1rem;
-    color: #0000006d;
+    color: #00000092;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -71,7 +71,7 @@
 
     .Profile{
         width: 80%;
-        margin: 10rem auto;
+        margin: 15rem auto;
     }
 
     .profile-border{

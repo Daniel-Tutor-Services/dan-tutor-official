@@ -2,7 +2,7 @@ import './PrivacyPolicy.css';
 import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
-import dtlogo from '../../../assets/dtlogo.png';
+import dtlogo from '../../../assets/dtlogo2.png';
 
 
 function PrivacyPolicy() {
@@ -37,7 +37,7 @@ function PrivacyPolicy() {
 
                 <div className='policyheadpic'>
                     <Link to='/' className='links' >
-                        <img src={dtlogo} alt="dtlogo"/>
+                        <img  src={dtlogo} alt="dtlogo"/>
                     </Link>
 
                     <div className='policyheader'>         

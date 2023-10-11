@@ -2,7 +2,7 @@
 
 .dashcontainer{
     font-family: 'BioRhyme', serif;
-    background: lightgrey; 
+    background:white; 
     padding: 3rem 0;
 }
 
@@ -13,7 +13,7 @@
     position: sticky;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    background: #0057ff;
+    background: #00296f; 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -22,9 +22,10 @@
 }
 
 #availcours{
-    font-size: 1.5rem;
-    background: #0057ff;
-    color: rgba(245, 245, 245, 0.853);
+    font-size: 1.4rem;
+    background: #00296f; 
+    color: white;
+    padding: 0.5rem;
 }
 
 .dashindiv{
@@ -73,6 +74,7 @@
 
     .dashcustominput{
         width: 100%;
+        padding-top: 5rem;
     }
 
     #availcours{

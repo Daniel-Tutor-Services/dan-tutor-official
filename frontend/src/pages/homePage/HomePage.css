@@ -1,7 +1,7 @@
 .homepagebody {
     width: 100%;
     min-height: 100vh;
-    background: #0057ff; 
+    background: #00296f; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,14 +22,14 @@
 
 .home-text h1{
     width: 100%;
-    color: white;
+    color: yellow;
     font-size: 2rem;
     padding-bottom: 0;
 }
 
 .home-text p{
     width: 70%;
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 1.3rem;
     padding-top: 2%;
     line-height: 2.5rem;
@@ -102,7 +102,7 @@
     }
 
     .homepagebody {
-        padding: 2rem 0;
+        padding: 7rem 0;
     }
 
     .display-item{

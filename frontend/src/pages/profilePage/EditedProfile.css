@@ -2,7 +2,7 @@
 .main12{   
     width: 100vw;
     min-height: 100vh;
-    background: #0057ff;
+    background: #00296f; 
     top: 0;
     bottom: 0;
     left: 0;
@@ -66,6 +66,6 @@
         padding: 1.5rem;
         width: 80%;
         margin: 0 auto;
-        margin-top: 10rem;
+        margin-top: 15rem;
     }
 }

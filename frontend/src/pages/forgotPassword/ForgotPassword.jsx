@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import img from '../../assets/image3.jpg'
-import dtlogo from '../../assets/dtlogo.png'
+import dtlogo from '../../assets/dtlogo2.png'
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton'
 import './ForgotPassword.css'
@@ -83,7 +83,7 @@ function ForgotPassword({ API_URL }) {
 
                     <Link to='/' className='links'>
                         <div className="flexz">
-                            <img src= {dtlogo} alt="dtlogo" style={{width:'200px', height:'100px'}} />     
+                            <img src= {dtlogo} alt="dtlogo" style={{width:'200px', height:'150px'}} />     
                         </div>
                     </Link>  
 
@@ -96,7 +96,7 @@ function ForgotPassword({ API_URL }) {
                         <>
                             <p style={{paddingTop:'3rem'}}>Please enter your email</p>
 
-                            <CustomInput required={true} name="email" value={userData.email} onChange={updateUserData} placeholder='Email*' style = {{width: '100%'}} />
+                            <CustomInput required={true} name="email" value={userData.email} onChange={updateUserData} placeholder='Email Address*' style = {{width: '100%'}} />
                         </>
                         :
                         <>

@@ -4,18 +4,18 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "128x128 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
       "src": "dtlogo.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "392x392"
     },
     {
       "src": "dtlogo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "712x712"
     }
   ],
   "start_url": ".",

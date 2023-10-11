@@ -17,7 +17,7 @@
 }
 
 .absl .imgl{
-    width: 25rem;
+    width: 35rem;
     height: 25rem;
     opacity: 1;
 }
@@ -66,7 +66,7 @@
 .coll p:hover{
     cursor: pointer;
     transition: ease-in .5s;
-    color: rgb(255, 255, 255);
+    color: yellow;
 }
 
 .forml{
@@ -74,7 +74,7 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
-    background: #0057ff;
+    background: #00296f;
     border: 1px solid black;
     padding: 10px 30 0;
 }
@@ -82,7 +82,7 @@
 .forml p{
     font-size: 1.1rem;
     font-weight: bold;
-    color: rgb(125, 9, 9);
+    color:  rgb(0, 0, 0);
 }
 
 .bottomzl{
@@ -93,18 +93,17 @@
 }
 
 .bottomz1 h5{
-    color: rgb(153, 20, 20);
-    transition: ease-in .5s;
+    transition: ease-in .3s;
 }
 
 .bottomzl span:hover{
     cursor: pointer;
-    color: rgb(255, 255, 255);
-    transition: ease-in .7s;
+    color: yellow;
+    transition: ease-in .3s;
 }
 
 #btspan{
-    color: rgb(153, 20, 20);
+    color:  rgb(0, 0, 0);
 }
 
 .flexl{

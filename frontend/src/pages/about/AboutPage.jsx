@@ -56,13 +56,13 @@ function AboutPage() {
                     <h1> Why Choose Us</h1>
 
                     <p>
-                        <li>  <b> Diverse Course Catalog: </b> Our platform hosts a diverse range of courses, spanning from academic subjects to practical skills, taught by experts in their respective fields.</li> <br />
+                        <li>  <b style={{color:'black'}}> Diverse Course Catalog: </b> Our platform hosts a diverse range of courses, spanning from academic subjects to practical skills, taught by experts in their respective fields.</li> <br />
 
-                        <li> <b>Interactive Learning: </b>  We believe in the power of interactive learning. Our courses are designed to keep you engaged with quizzes, assignments, discussions, and hands-on activities.</li><br />
+                        <li> <b style={{color:'black'}}>Interactive Learning: </b>  We believe in the power of interactive learning. Our courses are designed to keep you engaged with quizzes, assignments, discussions, and hands-on activities.</li><br />
 
-                        <li> <b>Flexibility: </b> Learning should fit into your schedule. Our on-demand courses allow you to learn at your own pace, anytime and anywhere.</li><br />
+                        <li> <b style={{color:'black'}}>Flexibility: </b> Learning should fit into your schedule. Our on-demand courses allow you to learn at your own pace, anytime and anywhere.</li><br />
 
-                        <li> <b>Community: </b>  Connect with fellow learners, collaborate on projects, and share insights in our vibrant online community. Learning is a social experience, and we are here to facilitate connections.</li>
+                        <li> <b style={{color:'black'}}>Community: </b>  Connect with fellow learners, collaborate on projects, and share insights in our vibrant online community. Learning is a social experience, and we are here to facilitate connections.</li>
                     </p>
 
 

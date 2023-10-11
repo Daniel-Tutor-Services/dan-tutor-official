@@ -197,14 +197,14 @@ function ChangePassword(){
                     <div className="border2" >
 
                         <p>Create New Password</p>
-                        <CustomInput  type={passwordShown ? "password" : "text"}  value ={password}   placeholder='XXXXXXXX' style={passWordStyle}
+                        <CustomInput  type={passwordShown ? "password" : "text"}  value ={password}   placeholder='Enter New Paasword' style={passWordStyle}
                         onChange={(e) => setPassword (e.target.value)}/>
                             
                     </div>
 
                     <div className="border2">
                         <p>Re-Enter Password</p>
-                        <CustomInput  type={passwordShown ? "password" : "text"}  value={confirmPassword} placeholder = 'XXXXXXXX'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
+                        <CustomInput  type={passwordShown ? "password" : "text"}  value={confirmPassword} placeholder = 'Re-enter New Password'  style={confirmPassWordStyle}  onChange={(e) => setConfirmPassword (e.target.value)}/>
 
                         {passwordShown ? <AiFillEyeInvisible style={{margin:'0 90%'}}  size={20} onClick={togglePassword}/> : <AiFillEye  style={{margin:'0 90%'}} size={20} onClick={togglePassword}/> } 
                     </div>

@@ -37,7 +37,7 @@ function EnglishLanguage() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1em',paddingBottom:'100%', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em',paddingBottom:'100%', width:'100%', background:'#00296f'}}>
             
             <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
@@ -47,7 +47,7 @@ function EnglishLanguage() {
             <div id='courseSubjects-hd'  >
 
                 <h1 style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn moree.</p>
+                <p style={{color:'wheat'}}>Here are lists of availaible topics in English Language. Click to learn moree.</p>
                 <br />
             </div>
 
@@ -106,7 +106,7 @@ function EnglishLanguage() {
                 <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
 
                     <marquee  direction="left">
-                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px', color:'white'}}>
                             No Other Topic Available
                         </p>
                     </marquee>

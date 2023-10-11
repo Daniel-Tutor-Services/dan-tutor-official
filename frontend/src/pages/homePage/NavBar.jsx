@@ -130,7 +130,7 @@ function NavBar() {
 
                                             <Link to='/profile-page' className='links'> 
                                             <br />
-                                                <h6 style={{fontSize:'0.68em', color:'#0057ff', fontWeight:'bolder',margin:'0.4rem', width:'180px', wordBreak:'break-word'}}>{`${userInfo.email}`}</h6>
+                                                <h6 style={{fontSize:'0.68em', color:'#00296f', fontWeight:'bolder',margin:'0.4rem', width:'180px', wordBreak:'break-word'}}>{`${userInfo.email}`}</h6>
                                             </Link>                                           
                                         </div>
 

@@ -9,7 +9,7 @@ import { setCredentials } from '../../slices/authSlice';
 import {  useRegisterMutation } from '../../slices/usersApiSlice';
 import validator from 'validator';
 import img from '../../assets/image5.jpg';
-import dtlogo from '../../assets/dtlogo.png';
+import dtlogo from '../../assets/dtlogo2.png';
 import Loader from '../../components/loader/Loader';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
@@ -326,7 +326,7 @@ function SignupPage () {
 
                     <Link to='/' className='links'>
                         <div className="signmob">
-                            <img src={dtlogo} alt="dtlogo" className='signmob-img' style={{width:'200px', height:'200px'}}/>
+                            <img src={dtlogo} alt="dtlogo" className='signmob-img' style={{width:'200px', height:'170px'}}/>
                         </div>
                     </Link> 
 
@@ -385,7 +385,7 @@ function SignupPage () {
                 <div className="abs">
                     <div className="flexs">
                         <Link to='/' className='links'>
-                            <img src={dtlogo} alt="dtlogo" className='img'  style={{width:'300px', height:'300px'}}/>
+                            <img src={dtlogo} alt="dtlogo" className='img'  style={{width:'350px', height:'250px'}}/>
                         </Link>
                     </div>
 
