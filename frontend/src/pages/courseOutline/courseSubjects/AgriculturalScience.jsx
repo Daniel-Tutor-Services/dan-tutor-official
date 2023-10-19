@@ -73,25 +73,25 @@ function AgriculturalScience() {
 
                             <div className='courseSubjects-detailz' key={index}>
                                     
-                                <h3> <a href=" " target='_blank' rel='noreferrer'> {agric.topicpr}</a> </h3>
+                                <h3> <a href=" #" target='_blank' rel='noreferrer'> {agric.topicpr}</a> </h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicmo}</a></h3>
+                                <h3> <a href=" #"  target='_blank' rel='noreferrer'> {agric.topicmo}</a></h3>
 
-                                <h3> <a href=" " target='_blank' rel='noreferrer'> {agric.topicel}</a></h3>
+                                <h3> <a href="# " target='_blank' rel='noreferrer'> {agric.topicel}</a></h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicrad}</a></h3>
+                                <h3> <a href=" #"  target='_blank' rel='noreferrer'> {agric.topicrad}</a></h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicra}</a></h3>
+                                <h3> <a href=" #"  target='_blank' rel='noreferrer'> {agric.topicra}</a></h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicth}</a></h3>
+                                <h3> <a href=" #"  target='_blank' rel='noreferrer'> {agric.topicth}</a></h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicme}</a></h3>
+                                <h3> <a href=" #"  target='_blank' rel='noreferrer'> {agric.topicme}</a></h3>
 
-                                <h3> <a href="  " target='_blank' rel='noreferrer'> {agric.topicqu}</a></h3>
+                                <h3> <a href="  #" target='_blank' rel='noreferrer'> {agric.topicqu}</a></h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {agric.topicop}</a></h3>
+                                <h3> <a href="#"  target='_blank' rel='noreferrer'> {agric.topicop}</a></h3>
 
-                                <h3> <a href="  " target='_blank' rel='noreferrer'> {agric.topicnu}</a></h3>
+                                <h3> <a href=" #" target='_blank' rel='noreferrer'> {agric.topicnu}</a></h3>
 
                             </div>
 
