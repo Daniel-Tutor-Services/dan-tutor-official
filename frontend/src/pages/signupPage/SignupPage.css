@@ -63,8 +63,6 @@
     font-weight: bolder;
 }
 
-
-
 .form{
     width: 40%;
     background: #00296f;
@@ -81,7 +79,6 @@
     width: 79%;
     margin: 14px auto;
     font-size: 1rem;   
-    color:rgba(0, 0, 0, 0.911);
     color:  white;
     line-height: 1.2rem;
     font-weight: bolder;
@@ -139,6 +136,22 @@
 
     .form{
         width: 100%;
+    }
+
+    
+    .bottoms h5{
+        color: black;
+    }
+    
+    .bottoms p{
+        color: black;
+    }
+    .bottoms span{
+        color: white;
+    }
+    
+    .bottoms a{
+        color: white;
     }
 }
 

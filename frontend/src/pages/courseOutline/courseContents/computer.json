@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Input Devices",
+        "topicpr": "Input Devices"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Computer Virus",
+        "topicop": "Computer Virus"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Networking " ,   
+        "topicnu": "Networking "    
+    }   
+
+]

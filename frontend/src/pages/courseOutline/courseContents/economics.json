@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Inflation",
+        "topicpr": "Inflation"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Demand and Supply",
+        "topicop": "Demand and Supply"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Deflation" ,   
+        "topicnu": "Deflation"    
+    }   
+
+]

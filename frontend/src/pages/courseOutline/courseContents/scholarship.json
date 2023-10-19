@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "GRE",
+        "topicpr": "GRE"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "AGIP-NAE",
+        "topicop": "AGIP-NAE"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "PTDF" ,   
+        "topicnu": "PTDF"    
+    }   
+
+]

@@ -83,67 +83,76 @@ function DashBoard() {
                             <br/>
 
 
-                            <p id='availcours' style={{textAlign:'center'}}>Here are the lists of courses avaialble. Select to see topics. </p>
+                            <p id='availcours' style={{textAlign:'center'}}>Here are the lists of courses avaialble. Select to see topics / contents. </p>
 
                             <div>
 
                                 <div className='gen-course-mat'>
+
+                                    
+                                    <NavLink to='/course-agricultural-science' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>AGRICULTURAL SCIENCE</p></div>
+                                    </NavLink>
+                                    
+                                    <NavLink to='/course-biology' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>BIOLOGY</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-chemistry' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>CHEMISTRY</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-civic-education' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>CIVIC EDUCATION</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-computer-science' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p >COMPUTER SCIENCE</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-economics' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>ECONOMICS</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-engineering-mathematics' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p >ENGINEERING MATHEMATICS</p></div>
+                                    </NavLink>
+                                    
                                     <NavLink to='/course-english-language' className='links'  onFocus={ScrollToTop()} >        
                                         <div className="courses"><p >ENGLISH LANGUAGE</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-french-language' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>FRENCH LANGUAGE</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-geography' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>GEOGRAPHY</p></div>
+                                    </NavLink>
+
+                                    <NavLink to='/course-government' className='links' onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p>GOVERNMENT</p></div>
                                     </NavLink>
 
                                     <NavLink to='/course-mathematics' className='links'  onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>MATHEMATICS</p></div>
                                     </NavLink>
 
-
                                     <NavLink to='/course-physics' className='links'  onFocus={ScrollToTop()} >        
                                         <div className="courses"><p>PHYSICS</p></div>
                                     </NavLink>
-
-                                    <NavLink to='/course-chemistry' className='links'  onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>CHEMISTRY</p></div>
+                                                                                                      
+                                    <NavLink to='/course-project-management' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p >PROJECT MANAGEMENT</p></div>
                                     </NavLink>
-                                                                        
-                                    <NavLink to='/course-french' className='links'  onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>FRENCH LANGUAGE</p></div>
+                                    
+                                    <NavLink to='/course-research-methodology' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p >RESEARCH METHODOLOGY</p></div>
                                     </NavLink>
-
-
-                                    <NavLink to='/course-biology' className='links'  onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>BIOLOGY</p></div>
+                                    
+                                    <NavLink to='/course-scholarship-materials' className='links'  onFocus={ScrollToTop()} >        
+                                        <div className="courses"><p ><b>BONUS -- </b> SCHOLARSHIP MATERIALS</p></div>
                                     </NavLink>
-
-
-                                    <NavLink to='/course-computer-science' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p >COMPUTER SCIENCE</p></div>
-                                    </NavLink>
-
-
-                                    <NavLink to='/course-agricultural-science' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>AGRICULTURAL SCIENCE</p></div>
-                                    </NavLink>
-
-
-                                    <NavLink to='/course-economics' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>ECONOMICS</p></div>
-                                    </NavLink>
-
-
-                                    <NavLink to='/course-geography' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>GEOGRAPHY</p></div>
-                                    </NavLink>
-
-
-                                    <NavLink to='/course-civic-education' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>CIVIC EDUCATION</p></div>
-                                    </NavLink>
-
-
-                                    <NavLink to='/course-government' className='links' onFocus={ScrollToTop()} >        
-                                        <div className="courses"><p>GOVERNMENT</p></div>
-                                    </NavLink>
-
 
 
                                     <div className="nocourse" style={{background:'red',textAlign:'center',transform:'none', color:'black'}}> 

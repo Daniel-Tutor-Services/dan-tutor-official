@@ -1,15 +1,15 @@
 [
     {
         "_id": 1,
-        "img":"Pictures/staff1.png",
+        "img":"https://avatars.githubusercontent.com/u/107114779?v=4",
         "name":"Achilihu Daniel Uchenna",
         "about":"Chief Executive Officer"
           
     },
     {
         "_id": 2,
-        "img":"https://scontent.flos1-1.fna.fbcdn.net/v/t39.30808-6/379993599_1496126167871496_2741142102106731213_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeG6XNNENm0ehTTKoKhGWM_VFpQBu-NTVRsWlAG741NVG89xd7f1fxO5RE0VtRXdEnIulh3ml-3i5cemDOGQDkKG&_nc_ohc=256qJqErhj0AX-Fp9BC&_nc_zt=23&_nc_ht=scontent.flos1-1.fna&oh=00_AfA2we9EeEqq1TSWWhC7ZM_DEYgq99B6obHgk_k6ZPHs4Q&oe=652AEC50",
-        "name":"Lucius Ben",
+        "img":"https://joedangoldtech.netlify.app/static/media/Joseph.bf2b4c18.JPG",
+        "name":"Joseph Ukaga",
         "about":"Managing Director "
        
     },
@@ -30,8 +30,8 @@
     },
     {
         "_id": 5,
-        "img":"https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/387730197_747985550674036_3139922682220945611_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeG2MDOzCnXBJe71af1w2c6AGIT5aAG-B3EYhPloAb4HcVp1_R--sa0pQm-yc7-PazEFUPhJwvrKcoD32v-DHWBD&_nc_ohc=6IWrKAcquCUAX8I6-sy&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&oh=00_AfC603JWKgPkt6ZIz9v4mcQWqMSYmv6dPFGtCguDer8keQ&oe=652BFEA4",
-        "name":"Sunday Akwaji ",
+        "img":"https://avatars.githubusercontent.com/u/85767456?s=100&v=4",
+        "name":"Martins Nkemakolam ",
         "about":"Instructor's Supervisor"
        
     },

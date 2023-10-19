@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Classes of government",
+        "topicpr": "Classes of government"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Civil law",
+        "topicop": "Civil law"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "" ,   
+        "topicnu": ""    
+    }   
+
+]

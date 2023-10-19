@@ -2,13 +2,14 @@ import './courseSubjects.css';
 import { useEffect, useState } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { useLocation } from 'react-router-dom';
-import chemistry from '../courseContents/chemistry.json';
+import scholarship from '../courseContents/scholarship.json';
 
 
 
-function Chemistry() {
-
+function Scholarship() {
+    
     const [query, setQuery] = useState("");
+
     
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -20,7 +21,7 @@ function Chemistry() {
             behavior: 'smooth', 
         });
         }, [pathname]);
-    
+
         return null;
     }
 
@@ -34,16 +35,16 @@ function Chemistry() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%', width:'100%', background:'#00296f'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'#00296f'}}>
             
             <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
                 <span>Back</span>
             </div>
 
-            <div id='courseSubjects-hd'  >
-                <h1 style={{color:'white'}}>CHEMISTRY</h1> 
-                <p style={{color:'wheat'}}>Here are lists of availaible topics in Chemistry. Click to learn more.</p>
+            <div id='courseSubjects-hd' >
+                <h1 style={{color:'white'}}>SCHOLARSHIP MATERIALS</h1> 
+                <p style={{color:'wheat'}}>Here are availaible scholarship materials to prepare you for any scholarship examination. Click to see more.</p>
                 <br />
             </div>
 
@@ -60,37 +61,38 @@ function Chemistry() {
                 <div className='courseSubjects-cont'>
                                 
                     {
-                        chemistry.filter(chemistryz => {
+                        scholarship.filter(scholarshipz => {
 
                             if (query === '') {
-                                return chemistryz;
-                            } else if (chemistryz.topic.toLowerCase().includes(query.toLowerCase())) {
-                                return chemistryz;
+                                return scholarshipz;
+                            } else if (scholarshipz.topic.toLowerCase().includes(query.toLowerCase())) {
+                                return scholarshipz;
                             }
 
-                        }).map((chemistry, index) => (
+                        }).map((scholarship, index) => (
 
                             <div className='courseSubjects-detailz' key={index}>
+                                
+                                <h3> <a href=" " target='_blank' rel='noreferrer'> {scholarship.topicpr}</a> </h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicor} </a></h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicmo}</a></h3>
+                            
+                                <h3> <a href=" " target='_blank' rel='noreferrer'> {scholarship.topicel}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicin} </a></h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicrad}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicse}</a> </h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicra}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicel}</a> </h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicth}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicnu} </a></h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicme}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicth} </a></h3>
+                                <h3> <a href="  " target='_blank' rel='noreferrer'> {scholarship.topicqu}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicra} </a></h3>
+                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {scholarship.topicop}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'> {chemistry.topicph}  </a></h3>
+                                <h3> <a href="  " target='_blank' rel='noreferrer'> {scholarship.topicnu}</a></h3>
 
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicsu} </a></h3>
-
-                                <h3>  <a href=" "  target='_blank' rel='noreferrer'>  {chemistry.topicge} </a></h3>
 
                             </div>
                         ))
@@ -107,11 +109,11 @@ function Chemistry() {
                     </marquee>
                 </div>
 
-                
+            
             </div>
 
         </div>
     )
 }
 
-export default Chemistry;
+export default Scholarship;

@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Project Manager",
+        "topicpr": "Project Manager"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Project Vs Operations",
+        "topicop": "Project Vs Operations"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Stages of project management" ,   
+        "topicnu": "Stages of project management"    
+    }   
+
+]

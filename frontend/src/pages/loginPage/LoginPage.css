@@ -90,10 +90,16 @@
     width: 85%;
     font-weight: bold;
     margin: 0px 0 0;   
+    display: flex;
+}
+
+#yetto{
+    color: white;
 }
 
 .bottomz1 h5{
     transition: ease-in .3s;
+    color: white;
 }
 
 .bottomzl span:hover{
@@ -145,11 +151,26 @@
     .forml{
         width: 100%;
     }
+
+    .forml p{
+        color: white;
+    }
+
+    .bottomzl span{
+        color: white;
+    }
+
+    #yetto{
+        color: black;
+    }
+    
 }
 
 
 
 @media screen and (max-width:420px) {
+
+
 
     .bottomz1 h5{
         font-size: 0.2rem;

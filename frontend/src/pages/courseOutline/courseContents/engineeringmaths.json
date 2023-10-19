@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Linear Algebra",
+        "topicpr": "Linear Algebra"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Fourier Series",
+        "topicop": "Fourier Series"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Eigen Values" ,   
+        "topicnu": "Eigen Values"    
+    }   
+
+]

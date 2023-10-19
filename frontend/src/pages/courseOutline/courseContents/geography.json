@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Map Reading",
+        "topicpr": "Map Reading"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Solid Minerals",
+        "topicop": "Solid Minerals"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Rocks" ,   
+        "topicnu": "Rocks"    
+    }   
+
+]

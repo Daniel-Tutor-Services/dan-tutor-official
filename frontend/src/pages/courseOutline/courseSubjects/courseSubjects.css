@@ -22,6 +22,7 @@
 
 .courseSubjects-detailz a{
     color: #000000;
+    font-weight: bolder;
 }
 
 .courseSubjects-detailz a:hover{
@@ -66,7 +67,12 @@
         text-decoration: none;
         width: 250px;
         margin-bottom: 30px;
-    }    
+    }
+    
+    .courseSubjects-detailz a{
+        color: #000000;
+        font-weight: lighter;
+    }
     
 
 }

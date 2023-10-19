@@ -31,10 +31,23 @@ import ContactPage from './pages/contactPage/ContactPage.jsx';
 
 
 //Course Subjects
+import AgriculturalScience from './pages/courseOutline/courseSubjects/AgriculturalScience.jsx';
+import Biology from './pages/courseOutline/courseSubjects/Biology.jsx';
 import Chemistry from './pages/courseOutline/courseSubjects/chemistry.jsx';
+import CivicEducation from './pages/courseOutline/courseSubjects/CivicEducation.jsx';
+import ComputerScience from './pages/courseOutline/courseSubjects/ComputerScience.jsx';
+import Economics from './pages/courseOutline/courseSubjects/Economics.jsx';
+import EngineeringMathematics from './pages/courseOutline/courseSubjects/EngineeringMathematics.jsx';
 import EnglishLanguage from './pages/courseOutline/courseSubjects/EnglishLanguage.jsx';
+import FrenchLanguage from './pages/courseOutline/courseSubjects/FrenchLanguage.jsx';
+import Geography from './pages/courseOutline/courseSubjects/Geography.jsx';
+import Government from './pages/courseOutline/courseSubjects/Government.jsx';
 import Mathematics from './pages/courseOutline/courseSubjects/Mathematics.jsx';
 import Physics from './pages/courseOutline/courseSubjects/Physics.jsx';
+import ProjectManagement from './pages/courseOutline/courseSubjects/ProjectManagement.jsx';
+import ResearchMethodology from './pages/courseOutline/courseSubjects/ResearchMethodology.jsx';
+import ScholarshipMaterials from './pages/courseOutline/courseSubjects/ScholarshipMaterials.jsx';
+
 
 
 //Dashboard
@@ -124,13 +137,51 @@ const router = createBrowserRouter(
 
 
             {/* Course Subjects */} 
+            <Route path='/course-agricultural-science' element = {<PrivateRoutes />}> 
+                <Route path="/course-agricultural-science" element={<AgriculturalScience />} />  
+            </Route>
+            
+            <Route path='/course-biology' element = {<PrivateRoutes />}> 
+                <Route path="/course-biology" element={<Biology />} />  
+            </Route>
+            
             <Route path='/course-chemistry' element = {<PrivateRoutes />}> 
                 <Route path="/course-chemistry" element={<Chemistry />} />  
+            </Route>
+
+            <Route path='/course-civic-education' element = {<PrivateRoutes />}> 
+                <Route path="/course-civic-education" element={<CivicEducation />} />  
+            </Route>
+            
+            <Route path='/course-computer-science' element = {<PrivateRoutes />}> 
+                <Route path="/course-computer-science" element={<ComputerScience />} />  
+            </Route>
+
+            
+            <Route path='/course-economics' element = {<PrivateRoutes />}> 
+                <Route path="/course-economics" element={<Economics />} />  
+            </Route>
+            
+            <Route path='/course-engineering-mathematics' element = {<PrivateRoutes />}> 
+                <Route path="/course-engineering-mathematics" element={<EngineeringMathematics />} />  
             </Route>
 
             <Route path='/course-english-language' element = {<PrivateRoutes />}> 
                 <Route path="/course-english-language" element={<EnglishLanguage />} />  
             </Route>
+
+            <Route path='/course-french-language' element = {<PrivateRoutes />}> 
+                <Route path="/course-french-language" element={<FrenchLanguage />} />  
+            </Route>
+
+            <Route path='/course-geography' element = {<PrivateRoutes />}> 
+                <Route path="/course-geography" element={<Geography />} />  
+            </Route>
+
+            <Route path='/course-government' element = {<PrivateRoutes />}> 
+                <Route path="/course-government" element={<Government />} />  
+            </Route>
+
 
             <Route path='/course-mathematics' element = {<PrivateRoutes />}> 
                 <Route path="/course-mathematics" element={<Mathematics />} />  
@@ -138,6 +189,18 @@ const router = createBrowserRouter(
 
             <Route path='/course-physics' element = {<PrivateRoutes />}> 
                 <Route path="/course-physics" element={<Physics />} />  
+            </Route>       
+    
+            <Route path='/course-project-management' element = {<PrivateRoutes />}> 
+                <Route path="/course-project-management" element={<ProjectManagement />} />  
+            </Route>
+
+            <Route path='/course-research-methodology' element = {<PrivateRoutes />}> 
+                <Route path="/course-research-methodology" element={<ResearchMethodology />} />  
+            </Route>
+
+            <Route path='/course-scholarship-materials' element = {<PrivateRoutes />}> 
+                <Route path="/course-scholarship-materials" element={<ScholarshipMaterials/>} />  
             </Route>
 
 

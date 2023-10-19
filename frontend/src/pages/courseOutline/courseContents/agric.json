@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Animal Husbandry",
+        "topicpr": "Animal Husbandry"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Fishery",
+        "topicop": "Fishery"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Animal Diseases" ,   
+        "topicnu": "Animal Diseases"    
+    }   
+
+]

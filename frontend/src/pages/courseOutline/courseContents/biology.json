@@ -1,0 +1,21 @@
+[
+    {
+        "_id": 1,
+        "topic": "Reproduction",
+        "topicpr": "Reproduction"
+          
+    },
+    
+    {
+        "_id": 9,
+        "topic": "Genetics",
+        "topicop": "Genetics"
+       
+    },   
+    {
+        "_id": 10,
+        "topic": "Sense Organs" ,   
+        "topicnu": "Sense Organs"    
+    }   
+
+]
