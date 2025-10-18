@@ -39,7 +39,7 @@
 }
 
 .sidebar-icon p:hover{
-    color:red;
+    color:gold;
     font-weight: bolder;
     transition: ease-in .3s;
 }

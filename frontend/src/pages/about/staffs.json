@@ -2,59 +2,9 @@
     {
         "_id": 1,
         "img":"https://avatars.githubusercontent.com/u/107114779?v=4",
-        "name":"Engr. Achilihu Daniel Uchenna",
+        "name":"Daniel Uchenna Achilihu ",
         "about":"Chief Executive Officer"
           
-    },
-    {
-        "_id": 2,
-        "img":"https://joedangoldtech.netlify.app/static/media/Joseph.bf2b4c18.JPG",
-        "name":"Joseph Ukaga",
-        "about":"Managing Director "
-       
-    },
-    {
-        "_id": 3,
-        "img":"https://avatars.githubusercontent.com/u/62248294?s=100&v=4",
-        "name":"Glorious Abolade",
-        "about":"Content Manager"
-        
-    },
-    {
-        "_id": 4,
-        "img":"https://avatars.githubusercontent.com/u/110849861?s=100&v=4" ,
-        "name":"Emmanuel Yeboah Manu",
-        "about":"Team Lead"
-        
-        
-    },
-    {
-        "_id": 5,
-        "img":"https://avatars.githubusercontent.com/u/85767456?s=100&v=4",
-        "name":"Martins Nkemakolam ",
-        "about":"Instructor's Supervisor"
-       
-    },
-    {
-        "_id": 6,
-        "img":"https://avatars.githubusercontent.com/u/121112881?v=4",
-        "name":"Cletus Emmanuel",
-        "about":"Product Designer"
-        
-    },
-    {
-        "_id": 7,
-        "img":"https://avatars.githubusercontent.com/u/122415202?s=100&v=4",
-        "name":"Nwankwo Emmanuel C.",
-        "about":"Chief Technology Officer"
-
-    },
-    {
-        "_id": 8,
-        "img":"https://media.licdn.com/dms/image/C4E03AQFIDlMlTokBsw/profile-displayphoto-shrink_200_200/0/1643480487790?e=1704931200&v=beta&t=HNr0vl-6JuvQPIWfSx82Ip2Sbn1RHxMn10Ujh48JRI0",
-        "name":"Noble Didi",
-        "about":"Chief Financial Ofiicer"
-       
-    }   
+    }
 
 ]

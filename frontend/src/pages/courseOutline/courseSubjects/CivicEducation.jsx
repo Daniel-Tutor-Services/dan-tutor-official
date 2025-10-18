@@ -35,16 +35,16 @@ function CivicEducation() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'#00296f'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'#turquoise'}}>
             
             <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
-                <span>Back</span>
+                <span style={{color:'black'}}>Back</span>
             </div>
 
             <div id='courseSubjects-hd' >
-                <h1 style={{color:'white'}}>CIVIC EDUCATION</h1> 
-                <p style={{color:'wheat'}}>Here are lists of availaible topics in Civic Education. Click to learn more.</p>
+                <h1 style={{color:'black'}}>CIVIC EDUCATION</h1> 
+                <p style={{color:'white'}}>Here are lists of availaible topics in Civic Education. Click to learn more.</p>
                 <br />
             </div>
 

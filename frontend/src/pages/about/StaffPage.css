@@ -10,7 +10,7 @@
 }
 
 .staff-imagez{
-    background-color: rgba(245, 245, 245, 0.574);
+    background-color: rgb(65, 63, 63);
     border-radius: 50px;
     padding: 3% 0 0;
     margin: 0;
@@ -32,8 +32,8 @@
 
 .staff-detailz{
     display: grid;
-    padding: 7% 3%;
-    background: #D82148;
+    padding: 5% 3%;
+    background: turquoise;
     width: 100%;
     height: 170px;
     border-radius: 30px;
@@ -46,7 +46,7 @@
 
 .staff-detailz p{
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: bolder;
     text-align: center;
 }
@@ -64,7 +64,7 @@
 
 .staff-btn button:hover{
     color: white;
-    background: #00296F;
+    background: #000000;
     box-shadow: 1px  2px 1px 1px black;
 }
 

@@ -13,6 +13,8 @@
     border-radius: 50px;
     padding: 1.3rem 0.6rem;
     margin: 0;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     width: 300px;
     margin-bottom: 30px;
@@ -20,13 +22,15 @@
     border: 5px solid rgb(0, 0, 0);
 }
 
-.courseSubjects-detailz a{
+.courseSubjects-detailz h3{
     color: #000000;
     font-weight: bolder;
+    pointer-events: visible;
+    cursor: pointer;
 }
 
-.courseSubjects-detailz a:hover{
-    color: #ff0000;
+.courseSubjects-detailz h3:hover{
+    color: gold;
     text-decoration: none;
 }
 

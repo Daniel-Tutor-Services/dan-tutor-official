@@ -1,5 +1,5 @@
 .errorbody {
-    background: #00296f;
+    background: turquoise;
     overflow:hidden;
     height: 100vh;
 }
@@ -16,7 +16,7 @@
     width: 50%;
     height: 85vh;
     margin: 0 auto;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
     text-align: center;
 }
@@ -26,11 +26,13 @@
     margin-bottom: 0;
     display: flex;
     justify-content: center;
+    color: black;
 }
 
 .errorbody p {
     font-size: 1.8rem;
     margin: 0;
+    color: white;
 }
 
 

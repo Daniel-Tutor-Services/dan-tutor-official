@@ -1,6 +1,6 @@
 .about-us-page{
     padding: 5rem  0 0;
-    background: #00296F;
+    background: #ffffff;
 }
 
 .about-us-page p{
@@ -16,7 +16,7 @@
 
 .aboutus-info h1{
     font-size: 2rem;
-    color: yellow;
+    color: turquoise;
     font-weight: bolder;
     padding: 1.2rem 0;
 }
@@ -26,7 +26,7 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .why-choose-us-info{
@@ -38,7 +38,7 @@
 
 .why-choose-us h1, .meet-the-team h1{
     font-size: 2rem;
-    color: yellow;
+    color: turquoise;
     font-weight: bolder;
     padding: 1.2rem 0;
 }
@@ -48,7 +48,7 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .cl-aw-tr{
@@ -59,8 +59,8 @@
 }
 
 .client-sat, .award, .trustable{
-    background-color: white;
-    box-shadow: 0px 3.43px 3.43px 0px #0000003D;
+    background-color: rgb(65, 63, 63);
+    box-shadow: 0px 3.43px 3.43px 0px #0000003d;
     width: 150px;
     height: 150px;
     text-align: center;
@@ -77,7 +77,7 @@
     font-size: 0.8rem;
     margin: 10px 0;
     font-weight: bolder;
-    color: wheat;
+    color: rgb(14, 11, 5);
 }
 
 .c-a-t img{
@@ -96,8 +96,15 @@
     word-spacing: 0.4rem;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: white;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
 }
+
+.meet-the-team2 {
+    display:flex;
+    gap: 2rem;
+}
+
 
 
 
@@ -134,7 +141,6 @@
 
     .why-choose-us{
         background-image:none;
-        background-color: rgb(183, 182, 182);
     }
 
     .why-choose-us-info{
@@ -159,6 +165,7 @@
         width: 100%;
         font-weight:normal;
         font-size: 1rem;
+        margin-top: 0px;
     }
 
     .cl-aw-tr{
@@ -191,5 +198,11 @@
     .c-a-t h3{
        display: none;
     }
+
+    .meet-the-team2 {
+        display:grid;
+        gap: 0rem;
+    }
+    
 
 }

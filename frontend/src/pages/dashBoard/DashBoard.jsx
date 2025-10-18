@@ -83,7 +83,7 @@ function DashBoard() {
                             <br/>
 
 
-                            <p id='availcours' style={{textAlign:'center'}}>Here are the lists of courses avaialble. Select to see topics / contents. </p>
+                            <p id='availcours' style={{textAlign:'center'}}>Here are the lists of courses available. Select to see topics / contents. </p>
 
                             <div>
 
@@ -157,7 +157,7 @@ function DashBoard() {
 
                                     <div className="nocourse" style={{background:'red',textAlign:'center',transform:'none', color:'black'}}> 
                                         <marquee direction="left">
-                                            <p style={{background:'red', color:'white'}}>
+                                            <p style={{color:'white', padding:'0 5rem'}}>
                                                 No Other Course Available
                                             </p>
                                         </marquee>

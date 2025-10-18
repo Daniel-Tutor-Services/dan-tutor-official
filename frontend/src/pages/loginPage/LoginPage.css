@@ -53,7 +53,7 @@
 
 .coll {
     width: 80%;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -66,7 +66,7 @@
 .coll p:hover{
     cursor: pointer;
     transition: ease-in .5s;
-    color: yellow;
+    color: gold;
 }
 
 .forml{
@@ -74,7 +74,7 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
-    background: #00296f;
+    background: turquoise;
     border: 1px solid black;
     padding: 10px 30 0;
 }
@@ -104,7 +104,7 @@
 
 .bottomzl span:hover{
     cursor: pointer;
-    color: yellow;
+    color: gold;
     transition: ease-in .3s;
 }
 

@@ -33,7 +33,7 @@ import ContactPage from './pages/contactPage/ContactPage.jsx';
 //Course Subjects
 import AgriculturalScience from './pages/courseOutline/courseSubjects/AgriculturalScience.jsx';
 import Biology from './pages/courseOutline/courseSubjects/Biology.jsx';
-import Chemistry from './pages/courseOutline/courseSubjects/chemistry.jsx';
+import Chemistry from './pages/courseOutline/courseSubjects/Chemistry.jsx';
 import CivicEducation from './pages/courseOutline/courseSubjects/CivicEducation.jsx';
 import ComputerScience from './pages/courseOutline/courseSubjects/ComputerScience.jsx';
 import Economics from './pages/courseOutline/courseSubjects/Economics.jsx';

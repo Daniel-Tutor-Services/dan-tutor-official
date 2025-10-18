@@ -21,7 +21,7 @@
 }
 
 .gen-course-mat div:hover {
-    background: #00296f; 
+    background: #000000; 
     transform: scale(1.04);  
     color: white;
 }

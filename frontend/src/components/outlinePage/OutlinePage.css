@@ -1,7 +1,7 @@
 .course-wrapper {
     overflow: hidden;
     height: 100vh;
-    background: #0057ff;
+    background: turquoise;
 }
 
 .course-h1 {
@@ -43,7 +43,7 @@
 }
 
 .outline-videos p:hover {
-    background: #0057ff;
+    background: turquoise;
     color: white;
     transform: scale(1.04);
 }

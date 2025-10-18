@@ -20,18 +20,18 @@
     flex-direction: column;
     width: 40%;
     padding: 2rem 0;
-    background: #00296f; 
+    background: turquoise; 
 
 }
 
 .formc p{
     font-size: 1rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .colc {
     width: 80%;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     margin: 0 auto 0;
@@ -110,7 +110,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    color: yellow;
+    color: gold;
 }
 
 .groupc span{
@@ -143,12 +143,12 @@
 }
 
 .bluei:hover{
-    color: #1877F2;
+    color: gold;
     transition: ease-in .2s;
 }
 
 .pinki:hover{
-    color: rgb(231, 15, 51);
+    color: gold;
     transition: ease-in .2s;
 }
 

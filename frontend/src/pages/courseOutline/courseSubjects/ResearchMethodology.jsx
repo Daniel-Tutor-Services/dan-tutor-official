@@ -29,22 +29,146 @@ function ResearchMethodology() {
         window.history.go(-1);
     }
 
+    // LECTURE 1
+
+        function onButtonClick1 () {
+    
+        // using Java Script method to get PDF file
+
+        fetch('Lecture 1.pdf').then(response => {
+            response.blob().then(blob => {
+        
+                // Creating new object of PDF file
+        
+                const fileURL = window.URL.createObjectURL(blob);
+            
+                // Setting various property values
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Lecture 1.pdf';
+                alink.click();
+             
+
+            })
+        })
+    }
+
+    // LECTURE 2
+
+    function onButtonClick2 () {
+    
+        // using Java Script method to get PDF file
+
+        fetch('Lecture 2.pdf').then(response => {
+            response.blob().then(blob => {
+        
+                // Creating new object of PDF file
+        
+                const fileURL = window.URL.createObjectURL(blob);
+            
+                // Setting various property values
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Lecture 2.pdf';
+                alink.click();
+             
+
+            })
+        })
+    }
+
+    // LECTURE 3
+
+    function onButtonClick3 () {
+    
+        // using Java Script method to get PDF file
+
+        fetch('Lecture 3.pdf').then(response => {
+            response.blob().then(blob => {
+        
+                // Creating new object of PDF file
+        
+                const fileURL = window.URL.createObjectURL(blob);
+            
+                // Setting various property values
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Lecture 3.pdf';
+                alink.click();
+             
+
+            })
+        })
+    }
 
 
+    // LECTURE 4
+
+    function onButtonClick4 () {
+    
+        // using Java Script method to get PDF file
+
+        fetch('Lecture 4.pdf').then(response => {
+            response.blob().then(blob => {
+        
+                // Creating new object of PDF file
+        
+                const fileURL = window.URL.createObjectURL(blob);
+            
+                // Setting various property values
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Lecture 4.pdf';
+                alink.click();
+             
+
+            })
+        })
+    }
+
+    // LECTURE 5
+
+    function onButtonClick5 () {
+    
+        // using Java Script method to get PDF file
+
+        fetch('Lecture 5.pdf').then(response => {
+            response.blob().then(blob => {
+        
+                // Creating new object of PDF file
+        
+                const fileURL = window.URL.createObjectURL(blob);
+            
+                // Setting various property values
+
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Lecture 5.pdf';
+                alink.click();
+             
+
+            })
+        })
+    }
+  
 
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'#00296f'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'turquoise'}}>
             
             <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
                 <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
-                <span>Back</span>
+                <span style={{color:'black'}}> Back</span>
             </div>
 
             <div id='courseSubjects-hd' >
-                <h1 style={{color:'white'}}>RESEARCH METHODOLOGY</h1> 
-                <p style={{color:'wheat'}}>Here are lists of availaible topics in Research Methodology. Click to learn more.</p>
+                <h1 style={{color:'black'}}>RESEARCH METHODOLOGY</h1> 
+                <p style={{color:'white'}}>Here are lists of availaible topics in Research Methodology. Click to learn more.</p>
                 <br />
             </div>
 
@@ -68,28 +192,19 @@ function ResearchMethodology() {
 
                         }).map((research, index) => (
 
+                            
                             <div className='courseSubjects-detailz' key={index}>
                                 
-                                <h3> <a href=" " target='_blank' rel='noreferrer'> {research.topicpr}</a> </h3>
+                                <h3 rel='noreferrer'onClick={onButtonClick1}> {research.topicone}</h3> 
+                               
+                                <h3 rel='noreferrer' onClick={onButtonClick2}> {research.topictwo}</h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicmo}</a></h3>
+                                <h3 rel='noreferrer' onClick={onButtonClick3}> {research.topicthree}</h3>
 
-                                <h3> <a href=" " target='_blank' rel='noreferrer'> {research.topicel}</a></h3>
+                                <h3 rel='noreferrer' onClick={onButtonClick4}> {research.topicfour}</h3>
 
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicrad}</a></h3>
-
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicra}</a></h3>
-
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicth}</a></h3>
-
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicme}</a></h3>
-
-                                <h3> <a href="  " target='_blank' rel='noreferrer'> {research.topicqu}</a></h3>
-
-                                <h3> <a href=" "  target='_blank' rel='noreferrer'> {research.topicop}</a></h3>
-
-                                <h3> <a href="  " target='_blank' rel='noreferrer'> {research.topicnu}</a></h3>
-
+                                <h3 rel='noreferrer' onClick={onButtonClick5}> {research.topicfive}</h3>
+                                
                             </div>
                         ))
                     }

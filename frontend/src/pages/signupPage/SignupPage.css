@@ -59,13 +59,13 @@
 
 .col h2{
     font-size: 1.1rem;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
 }
 
 .form{
     width: 40%;
-    background: #00296f;
+    background: turquoise;
     border: 1px solid black;
     padding: 1.1rem 0;
     height: auto;
@@ -97,7 +97,7 @@
 }
 
 .bottoms span:hover{
-    color: yellow;
+    color: gold;
     transition: ease-in .3s;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .bottoms a:hover{
-    color:  yellow;
+    color:  gold;
     transition: ease-in .3s;
 }
 

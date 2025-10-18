@@ -49,7 +49,7 @@ function PrivacyPolicy() {
 
             <div className='policy' >
                 <p>
-                    This <b>DAN-TUTOR</b> privacy policy collects, uses, consults or otherwise processes an individuals Personal Data. For the purposes of this policy, Please refer to DAN-TUTOR SERVICES, an e-learning platform having its courses online. In all cases described in this Policy, <b>DAN-TUTOR</b> will process your personal data as a data Controller. Please take a moment to read this Privacy Policy carefully.
+                    This <b>DAN-TUTOR</b> privacy policy collects, uses, consults or otherwise processes an individuals personal data. For the purposes of this policy, please refer to DAN-TUTOR SERVICES, an e-learning platform having its courses online. In all cases described in this policy, <b>DAN-TUTOR</b> will process your personal data as a data controller. Please take a moment to read this Privacy Policy carefully.
                 </p>
 
                 <p>
@@ -61,7 +61,7 @@ function PrivacyPolicy() {
                     <li>natural persons contacting us through the contact or other forms available on the platform;</li>
                     <li> subscribers to our newsletter(s);</li>
                     <li>users signing in to use our services;</li>
-                    <li>users signing in to download Free eBooks;</li>
+                    <li>users signing in to download free eBooks;</li>
                     <li>users signing in to attend and/or watch webinars;</li>
                 </ul>
 

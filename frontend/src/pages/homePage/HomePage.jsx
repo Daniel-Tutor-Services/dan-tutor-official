@@ -34,11 +34,11 @@ function HomePage() {
                         {
                             userInfo ?
                             (
-                                <p>Welcome back to <b>  DAN-TUTOR  </b> E-learning platform! Click to continue learning a course.</p>
+                                <p>Welcome back to <b>  DAN-TUTOR  </b> e-learning platform! Click to continue learning a course.</p>
                             )
                             :
                             (
-                                <p>Welcome to <b>DAN-TUTOR </b> E-learning platform! Get started with us by learning a new course.</p>
+                                <p>Welcome to <b>DAN-TUTOR </b> e-learning platform! Get started with us by learning a new course.</p>
                             )
                         }
 
@@ -50,13 +50,13 @@ function HomePage() {
 
                                 (
                                     <Link to='/dash-board'>
-                                        <CustomButton title="SEE COURSES" style={{width:'200px', height:'50px', padding:'1rem',color:'white',  fontSize:'.7rem'}}/>
+                                        <CustomButton title="SEE COURSES" style={{width:'200px', height:'50px', padding:'1rem', fontSize:'.7rem'}}/>
                                     </Link>
                                 )
                                 :
                                 (
                                     <Link to='/signup'>
-                                        <CustomButton title="GET STARTED" style={{width:'200px', height:'50px', padding:'1rem',color:'white',  fontSize:'.7rem'}}/>
+                                        <CustomButton title="GET STARTED" style={{width:'200px', height:'50px', padding:'1rem', fontSize:'.7rem'}}/>
                                     </Link>
                                 )
                             }

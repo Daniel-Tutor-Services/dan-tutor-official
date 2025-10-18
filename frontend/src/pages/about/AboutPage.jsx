@@ -27,7 +27,7 @@ function AboutPage() {
                     <h1>About Us </h1> 
         
                     <p>
-                        Welcome to <b>DAN-TUTOR</b> E-learning Platform, your online destination for interactive and engaging learning experiences. Our mission is to make education accessible to everyone, breaking down barriers and revolutionizing the way we learn. With a passion for learning and technology, our team has come together to create a platform that empowers learners of all ages and backgrounds to achieve their goals.
+                        Welcome to <b>DAN-TUTOR</b> e-learning Platform, your online destination for interactive and engaging learning experiences. Our mission is to make education accessible to everyone, breaking down barriers and revolutionizing the way we learn. With a passion for learning and technology, our team has come together to create a platform that empowers learners of all ages and backgrounds to achieve their goals.
                     </p>
 
                     <h1>Our Vision</h1>
@@ -107,12 +107,15 @@ function AboutPage() {
 
             <div className='meet-the-team'>
 
-                <h1>Our Expect Team</h1>
+                <h1>Our Expert CEO</h1>
 
-                <p>We are a dedicated team of educators, technologists, designers, and visionaries who are passionate about education and its transformational potential. Our combined expertise allows us to create an exceptional learning environment that caters to different learning styles and preferences. </p>
-
-                <StaffPage/>
-                
+                <div className='meet-the-team2'>
+               
+                    <StaffPage/>
+                    
+                    <p>Daniel Uchenna Achilihu is an Electrical and Electronics Engineering Researcher with expertise in intelligent control systems, metaheuristic AI algorithms, and renewable energy integration. Experienced in academic research, technical writing, and peer review contributions. Skilled in MATLAB/Simulink, and engineering design for hybrid power systems. Recognized for contributions to load frequency stability solutions and academic mentoring. Current research focuses on fuzzy logic controllers optimized via metaheuristic AI algorithm for improved Load Frequency Control in hybrid power systems. He is a dedicated visionary who is passionate about education and its transformational potential. </p>
+               
+                </div>
             </div>
 
         </div>
