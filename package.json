@@ -25,10 +25,10 @@
     "validator": "^13.11.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.1",
+    "concurrently": "^8.2.2",
     "envify": "^4.1.0",
     "nodemon": "^3.0.1",
     "terser": "^5.20.0",
-    "uglifyify": "^5.0.2"
+    "uglifyify": "^5.0.0"
   }
 }
