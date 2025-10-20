@@ -20,8 +20,7 @@
     flex-direction: column;
     width: 40%;
     padding: 2rem 0;
-    background: turquoise; 
-
+    background: dodgerblue; 
 }
 
 .formc p{
@@ -51,6 +50,7 @@
 .colc h2{
     text-align: center;
     font-size: 1.5rem;
+    color: white;
 }
 
 #textc{

@@ -28,8 +28,14 @@
     pointer-events: visible;
     cursor: pointer;
 }
+.courseSubjects-detailz a{
+    color: #000000;
+    pointer-events: visible;
+    cursor: pointer;
+}
 
-.courseSubjects-detailz h3:hover{
+
+.courseSubjects-detailz h3:hover, .courseSubjects-detailz a:hover{
     color: gold;
     text-decoration: none;
 }

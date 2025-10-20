@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 import './ContactPage.css';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
